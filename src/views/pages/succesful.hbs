@@ -1,0 +1,127 @@
+ <title>Success</title>
+<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/vendor/icofont/icofont.min.css" rel="stylesheet">
+
+<style>
+    .success-content {
+        height: 90vh;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        -webkit-animation: fadein 4s;
+        /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 4s;
+        /* Firefox < 16 */
+        -ms-animation: fadein 4s;
+        /* Internet Explorer */
+        -o-animation: fadein 4s;
+        /* Opera < 12.1 */
+        animation: fadein 4s;
+    }
+
+    .successBack {
+        background: #262688;
+        color: white;
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .sucIcon {
+        color: greenyellow;
+    }
+
+    .i>img {
+        height: 100px;
+    }
+
+    .i>h5 {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .r>h6 {
+        font-size: 12px;
+        position: relative;
+        top: 50px;
+        left: 40px;
+    }
+
+    .coler {
+        background: #f64c72;
+        border: #f64c72;
+    }
+
+    .coler:hover {
+        background: #f18da3;
+        border: #f18da3;
+    }
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Firefox < 16 */
+    @-moz-keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Internet Explorer */
+    @-ms-keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+
+
+<div class="col-lg-12 success-content d-flex">
+    <div class="successBack col-lg-5 d-flex">
+        <div class="col-md-12 i text-center">
+            <img src="/media/Success.png" alt="" />
+            <h3 class="pt-3">¡Gracias por completar tu información!</h3>
+            <h5 class="text-center">
+                Accesa a tu correo electrónico para terminar tu cita.
+            </h5>
+        </div>
+        <div class="col-md-12 text-center pt-2">
+            <a href="/">
+                <button type="button" class="btn btn-primary coler">Ir al inicio</button>
+            </a>
+        </div>
+        <div class="col-md-13 text-right r">
+            <h6>&copy Salud Mental UM</h6>
+        </div>
+    </div>
+</div>
+
+<div id="preloader"></div>
+
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/js/main.js"></script>

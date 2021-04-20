@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link href="/media/portal/SMUMLogo.png" rel="icon">
+    <link href="/media/portal/SMUMLogo.png" rel="apple-touch-icon">
+    <title>Portal SMUM</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href="/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel='stylesheet' href="/css/pago.css">
+</head>
+
+<body>
+    <section class="breadcrumbs">
+        <div class="breadcrumbs-box pl-5">
+            <span>SaludMental UM</span>
+            <h4>SMUM Pago</h4>
+        </div>
+    </section>
+    <section class="" id="pagoSection">
+        <form action="">
+            <div class="col-md-8">
+                <div class="row w-100 p-5">
+                    <div class="col-sm-3 pr-0">
+                        <p>Nombre:</p>
+                        <p>Correo:</p>
+                        <p>Consulta:</p>
+                        <p>Monto a pagar:</p>
+                        <p>Forma de pago:</p>
+                    </div>
+                    <div class="col-sm-5 pl-0">
+                        <p id="nombreCliente"></p>
+                        <p id="correoCliente"></p>
+                        <p id="consultCliente"></p>
+                        <div class="row pl-3">$<p name="" id="montoPagoCliente">1.00</p>MXN</div>
+                        <select class="form-control" name="formPago" id="formPago">
+                            <option value="" selected disabled>Selectione forma de pago</option>
+                            <option value="DEBITO">Debito</option>
+                            <option value="CREDITO">Credito</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 pb-3">
+                <div class="card card-small">
+                    <div class="card-header border-bottom">
+                        <div class="row p-1 pl-3">
+                            <i class="fas fa-credit-card"></i>
+                            <h6 class="m-0 pl-2">Pago con tarjeta</h6>
+                        </div>
+                    </div>
+                    <div class="card-body p-0 pb-3">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 mb-4 pl-5 pt-4 pr-5">
+                                <h4>Informacion de pago</h4>
+                                <span>Su pago se procesara en el portal del banco Santander, puede hacer uso de
+                                    cualquier tarjeta VISA o MASTERCARD.
+                                    el Sistema usa para su proteccion el sistema 3dSecure, consulte en su banco para
+                                    mayor informacion si su tarjeta cuenta con esa proteccion.
+                                </span>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 mb-4 pl-5 ">
+                                <h6>Total a Pagar:</h6>
+                                <h5>$ 1.00MXN</h5>
+                            </div>
+                            <div class="col-md-8 col-md-2 col-sm-12 mb-4 pl-5 ">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h5 class="">Datos para facturacion (Opcional)</h5>
+                                    </div>
+                                    <div class="col-md-12 pt-2 pb-2">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="facturaCheck">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Si desea factura, marque esta casilla para ingresar su información
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="dataFactur">
+                                    <div class="col">
+                                        <span class="">Nombre factura</span>
+                                        <input type="text" class="form-control" name="nombreFactura" id="nombreFactura"
+                                            placeholder="nombre">
+                                        <span class="">RFC</span>
+                                        <input type="text" class="form-control" name="RFC" id="RFC" placeholder="RFC">
+                                    </div>
+                                    <div class="col">
+                                        <span class="">Domicilio</span>
+                                        <input type="text" class="form-control" name="Domicilio" id="Domicilio"
+                                            placeholder="Domicilio">
+                                        <span class="">Uso de CFDI</span>
+                                        <select class="form-control" name="usoCFDI" id="usoCFDI">
+                                            <option value="" selected disabled>Selectione uso de CFDI</option>
+                                            <option value="G03">Gastos General</option>
+                                            <option value="G04">Pago por Servicios Educativos</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-11 text-right">
+                                <a href="/inicioPacientes"><button class="btn btn-secondary">Cancelar</button></a>
+                                <button class="btn btn-primary" id="realizarPago">Realizar Pago</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section id="iframContent">
+        <div class="p-2 pl-5">
+        <span >A partir de este momento la transacción queda en mano del banco, al acreditar su pago puede requerir de unos minutos a algunas horas</span>
+        </div>
+    <iframe id="iframe" src="" height="800px" width="100%" ></iframe>
+    </section>
+
+    <div id="preloader"></div>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/14fac1d4b2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
+    <script src="/js/portal/pagos.js"></script>
+</body>
+
+</html>

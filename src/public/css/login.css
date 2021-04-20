@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  color: white;
+}
+
+.logIn {
+  width: 100%;
+  height: 100vh;
+  background: url(/media/logBack.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+}
+
+.log-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+span {
+  color: #5581b5;
+}
+
+.log-right {
+  margin-left: 20px;
+}
+
+.passInput {
+  width: 330px;
+  height: 30px;
+  margin-bottom: 10px;
+  background: none;
+  outline: none;
+  border: 0.5px solid white;
+  padding: 8px;
+}
+
+.passInput::placeholder {
+  color: white;
+}
+
+.passInput1{
+  width: 298px;
+  height: 30px;
+  background: none;
+  outline: none;
+  border: 0.5px solid white;
+  padding: 8px;
+}
+
+.passInput1::placeholder {
+  color: white;
+}
+
+.butLogin {
+  outline: none;
+  border: none;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  color: #5581b5;
+  font-size: 16px;
+  font-weight: 500;
+  width: 50%;
+}
+
+.butLogin:hover {
+  background: #5581b5;
+  color: #fff;
+}
+
+.imgLogin {
+  height: 90px;
+}
+
+.fade-in {
+  animation: fadeIn ease 2s;
+}
+
+.spn:hover{
+cursor: pointer;
+}
+
+.fa-eye{
+  color: #527daf;
+  cursor: pointer;
+}
+.fa-eye-slash{
+  color: #527daf;
+  cursor: pointer;
+}
+
+.fa-arrow-circle-left{
+  font-size: 25px;
+  padding: 10px;
+}
+
+.fa-arrow-circle-left:hover{
+ color:#5581b5;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

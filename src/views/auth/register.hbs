@@ -1,0 +1,265 @@
+<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/register.css" rel="stylesheet">
+<link href="/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+  rel="stylesheet">
+<title>SMUM Registro</title>
+
+
+<main id="main" class="mb-3">
+  <section class="breadcrumbs">
+  </section>
+
+  <!-- ======= Citas Section ======= -->
+  <section id="appointment" class="appointment mb-4">
+    <div class="container appointment-container">
+      <div class="section-title">
+        <h2>Consulta Virtual o Presencial</h2>
+        <p>¡Bienvenido al registro SM UM! Completa todos los campos para completar tu cita.</p>
+      </div>
+      {{!-- action="/registerF" --}}
+      <form method="post" role="form" class="php-email-form" id="formControl">
+        <div class="form-row">
+          <div class="col-md-4 form-group">
+            <select name="citation" id="citation" class="form-control" required>
+              <option value="" selected disabled>Selecciona el tipo de consulta</option>
+              <option value="Virtual">Virtual</option>
+              <option value="Presencial">Presencial</option>
+            </select>
+            <div class="validate"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-4 form-group">
+            <div class="">Nombre de usuario</div>
+            <input type="text" name="username" class="form-control" required id="username"
+              placeholder="Nombre de Usuario" data-msg="Porfavor llena un nombre de usuario">
+            <div class="validate"></div>
+          </div>
+          <div class="col-md-4 form-group">
+            <div class="">Contraseña</div>
+            <input type="password" name="password" class="form-control" id="txtNewPassword" placeholder="Contraseña"
+              required>
+            <div class="registrationFormAlert" id="CheckPasswordMatch1">
+            </div>
+          </div>
+          <div class="col-md-4 form-group">
+            <div class="">Confirmar contraseña</div>
+            <input type="password" name="confirmpassword" class="form-control" id="txtConfirmPassword"
+              placeholder="Confirmar Contraseña" data-msg="Porfavor rivisa tu contraseña" required>
+            <div class="registrationFormAlert" id="CheckPasswordMatch">
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-4 form-group">
+            <div class="">Nombre</div>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Nombre"
+              data-msg="Porfavor llena un nombre valido" required>
+            <div class="validate"></div>
+          </div>
+          <div class="col-md-4 form-group">
+            <div class="">Apellido paterno</div>
+            <input type="text" name="lastNameP" class="form-control" id="lastNameP" placeholder="Apellido paterno"
+              data-msg="Porfavor llena un nombre valido" required>
+            <div class="validate"></div>
+          </div>
+          <div class="col-md-4 form-group">
+            <div class="">Apellido materno</div>
+            <input type="text" name="lastNameM" class="form-control" id="lastNameM" placeholder="Apellido materno"
+              data-msg="Porfavor llena un nombre valido">
+            <div class="validate"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-lg-12 form-group">
+            <div class="">Dirección</div>
+            <input type="text" name="address" class="form-control" id="direction" placeholder="Dirección actual"
+              data-msg="Porfavor un direccion valido" required>
+            <div class="validate"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-4 form-group">
+            <div class="">País</div>
+            <select name="country" id="country" class="form-control" required>
+              <option value="" selected disabled>Seleccione un país</option>
+            </select>
+            <div class="validate"></div>
+          </div>
+          <div class="col-md-4 form-group">
+            <div class="">Estado</div>
+            <select name="state" id="state" class="form-control">
+              <option value="" selected disabled>Seleccione un estado</option>
+            </select>
+            <div class="validate"></div>
+          </div>
+          <div class="col-md-4 form-group">
+            <div class="">Ciudad</div>
+            <select name="city" id="city" class="form-control">
+              <option value="" selected disabled>Seleccione una ciudad</option>
+            </select>
+            <div class="validate"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-4 form-group">
+            <div class="">Correo válido</div>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email"
+              data-msg="Porfavor llena un correo valido" required>
+            <div class="validate"></div>
+          </div>
+          <div class="col-md-4 form-group">
+            <div class="">Edad</div>
+            <input type="text" class="form-control" name="age" id="age" placeholder="Edad"
+              data-msg="Porfavor llena tu edad" required>
+            <div class="validate"></div>
+          </div>
+          <div class="form-row">
+            <p style="font-size: 14px;">Introduce el día y horario que deseas tener tu cita! Si no hay lugar disponible en la fecha el sistema te
+              indicará. El horario de consulta es 9:00-13:00 hrs y del 14:30-17:30 hrs.</p>
+            <div class="col-md-4 form-group" data-date-format="dd-mm-yyyy">
+              <div class="">Día de consulta</div>
+              <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Dia de consulta"
+                data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group" data-date-format="dd-mm-yyyy">
+              <div class="">Horario de consulta</div>
+              <input type="time" name="time" class="form-control datepicker" id="time" placeholder="Horario de consulta"
+                data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
+              <div class="validate"></div>
+            </div>
+          </div>
+            <p>Para brindarte una mejor atención, responde las siguientes preguntas.</p>
+          <div class="form-row col-lg-12">
+            <div class="col-md-4 form-group" data-date-format="dd-mm-yyyy">
+              <div class="" style="font-size: 14px;">¿Cuál es el motivo de consulta?</div>
+              <input type="text" name="motivConsult" class="form-control" id="motivConsult"
+                placeholder="Motivo de consulta" required>
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-3 form-group" data-date-format="dd-mm-yyyy">
+              <span class="" style="font-size: 14px;">Entre 1 y 10 ¿Cómo evaluas tu salud?</span>
+              <input type="text" name="evaSalud" class="form-control" id="evaSalud" maxlength="10" required
+                placeholder="¿Cómo evalúas tu salud? En una escala del 1 al 10?">
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-5 form-group" data-date-format="dd-mm-yyyy">
+              <p class="mb-0" style="font-size: 14px;">¿Qué soluciones has intentado para combatir el problema?</p>
+              <input type="text" name="soluProb" class="form-control" id="soluProb" required
+                placeholder="¿Qué soluciones has intentado para combatir tu problemática?">
+              <div class="validate"></div>
+              <div class="validate"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-lg-12">
+              <p>Lee nuestro aviso de privacidad y selecciona la casilla</p>
+            </div>
+            <div class="col-lg-12 form-group">
+              <div class="form-floating">
+                <textarea class="form-control text-disabled" rows="20" cols="150" placeholder="Leave a comment here"
+                  id="floatingTextarea">
+                TÉRMINOS Y CONDICIONES PARA LA PRESTACIÓN DEL SERVICIO DE ATENCIÓN PSICOLÓGICA EN LÍNEA DEL CEDAFAM.\
+
+Consideraciones previas. 
+1. &nbsp;El Centro de Atención Familiar (CEDAFAM), que tiene por objeto atender la salud mental de la población en general, y ofrece, a través de la Universidad de Montemorelos, servicios de orientación psicológica tanto de manera presencial como virtual mediante teleconsultas.
+2. &nbsp;Para recibir el servicio, los usuarios deberán aceptar previamente los términos y condiciones, condición sin la cual no podrá recibir el servicio.
+3. &nbsp;El usuario podrá aceptar los términos y condiciones y recibir el servicio siempre y cuando goce de capacidad legal de acuerdo con la legislación Mexicana aplicable.
+4. &nbsp;SI EL USUARIO CONSIDERA QUE SU SALUD MENTAL O FÍSICA CORRE PELIGRO, SI ESTÁ PENSANDO EN EL SUICIDIO O SI PUEDE ACTUAR EN MODO QUE PONGA EN RIESGO SU SALUD O LA DE TERCEROS O ENTIENDE QUE CUALQUIER OTRA PERSONA PUEDE ESTAR EN CUALQUIER PELIGRO; O SI TIENE ALGUNA EMERGENCIA MÉDICA, PSICOLÓGICA O PSIQUIÁTRICA, DEBE ABSTENERSE DE UTILIZAR LOS SERVICIOS DEL CEDAFAM Y CONTACTAR INMEDIATAMENTE A UN CENTRO MÉDICO O UN SERVICIO DE URGENCIAS.
+
+El servicio prestado por el CEDAFAM se sujetará a los siguientes términos y condiciones:
+
+1. &nbsp;DESCRIPCIÓN DEL SERVICIO. El servicio consiste en la realización de un tratamiento psicológico, el cual se orientará a la atención de los motivos de consulta expuestos, este puede prestarse en modalidades como terapia individual, familiar ó de pareja. Además, se ofrecerán servicios como seminarios, talleres y conferencias en materia de psicología y relaciones familiares. 
+2. &nbsp;OBLIGACIONES GENERALES. 
+        a.&nbsp;Obligaciones del CEDAFAM:
+                i. Prestar los servicios de conformidad con los términos y condiciones contemplados en este documento, para tal efecto, se deberá prestar colaboración en todo 
+                    momento, hasta la finalización de los efectos del mismo.
+                ii.Prestar el servicio con la diligencia, profesionalismo y calidad exigible al mismo. 
+        b.&nbsp;Obligaciones del usuario:
+i.    &nbsp;El usuario es el único responsable de determinar si el Servicio ofertado por el CEDAFAM se ajusta a sus necesidades.
+ii.   &nbsp;Utilizar el servicio dentro de la legalidad, de conformidad con los términos del presente contrato y a un uso del mismo dentro de la buena fe y uso para el que ha sido contratado.
+iii.  &nbsp;Pagar las cantidades referidas en la cláusula Tercera.
+iv.   &nbsp;Responder por los retrasos, cumplimientos defectuosos o incumplimientos en la prestación de los Servicios cuando los mismos se debieran a su incumplimiento de las disposiciones contenidas en este documento.
+    2.&nbsp;CUESTIONES RELATIVAS AL PAGO. 
+        &bull;&nbsp;La asistencia se realiza mediante el pago de un honorario por sesión, ya sea por sesión individual o paquetes de 3 y 5 sesiones, conforme a los precios publicados en la 
+        página pendiente.
+        &bull;&nbsp;CEDAFAM pone a su disposición diferentes medios de pago, para adaptarse a sus necesidades.
+Medios de pago disponibles: pendiente
+
+1.&nbsp;DURACIÓN. Los términos y condiciones entrarán en vigor desde la solicitud de la primera consulta y tendrá una duración indefinida, la prestación del servicio se dará por terminada en los siguientes casos:
+        &bull;&nbsp;Por mutuo acuerdo entre las partes.
+        &bull;&nbsp;Por parte de CEDAFAM, cuando se haya finalizado el objeto del mismo, esto es, la finalización del tratamiento.
+        &bull;&nbsp;Cuando el usuario, de forma unilateral considere que ha alcanzado un nivel de mejoría suficiente como para no necesitar el servicio.
+        &bull;&nbsp;Cuando el cliente desee contactar con otro psicólogo o hacer otra terapia.
+
+2.&nbsp;RESPONSABILIDAD. Salvo disposición legal en sentido contrario, CEDAFAM no aceptará ninguna responsabilidad por las siguientes pérdidas, con independencia de su origen:
+        &bull;&nbsp;Cualesquiera pérdidas que no fueran atribuibles a incumplimiento alguno por su parte.
+        &bull;&nbsp;Por las mínimas diferencias o inexactitudes que puedan existir debido a falta de resolución de la pantalla, o problemas del navegador que se utilice u otros de esta índole.
+        &bull;&nbsp;Fallos técnicos que por causas fortuitas o de otra índole, impidan un normal funcionamiento del servicio a través de internet. Falta de disponibilidad del Sitio Web por razones de mantenimiento u otras, que impida disponer del servicio. 
+        &bull;&nbsp;CEDAFAM no se hará responsable del mal uso de los productos o servicios que hayan sido utilizados por el Usuario.
+        &bull;&nbsp;En general, CEDAFAM no se responsabilizará por ningún incumplimiento o retraso en el cumplimiento de alguna de las obligaciones asumidas, cuando el mismo se deba a acontecimientos que están fuera de su control razonable, es decir, que se deban a causa de fuerza mayor.
+
+3. PROTECCIÓN DE DATOS. Para acceder a determinados recursos de CEDAFAM, los Usuarios deberán proporcionar previamente ciertos datos de carácter personal (los "Datos Personales"). CEDAFAM tratará los Datos Personales para los fines relacionados a la prestación del servicio, de conformidad con la ley federal de protección de datos personales en posesión de particulares y su reglamento. En todo caso, los usuarios garantizan la autenticidad y actualidad de todos aquellos datos que comunique a CEDAFAM siendo los únicos responsables de sus manifestaciones y de su actualización.
+CONFIDENCIALIDAD. CEDAFAM guardará confidencialidad sobre la información que le facilite el usuario en o para la prestación del servicio o que por su propia naturaleza deba ser tratada como tal. Se excluye de la categoría de información confidencial toda aquella información que sea divulgada por el usuario, aquella que haya de ser revelada de acuerdo con las leyes o con una resolución judicial o acto de autoridad competente. Este deber se mantendrá durante un plazo de 5 años a contar desde la finalización del servicio.
+LEY APLICABLE Y JURISDICCIÓN. La Relación derivada de las prestaciones del servicio que regulan estos términos y condiciones será regulado por las leyes mexicanas. Los usuarios y CEDAFAM se someten a estas con renuncia a cualquier otro fuero que pudiera corresponderles. Así mismo, se acuerda someter cualquier disputa a los Mecanismos Alternos de Solución de Controversias o, en su defecto, a los tribunales competentes en la ciudad de Montemorelos, N.L. 
+CONSENTIMIENTO INFORMADO DE LA TERAPIA
+CUESTIONES RELATIVAS A LAS CARACTERÍSTICAS DEL TRATAMIENTO
+    1.&nbsp;Se realizará un tratamiento psicológico, el cual se orientará a la atención de los motivos de consulta expuestos.
+    2.&nbsp;El abordaje terapéutico será el adecuado a cada situación clínica y se inscribe dentro del marco de la psicoterapia basada en la evidencia. Se hará por medio de estrategias 
+    terapéuticas: ejercicios para casa, lecturas, cuestionarios, registros y cualquier otro medio que se adecue al objetivo de la intervención.
+    3.&nbsp;Los resultados de la terapia dependen de varios factores, entre ellos un papel activo de su parte. Para lograr aumentar la probabilidad de lograr los resultados esperados, 
+    es necesario que siga las indicaciones.
+    4.&nbsp;La terapia psicológica tiene al mismo tiempo beneficios y riesgos. En el proceso terapéutico con frecuencia es necesario hablar o enfrentar aspectos dolorosos, los riesgos pueden incluir la posibilidad de sentir sensaciones desagradables o incómodas, como, por ejemplo, malestar, ansiedad, tristeza, rabia o frustración, entre otras. Sin embargo, las terapias psicológicas que están basadas en evidencia han demostrado en múltiples estudios de investigación que tienen efectos beneficiosos para las personas que llevan a cabo el pro-ceso y cumplen con las indicaciones. La terapia psicológica puede producir una reducción importante de malestar psicológico y emocional, y además ayudar a aumentar los niveles generales de satisfacción en la vida y en las relaciones interpersonales, así como el nivel de autoconocimiento y consciencia vital. Además, puede ayudarle a través de herramientas concretas a afrontar nuevas situaciones y tener un mejor manejo de fuentes de tensión o de estrés y generar estrategias efectivas de solución de problemas.
+    5.&nbsp;SI CONSIDERA QUE SU SALUD MENTAL O FÍSICA CORRE PELIGRO, SI ESTÁ PENSANDO EN EL SUICIDIO O SI PUEDE ACTUAR EN MODO QUE PONGA EN RIESGO SU SALUD O LA DE TERCEROS O ENTIENDE QUE CUALQUIER OTRA PERSONA PUEDE ESTAR EN CUALQUIER PELIGRO; O SI TIENE ALGUNA EMERGENCIA MÉDICA, PSICOLÓGICA O PSIQUIÁTRICA), CONTACTAR INMEDIATAMENTE CON UN CENTRO MÉDICO O UN SERVICIO DE URGENCIAS.
+
+CUESTIONES RELATIVAS A LA DURACIÓN Y MODALIDAD DEL TRATAMIENTO
+El tratamiento se llevará a cabo con una determinada periodicidad indicada por el profesional tratante. Las consultas tienen una duración promedio de 50 – 60 minutos, pudiendo haber variaciones según lo que acontezca en su transcurso.
+El plazo del tratamiento será el que el profesional juzgue necesario de acuerdo a la problemática que ha generado el tratamiento.
+La ausencia a dos sesiones seguidas sin que medie aviso efectivo por parte del paciente, será interpretada como un abandono del tratamiento.
+
+CUESTIONES RELATIVAS AL PAGO DE HONORARIOS
+La asistencia se realiza mediante el pago de un honorario por sesión, ya sea por sesión individual o bonos de 3 y 5 sesiones, conforme a los precios publicados en la página pendiente.
+
+CUESTIONES RELATIVAS A LA EVOLUCIÓN DEL TRATAMIENTO
+El tratamiento podrá ser interrumpido en forma unilateral por el paciente en el momento en que lo considere oportuno, informando de esta decisión al profesional tratante, quien evaluará si esta interrupción puede ser perjudicial para el mismo o para terceros. Reservándose el derecho de notificar a quien considere responsable.
+Se garantiza la confidencialidad, respecto a la información recibida por el paciente, cuyo límite sólo podrá ser vulnerado con causa justa de acuerdo a lo establecido en el código de ética del ejercicio de la profesión.
+
+CUESTIONES RELATIVAS A LA CUSTODIA DE DATOS CLÍNICOS.
+La historia clínica será custodiada en la base de datos, por 5 años desde el inicio del tratamiento, tal y como exige la ley correspondiente.
+
+He leído la información que ha sido explicada en cuanto al consentimiento. He tenido la oportunidad de hacer preguntas sobre mi valoración y tratamiento.
+Consiento que se me aplique el tratamiento que se me ha explicado de forma suficiente y comprensible. Entiendo que tengo el derecho de rehusar parte o todo el tratamiento en cualquier momento.
+Entiendo mi plan de tratamiento y consiento en ser tratado por los profesionales del CEDAFAM). Y entiendo que puedo revocar mi consentimiento en cualquier momento del tratamiento.
+Declaro haber facilitado de manera leal y verdadera los datos sobre estado físico y salud de mi persona que pudiera afectar a los tratamientos que se me van a realizar.
+Asimismo decido, dentro de las opciones clínicas disponibles, dar mi conformidad, libre, voluntaria y consciente a los tratamientos que se me han informado.
+                </textarea>
+                <div class="form-row">
+                  <div class="condiverf">
+                    <label for="floatingTextarea">Sí, acepto</label>
+                    <input class="form-check-input checkB mt-2" name="check" type="checkbox" value="" id="flexCheckDefault"
+                      required>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="loading">Cargando</div>
+          <div class="error-message"></div>
+        </div>
+        <div class="text-right pb-4"><button type="submit">Enviar</button></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/js/regist.js"></script>
