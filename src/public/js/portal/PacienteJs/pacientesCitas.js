@@ -47,7 +47,6 @@ function getPacienInfoC() {
       .join("")
   );
   tokenPInfo = JSON.parse(jsonPayload);
-  console.log(tokenPInfo);
   document.getElementById("pacienteNombreC").innerText =
     tokenPInfo.name + " " + tokenPInfo.lastNameP;
   document.getElementById("nomProfileC").innerText = tokenPInfo.name;
@@ -77,8 +76,6 @@ $("#citaButton").on("click", function () {
       if (response == "approved") {
         var citaId = tokenPInfo.cita;
         var citaOneId =  citaId[citaId.length - 1]
-        console.log(citaId)
-        console.log(citaOneId)
         let data = {
           idCita: citaOneId,
         };
@@ -93,7 +90,6 @@ $("#citaButton").on("click", function () {
           .then((res) => res.json())
           .then((data) => {
             $("#cita-content").show();
-            console.log(data);
             document.getElementById("pDia").innerText = data.date;
             document.getElementById("pHorario").innerText = data.time;
             document.getElementById("pZlink").innerText = data.zoomLink;

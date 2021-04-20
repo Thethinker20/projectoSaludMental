@@ -1,3 +1,8 @@
+$(document).ready(function () {
+  pacienteDocCitas();
+});
+
+
 $(window).on("load", function () {
   if ($("#preloader").length) {
     $("#preloader")
@@ -79,3 +84,34 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   calendar.render();
 });
+
+function pacienteDocCitas(){
+  let data = {
+    idAllDocPaciente: dataPacienteIn,
+  };
+  let options = {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify(data),
+  };
+  const promise = fetch("/getPacieCitaOfDoc", options)
+    .then((res) => res.json())
+    .then((data) => {
+      table = $("#tablePaCita").DataTable({
+        data: data,
+        columns: [
+          { data: "paciente" },
+          { data: "date" },
+          { data: "time" },
+        ],
+        filter: false,
+        bLengthChange: false,
+        bInfo: false,
+        bAutoWidth: false,
+        order: [[0, "desc"]],
+        bPaginate: false,
+      });
+    });
+}

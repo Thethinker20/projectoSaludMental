@@ -1,5 +1,11 @@
 $(document).ready(function () {
   getDoctInfo();
+  var today = new Date();
+  var dd = String(today.getDate()+1).padStart(2, "0");
+  var mm = String(today.getMonth() + 1).padStart(2, "0");
+  var yyyy = today.getFullYear();
+  today = dd + "-" + mm + "-" + yyyy;
+  document.getElementById('iniPDate').innerText = today;
 });
 
 $(window).on("load", function () {
@@ -46,7 +52,6 @@ function getDoctInfo() {
   var tokenDoctor = JSON.parse(jsonPayload);  
   document.getElementById('doctorName').innerText = "Dr. "+tokenDoctor.docNombre+" "+tokenDoctor.docPaterno;
   document.getElementById('docNombreNav').innerText = "Dr. "+tokenDoctor.docNombre;
-  console.log(tokenDoctor);
   const pacientesId = tokenDoctor.pasientes;
   let data = {
     idAllDocPaciente: pacientesId,

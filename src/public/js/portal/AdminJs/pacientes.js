@@ -31,10 +31,10 @@ function getPacientesAdmin() {
             { data: "time" },
           ],
           bLengthChange: false,
+          pageLength: 10,
           bInfo: false,
           bAutoWidth: false,
           order: [[2, "asc"]],
-          bPaginate: false,
           columnDefs: [
             { width: '12%', targets: 4 },
             { width: '10%', targets: 7 }

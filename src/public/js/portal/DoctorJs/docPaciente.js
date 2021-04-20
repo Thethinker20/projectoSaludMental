@@ -63,7 +63,6 @@ function getDoctInfo() {
   const promise = fetch("/getAllPacientOdDoc", options)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       table = $("#tablePacienD").DataTable({
         data: data,
         columns: [
@@ -106,52 +105,12 @@ $("#tablePacienD tbody").on("click", "tr", function () {
   getComments();
 });
 
-// var options = {
-//   placeholder: 'LLenar comentario de la cita.',
-//   theme: 'snow'
-// };
-
-// var editor = new Quill('#pacienteComment', options);
-// $(document).on('submit','form.formComent',function(){
-//   const pacienId = dataT._id;
-//   var text = editor.getText();
-//   console.log(text)
-//   let data = {
-//     paciId: pacienId,
-//     comentario: text,
-//   };
-//   let options = {
-//     method: "POST",
-//     headers: {
-//       "Content-type": "application/json",
-//     },
-//     body: JSON.stringify(data),
-//   };
-//   const promise = fetch("/addCommentP", options)
-//   .then(res => res.json())
-//   .then(data => {
-//     alert(data.status);
-//     if(data.status == '202'){
-//       Swal.fire({
-//         icon:"success",
-//         text: data.msg
-//       });
-//     }else{
-//       Swal.fire({
-//         icon:"error",
-//         text: data.err
-//       });
-//     }
-//   })
-// });
-
 const form = document.getElementById("formComent");
 form.addEventListener("submit", commentarios);
 
 async function commentarios(event) {
   const paciId = dataT._id;
   const comentario = document.getElementById("commentField").value;
-  console.log(comentario);
   event.preventDefault();
 
   const result = await fetch("/addCommentP", {
@@ -193,12 +152,6 @@ function getComments() {
   const promise = fetch("/getPatieneComment", options)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
-      //   $("#comentarioVis").append("<div class='newData'>" +
-      //   "<div class='infoBox'>" +
-      //   data.createdAt +
-      //   "</div>" +
-      // "</div>");
       if (data.length == 0) {
         $("#comentarioVis").append(
           '<div class="col-md-12">No hay commentarios<div>'

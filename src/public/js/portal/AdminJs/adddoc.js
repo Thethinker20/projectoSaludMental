@@ -106,17 +106,6 @@ function getDoctorsAdmin() {
     },
   });
 }
-
-// $('.data-table #tableDoctores tbody tr').on('click', function (e) {
-//   var animal = $(this).closest('tr').attr('docUsername');
-//   alert("I am a " + animal);
-//   // table.remove( $(this).closest('tr'), {
-//   //     title: 'Delete record',
-//   //     message: 'Are you sure you wish to remove this record?',
-//   //     buttons: 'Delete'
-//   // } );
-// } );
-
 $("#tableDoctores tbody").on("click", "tr", function () {
   var tableDataId = table.row(this).data();
   var docId = tableDataId._id;

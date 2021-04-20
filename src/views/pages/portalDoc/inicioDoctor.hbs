@@ -19,35 +19,6 @@
 
 <body class="h-100">
     <div class="container-fluid">
-        <div class="color-switcher animated">
-            <h5>Accent Color</h5>
-            <ul class="accent-colors">
-                <li class="accent-primary active" data-color="primary">
-                    <i class="material-icons">check</i>
-                </li>
-                <li class="accent-secondary" data-color="secondary">
-                    <i class="material-icons">check</i>
-                </li>
-                <li class="accent-success" data-color="success">
-                    <i class="material-icons">check</i>
-                </li>
-                <li class="accent-info" data-color="info">
-                    <i class="material-icons">check</i>
-                </li>
-                <li class="accent-warning" data-color="warning">
-                    <i class="material-icons">check</i>
-                </li>
-                <li class="accent-danger" data-color="danger">
-                    <i class="material-icons">check</i>
-                </li>
-            </ul>
-            <div class="close">
-                <i class="material-icons">close</i>
-            </div>
-        </div>
-        <div class="color-switcher-toggle animated pulse infinite">
-            <i class="material-icons">settings</i>
-        </div>
         <div class="row">
             {{!-- sidebar --}}
             <aside class="main-sidebar col-12 col-md-3 col-lg-2 px-0">
@@ -107,10 +78,10 @@
                 <div class="main-navbar sticky-top bg-white">
                     <!-- Main Navbar -->
                     <nav class="navbar align-items-stretch navbar-light flex-md-nowrap p-0">
-                        <form action="#" class="main-navbar__search w-100 d-none d-md-flex d-lg-flex">
+                        <form action="#" class="main-navbar__search w-100 d-none d-md-flex d-lg-flex mt-3">
                             <div class="input-group input-group-seamless ml-3">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text">
+                                    <div class="input-group-text" style="margin-top:7px;">
                                         <i class="fas fa-search"></i>
                                     </div>
                                 </div>
@@ -119,7 +90,7 @@
                             </div>
                         </form>
                         <ul class="navbar-nav border-left flex-row ">
-                            <li class="nav-item border-right dropdown notifications">
+                            {{!-- <li class="nav-item border-right dropdown notifications">
                                 <a class="nav-link nav-link-icon text-center" href="#" role="button"
                                     id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                                     aria-expanded="false">
@@ -162,7 +133,7 @@
                                         Notifications
                                     </a>
                                 </div>
-                            </li>
+                            </li> --}}
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#"
                                     role="button" aria-haspopup="true" aria-expanded="false">
@@ -248,7 +219,7 @@
                         <div class="col-lg col-md-4 col-sm-6 mb-4">
                             <div class="card card-small card-post card-post--1">
                                 <div class="card-post__image" style="background-image: url('/media/portal/2.jpeg');">
-                                    <a href="#" class="card-post__category badge badge-pill badge-info">Travel</a>
+                                    <a href="#" class="card-post__category badge badge-pill badge-info">Info</a>
                                     <div class="card-post__author d-flex">
                                         <a href="#" class="card-post__author-avatar card-post__author-avatar--small"
                                             style="background-image: url('/media/portal/1.jpg');">Written by James Jamerson</a>
@@ -256,38 +227,19 @@
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title">
-                                        <a class="text-fiord-blue" href="#">Off tears are day blind smile alone had
-                                            ready</a>
+                                        <a class="text-fiord-blue" href="#">Bienvenio a tu portal Salud Mental UM</a>
                                     </h5>
-                                    <p class="card-text d-inline-block mb-3">Is at purse tried jokes china ready decay
-                                        an. Small its shy
-                                        way had woody downs power. To denoting admitted speaking learning my...</p>
-                                    <span class="text-muted">29 February 2019</span>
+                                    <p class="card-text d-inline-block mb-3">Aqui vas a poder ver tur pacientes y todos tus citas. En la parte de 
+                                        pacientes vas a poder ver información de tus pacientes y tambien agregar comentarios</p>
+                                    <span class="text-muted" id="iniPDate"></span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <footer class="main-footer d-flex p-2 px-3 bg-white border-top">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                    </ul>
-                    <span class="copyright ml-auto my-auto mr-2">Copyright © 2018
-                        <a href="https://designrevision.com" rel="nofollow">DesignRevision</a>
+                    <span class="copyright p-2">Copyright © SaludMental UM 2021
+                        {{!-- <a href="" rel="nofollow">Design by Nathaniel Martina</a> --}}
                     </span>
                 </footer>
             </main>

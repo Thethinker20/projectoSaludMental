@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   loadPacientes();
   loadDoctores();
@@ -96,9 +95,9 @@ function loadCitaTable() {
         bAutoWidth: false,
         order: [[2, "desc"]],
         columnDefs: [
-          { width: '15%', targets: 0 },
-          { width: '20%', targets: 1 }
-      ],
+          { width: "15%", targets: 0 },
+          { width: "20%", targets: 1 },
+        ],
       });
     },
     error: function (response) {
@@ -110,6 +109,37 @@ function loadCitaTable() {
   });
 }
 
+//agregar paciente a doctor
+const form = document.getElementById("citasForm");
+form.addEventListener("submit", citas);
+
+async function citas(event) {
+  const docId = document.getElementById("doctorIdAdmin").value;
+  const pasieId = document.getElementById("pacienteIdAdmin").value;
+  console.log(docId);
+  event.preventDefault();
+
+  const result = await fetch("/addDoctorsForm", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      docId,
+      pasieId,
+    }),
+  }).then((res) => res.json());
+  if (result.status == 202) {
+    Swal.fire({ icon: "success", title: result.msg });
+  } else {
+    Swal.fire({
+      icon: "error",
+      text: result.msg,
+    });
+  }
+}
+
+//agregar cita a paciente
 const form1 = document.getElementById("citasForm1");
 form1.addEventListener("submit", citas1);
 
@@ -149,50 +179,16 @@ async function citas1(event) {
   }
 }
 
-const form = document.getElementById("citasForm");
-form.addEventListener("submit", citas);
-
-async function citas(event) {
-  const docId = document.getElementById("doctorIdAdmin").value;
-  const pasieId = document.getElementById("pacienteIdAdmin").value;
-  console.log(docId);
-  event.preventDefault();
-
-  const result = await fetch("/addDoctorsForm", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      docId,
-      pasieId,
-    }),
-  }).then((res) => res.json());
-
-  console.log(result);
-  if (result.status == 202) {
-    Swal.fire({ icon: "success", title: result.msg }).then(function () {
-      location.reload();
-    });
-  } else {
-    Swal.fire({
-      icon: "error",
-      text: result.msg,
-    });
-  }
-}
-
-
 document.addEventListener("DOMContentLoaded", function () {
   var calendarEl = document.getElementById("calendar");
   var calendar = new FullCalendar.Calendar(calendarEl, {
-    locale: 'es',
-    eventClick: function(info) {
-      var eventObj = info.event;  
-        Swal.fire({
-          icon: "success",
-          text: eventObj.title,
-        });
+    locale: "es",
+    eventClick: function (info) {
+      var eventObj = info.event;
+      Swal.fire({
+        icon: "success",
+        text: eventObj.title,
+      });
     },
     initialView: "dayGridMonth",
     events: function (fetchInfo, successCallback, failureCallback) {
@@ -200,18 +196,16 @@ document.addEventListener("DOMContentLoaded", function () {
         url: "/getAllCitas",
         type: "GET",
         success: function (res) {
-          var events = []
+          var events = [];
           res.forEach(function (evt) {
             events.push({
               title: evt.paciente,
               start: evt.date,
               end: evt.date,
-              // url: evt.zoomLink
             });
           });
           successCallback(events);
         },
-        
       });
     },
   });

@@ -20,35 +20,6 @@
 
 <body class="h-100">
     <div class="container-fluid">
-        <div class="color-switcher animated">
-            <h5>Accent Color</h5>
-            <ul class="accent-colors">
-                <li class="accent-primary active" data-color="primary">
-                    <i class="material-icons">check</i>
-                </li>
-                <li class="accent-secondary" data-color="secondary">
-                    <i class="material-icons">check</i>
-                </li>
-                <li class="accent-success" data-color="success">
-                    <i class="material-icons">check</i>
-                </li>
-                <li class="accent-info" data-color="info">
-                    <i class="material-icons">check</i>
-                </li>
-                <li class="accent-warning" data-color="warning">
-                    <i class="material-icons">check</i>
-                </li>
-                <li class="accent-danger" data-color="danger">
-                    <i class="material-icons">check</i>
-                </li>
-            </ul>
-            <div class="close">
-                <i class="material-icons">close</i>
-            </div>
-        </div>
-        <div class="color-switcher-toggle animated pulse infinite">
-            <i class="material-icons">settings</i>
-        </div>
         <div class="row">
             {{!-- sidebar --}}
             <aside class="main-sidebar col-12 col-md-3 col-lg-2 px-0">
@@ -108,10 +79,10 @@
                 <div class="main-navbar sticky-top bg-white">
                     <!-- Main Navbar -->
                     <nav class="navbar align-items-stretch navbar-light flex-md-nowrap p-0">
-                        <form action="#" class="main-navbar__search w-100 d-none d-md-flex d-lg-flex">
+                        <form action="#" class="main-navbar__search w-100 d-none d-md-flex d-lg-flex mt-3">
                             <div class="input-group input-group-seamless ml-3">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text">
+                                    <div class="input-group-text" style="margin-top:7px;">
                                         <i class="fas fa-search"></i>
                                     </div>
                                 </div>
@@ -120,7 +91,7 @@
                             </div>
                         </form>
                         <ul class="navbar-nav border-left flex-row ">
-                            <li class="nav-item border-right dropdown notifications">
+                            {{!-- <li class="nav-item border-right dropdown notifications">
                                 <a class="nav-link nav-link-icon text-center" href="#" role="button"
                                     id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                                     aria-expanded="false">
@@ -163,7 +134,7 @@
                                         Notifications
                                     </a>
                                 </div>
-                            </li>
+                            </li> --}}
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#"
                                     role="button" aria-haspopup="true" aria-expanded="false">
@@ -172,7 +143,7 @@
                                     <span class="d-none d-md-inline-block" id="docNombreNav"></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-small">
-                                    <a class="dropdown-item" href="/profileDoctor">
+                                    <a class="dropdown-item" href="#">
                                         <i class="material-icons">&#xE7FD;</i> Perfil</a>
                                     <a class="dropdown-item text-danger" href="/login">
                                         <i class="material-icons text-danger">&#xE879;</i> Logout </a>
@@ -210,9 +181,10 @@
                 <div class="main-content-container container-fluid px-4">
                     <!-- Page Header -->
                     <div class="page-header row no-gutters py-4">
-                        <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+                        <div class="col-lg-12 col-sm-4 text-center text-sm-left mb-0">
                             <span class="text-uppercase page-subtitle">Dashboard</span>
-                            <h3 class="page-title">Mis Citas</h3>
+                            <h3 class="page-title mb-2">Mis Citas</h3>
+                            <span style="font-weight: 400; font-size:14px;">Encuentra su pacientes y citas asignados, al hacer click en el nombre de la paciente en el calendario, se va a abrir automaticamente la liga de zoom que se asigno el administrador para ese cita.</span>
                         </div>
                     </div>
                     <!-- End Page Header -->
@@ -226,28 +198,30 @@
                                 <div id="calendarCita"></div>
                             </div>
                         </div>
+                        <div class="col-lg col-md-4 col-sm-6 mb-4">
+                            <div class="card card-small card-post card-post--1">
+                                <div class="card-body">
+                                    <table id="tablePaCita" class="table table-bordered"
+                                        style="margin-top: 0px !important;">
+                                        <thead class="bg-primary text-white">
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Fecha</th>
+                                                <th>Horario</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
                 <footer class="main-footer d-flex p-2 px-3 bg-white border-top">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                    </ul>
-                    <span class="copyright ml-auto my-auto mr-2">Copyright © 2018
-                        <a href="https://designrevision.com" rel="nofollow">DesignRevision</a>
+                    <span class="copyright p-2">Copyright © SaludMental UM 2021
+                        {{!-- <a href="" rel="nofollow">Design by Nathaniel Martina</a> --}}
                     </span>
                 </footer>
             </main>

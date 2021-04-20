@@ -129,15 +129,15 @@ app.post("/registerForm", async (req, res) => {
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "nathacarcool@gmail.com",
-        pass: "nathamartina",
+        user: "cedafam.admi@gmail.com",
+        pass: "CEDAFAM2021",
       },
     });
 
-    const linkPortal = "https://www.youtube.com/watch?v=Va9UKGs1bwI&t=116s";
+    const linkPortal = "http://saludmentalum.um.edu.mx/login";
     let mailOption = {
-      from: "nathacarcool@gmail.com",
-      to: `${email}, agamez@um.edu.mx`,
+      from: "cedafam.admi@gmail.com",
+      to: email,
       subject: "Confirmacion registro",
       html:
         "<h2>Bienvenido</h2><h5>Buendia has hecho un registro en Salud mental UM para tener un cita</h5><h5>En este link: " +
@@ -188,7 +188,7 @@ app.post("/login", async (req, res) => {
         JWT_SECRET
       );
       res.json({ status: "ok", data: token });
-    }else{
+    } else {
       res.json({ status: "404", error: "Contraseña invalido" });
     }
   } else {
@@ -221,7 +221,7 @@ app.post("/login", async (req, res) => {
         JWT_SECRET
       );
       res.json({ status: "ok", data: token });
-    }else{
+    } else {
       res.json({ status: "405", error: "Usuario invalido" });
     }
   }
@@ -255,7 +255,7 @@ app.post("/loginDoc", async (req, res) => {
       JWT_SECRET
     );
     res.json({ status: "ok", data: token });
-  }else{
+  } else {
     res.json({ status: "error2", error: "Contraseña invalido" });
   }
 });
@@ -272,7 +272,7 @@ app.get("/all-data", (req, res) => {
     });
 });
 
-//get todo los citas 
+//get todo los citas
 app.get("/getAllCitas", (req, res) => {
   Citas.find()
     .then((result) => {
@@ -349,14 +349,20 @@ app.post("/doctorsForm", async (req, res) => {
     },
   });
 
-  const SMUMLINK = "https://www.youtube.com/";
+  const SMUMLINK = "http://saludmentalum.um.edu.mx/login";
 
   let mailOption = {
     from: "nathacarcool@gmail.com",
     to: `${docEmail}`,
     subject: "Usuario Creado",
     html:
-      "<h2>Tu usuario de Salud Mental UM ha sido creado.</h2><h5>Usuario: " + docUsername + "</h5><h5>Contraseña: " + plainTextPassword + "</h5><h5>Ingresa aqui para ver tu citas y pasientes: " + SMUMLINK +"</h5>",
+      "<h2>Tu usuario de Salud Mental UM ha sido creado.</h2><h5>Usuario: " +
+      docUsername +
+      "</h5><h5>Contraseña: " +
+      plainTextPassword +
+      "</h5><h5>Ingresa aqui para ver tu citas y pasientes: " +
+      SMUMLINK +
+      "</h5>",
   };
 
   transporter.sendMail(mailOption, function (err, data) {
@@ -364,7 +370,7 @@ app.post("/doctorsForm", async (req, res) => {
       return res.json({ status: "500", msg: err });
     }
   });
-  
+
   res.json({ status: "202", msg: "Doctor Agregado" });
 });
 
@@ -380,19 +386,6 @@ app.post("/addDelteTableId", (req, res, next) => {
       res.json({ status: "500", error: err });
     });
 });
-
-//get citas by id from database
-app.post("/getCitaById", (req, res) => {
-  const data = req.body.idCita;
-  Citas.findById({ _id: data })
-    .then((result) => {
-      res.send(result);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
 //agrega paciente a un doctor
 app.post("/addDoctorsForm", async (req, res) => {
   const { docId, pasieId } = req.body;
@@ -430,6 +423,7 @@ app.post("/addLinkForm", async (req, res) => {
     time,
     zoomLink,
   });
+
   try {
     const linkAdded = await newLink.save();
     const idLink = linkAdded._id;
@@ -437,10 +431,40 @@ app.post("/addLinkForm", async (req, res) => {
       { _id: pasieId },
       { $push: { cita: idLink } }
     );
+    //pacieEmail = pacient.email;
     if (pacient) {
-      return res.json({
-        status: "202",
-        msg: "Cita fue agregado",
+      const pasieEmail = pacient.email;
+      let transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: "cedafam.admi@gmail.com",
+          pass: "CEDAFAM2021",
+        },
+      });
+
+      let mailOption = {
+        from: "cedafam.admi@gmail.com",
+        to: pasieEmail,
+        subject: "Cita asigando",
+        html:
+          "<h3>Felicitacones tu cita ha sido creado</h3><h5>Si aun no has hecho el pago de tu consulta te pedimos que lo hagas antes del este fecha " +
+          date +
+          " en tu portal de Salud Mental UM</h5><h5>La fecha nueva de la consulta es: " +
+          date +
+          ", horario: " +
+          time +
+          "</h5><h5>Al terminar de pagar su consulta, en su portal en el sección de citas vas a poder encontrar el link de zoom para su consulta virtual.</h5>",
+      };
+
+      transporter.sendMail(mailOption, function (err, data) {
+        if (err) {
+          return res.json({ status: "500", msg: err });
+        } else {
+          return res.json({
+            status: "202",
+            msg: "Cita fue agregado",
+          });
+        }
       });
     } else {
       return res.json({
@@ -453,6 +477,7 @@ app.post("/addLinkForm", async (req, res) => {
   }
 });
 
+//doctor
 //conseguir todos los pacientes de un doctor
 app.post("/getAllPacientOdDoc", (req, res, next) => {
   const data = req.body.idAllDocPaciente;
@@ -461,10 +486,21 @@ app.post("/getAllPacientOdDoc", (req, res, next) => {
   });
 });
 
+//get citas by id from database
+app.post("/getCitaById", (req, res) => {
+  const data = req.body.idCita;
+  Citas.findById({ _id: data })
+    .then((result) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 //enviar commentarios por id
 app.post("/addCommentP", async (req, res) => {
   const { paciId, comentario } = req.body;
-  console.log(comentario);
   const newCita = await Commentas.create({
     comentario,
   });
@@ -494,14 +530,13 @@ app.post("/addCommentP", async (req, res) => {
 //conseguir commentarios de un paciente
 app.post("/getPatieneComment", (req, res, next) => {
   const data = req.body.idPatientCom;
-  console.log(data);
 
   Commentas.find({ _id: { $in: data } })
     .then((result) => {
       res.send(result);
     })
     .catch((err) => {
-      console.log(err);
+      res.send(err);
     });
 });
 
@@ -643,14 +678,11 @@ app.post("/hacerPagos", async (req, res) => {
     var newData = new Pagos({ data: data });
     try {
       newData.save();
-      console.log(pacienteId);
       const idPago = newData._id;
-      console.log(idPago);
       const cita = await Consult.findByIdAndUpdate(
         { _id: pacienteId },
         { $push: { pagos: idPago } }
       );
-      console.log("yess");
     } catch (error) {
       return res.json(error);
     }
@@ -679,14 +711,14 @@ app.post("/preguntasEmail", (req, res) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "nathacarcool@gmail.com",
-      pass: "nathamartina",
+      user: "cedafam.admi@gmail.com",
+      pass: "CEDAFAM2021",
     },
   });
 
   let mailOption = {
     from: email,
-    to: "nathacarcool@gmail.com",
+    to: "cedafam.admi@gmail.com",
     subject: subject,
     text: message,
     html:
@@ -715,7 +747,9 @@ app.post("/getPagoPaciente", (req, res) => {
     .sort({ _id: -1 })
     .limit(1)
     .exec(function (err, docs) {
-      var result = docs.map(function(a) {return a.data.reference;});
+      var result = docs.map(function (a) {
+        return a.data.reference;
+      });
       const refContent = result.toString();
       var today = new Date();
       var dd = String(today.getDate()).padStart(2, "0");
@@ -723,21 +757,21 @@ app.post("/getPagoPaciente", (req, res) => {
       var yyyy = today.getFullYear();
       today = dd + "-" + mm + "-" + yyyy;
 
-
       //const url = `https://wso2am.um.edu.mx/pagoenlinea/1.0/pago_santander/PGINTCRI01-SMUM965-/15-04-2021`;
       const url = `https://wso2am.um.edu.mx/pagoenlinea/1.0/pago_santander/${refContent}/${today}`;
-      axios.get(url, {
-        headers: {
-          "apikey": "eyJ4NXQiOiJOVGRtWmpNNFpEazNOalkwWXpjNU1tWm1PRGd3TVRFM01XWXdOREU1TVdSbFpEZzROemM0WkE9PSIsImtpZCI6ImdhdGV3YXlfY2VydGlmaWNhdGVfYWxpYXMiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJsYWZ1ZW50ZS5kYW5pZWxAY2FyYm9uLnN1cGVyIiwiYXBwbGljYXRpb24iOnsib3duZXIiOiJsYWZ1ZW50ZS5kYW5pZWwiLCJ0aWVyUXVvdGFUeXBlIjpudWxsLCJ0aWVyIjoiMTBQZXJNaW4iLCJuYW1lIjoicHNpY29sb2dpYV9jb2JybyIsImlkIjoxNSwidXVpZCI6ImJmMmJhZDhlLTI4YmEtNDJkMy04MWQzLWI2MzdjZTA1NDZiNCJ9LCJpc3MiOiJodHRwczpcL1wvYW0udW0uZWR1Lm14OjQ0M1wvb2F1dGgyXC90b2tlbiIsInRpZXJJbmZvIjp7IlVubGltaXRlZCI6eyJ0aWVyUXVvdGFUeXBlIjoicmVxdWVzdENvdW50Iiwic3RvcE9uUXVvdGFSZWFjaCI6dHJ1ZSwic3Bpa2VBcnJlc3RMaW1pdCI6MCwic3Bpa2VBcnJlc3RVbml0IjpudWxsfX0sImtleXR5cGUiOiJQUk9EVUNUSU9OIiwic3Vic2NyaWJlZEFQSXMiOlt7InN1YnNjcmliZXJUZW5hbnREb21haW4iOiJjYXJib24uc3VwZXIiLCJuYW1lIjoicGFnb3NlbmxpbmVhIiwiY29udGV4dCI6IlwvcGFnb2VubGluZWFcLzEuMCIsInB1Ymxpc2hlciI6ImxhZnVlbnRlLmRhbmllbCIsInZlcnNpb24iOiIxLjAiLCJzdWJzY3JpcHRpb25UaWVyIjoiVW5saW1pdGVkIn1dLCJpYXQiOjE2MTc5ODkxMDcsImp0aSI6ImMzM2YwMWY2LTFmNmQtNGFjMC1hM2Y2LWE3NTQ0M2IzMzQxNiJ9.Ijo5LMHc8cl3MhLj7waNw1jzi9R9Q66MwMpLsP6dezMeP8FOCwjex97bDG20VLwoTWLx24XrNzYj9niP6ciKCGcdtPKgMokVELHeSwIwktgJr7m7X8f6ahapCieAvYy-050uCzBo_0x6wt3TJ9B43GsBG3iY8DbPmpjaOrZqXDxBvgOO39QWxyyEXx7_KUPAEbzUsNcAUIgB6dHeVnwnqUSZTrXMB4TiAQG6UWknle6y5ZgW6bpvFFecU40M1WFNZtZurq8APDodBpL5qK2CqEuOzyv6fJdoMN3gn4hxbN9pCLpEDwrwF4UQe13SttVgi9QXxpK68RgepDGRVa5geQ==",
-        }
-      })
-      .then((result) => {
-        res.send(result.data)
-      })
-      .catch((error) => {
-        console.error(error)
-      })
-      
+      axios
+        .get(url, {
+          headers: {
+            apikey:
+              "eyJ4NXQiOiJOVGRtWmpNNFpEazNOalkwWXpjNU1tWm1PRGd3TVRFM01XWXdOREU1TVdSbFpEZzROemM0WkE9PSIsImtpZCI6ImdhdGV3YXlfY2VydGlmaWNhdGVfYWxpYXMiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJsYWZ1ZW50ZS5kYW5pZWxAY2FyYm9uLnN1cGVyIiwiYXBwbGljYXRpb24iOnsib3duZXIiOiJsYWZ1ZW50ZS5kYW5pZWwiLCJ0aWVyUXVvdGFUeXBlIjpudWxsLCJ0aWVyIjoiMTBQZXJNaW4iLCJuYW1lIjoicHNpY29sb2dpYV9jb2JybyIsImlkIjoxNSwidXVpZCI6ImJmMmJhZDhlLTI4YmEtNDJkMy04MWQzLWI2MzdjZTA1NDZiNCJ9LCJpc3MiOiJodHRwczpcL1wvYW0udW0uZWR1Lm14OjQ0M1wvb2F1dGgyXC90b2tlbiIsInRpZXJJbmZvIjp7IlVubGltaXRlZCI6eyJ0aWVyUXVvdGFUeXBlIjoicmVxdWVzdENvdW50Iiwic3RvcE9uUXVvdGFSZWFjaCI6dHJ1ZSwic3Bpa2VBcnJlc3RMaW1pdCI6MCwic3Bpa2VBcnJlc3RVbml0IjpudWxsfX0sImtleXR5cGUiOiJQUk9EVUNUSU9OIiwic3Vic2NyaWJlZEFQSXMiOlt7InN1YnNjcmliZXJUZW5hbnREb21haW4iOiJjYXJib24uc3VwZXIiLCJuYW1lIjoicGFnb3NlbmxpbmVhIiwiY29udGV4dCI6IlwvcGFnb2VubGluZWFcLzEuMCIsInB1Ymxpc2hlciI6ImxhZnVlbnRlLmRhbmllbCIsInZlcnNpb24iOiIxLjAiLCJzdWJzY3JpcHRpb25UaWVyIjoiVW5saW1pdGVkIn1dLCJpYXQiOjE2MTc5ODkxMDcsImp0aSI6ImMzM2YwMWY2LTFmNmQtNGFjMC1hM2Y2LWE3NTQ0M2IzMzQxNiJ9.Ijo5LMHc8cl3MhLj7waNw1jzi9R9Q66MwMpLsP6dezMeP8FOCwjex97bDG20VLwoTWLx24XrNzYj9niP6ciKCGcdtPKgMokVELHeSwIwktgJr7m7X8f6ahapCieAvYy-050uCzBo_0x6wt3TJ9B43GsBG3iY8DbPmpjaOrZqXDxBvgOO39QWxyyEXx7_KUPAEbzUsNcAUIgB6dHeVnwnqUSZTrXMB4TiAQG6UWknle6y5ZgW6bpvFFecU40M1WFNZtZurq8APDodBpL5qK2CqEuOzyv6fJdoMN3gn4hxbN9pCLpEDwrwF4UQe13SttVgi9QXxpK68RgepDGRVa5geQ==",
+          },
+        })
+        .then((result) => {
+          res.send(result.data);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     });
 });
 
