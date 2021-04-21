@@ -219,3 +219,8 @@
     transform: rotate(360deg);
   }
 }
+
+.fa-arrow-alt-circle-left{
+  font-size: 30px;
+  color: #262688;
+}
