@@ -174,10 +174,6 @@ app.post("/login", async (req, res) => {
   const user = await Consult.findOne({ username }).lean();
   const admin = await Admin.findOne({ username }).lean();
 
-  if (!user) {
-    return res.json({ status: "error1", error: "Usuario invalido" });
-  }
-
   if (username == "admin") {
     if (await bcrypt.compare(password, admin.password)) {
       const token = jwt.sign(
@@ -187,11 +183,14 @@ app.post("/login", async (req, res) => {
         },
         JWT_SECRET
       );
+      console.log("yess")
       res.json({ status: "ok", data: token });
     } else {
       res.json({ status: "404", error: "Contraseña invalido" });
     }
-  } else {
+  } else if(!user){
+    return res.json({ status: "error1", error: "Usuario invalido" });
+  }else {
     if (await bcrypt.compare(password, user.password)) {
       const token = jwt.sign(
         {
@@ -222,7 +221,7 @@ app.post("/login", async (req, res) => {
       );
       res.json({ status: "ok", data: token });
     } else {
-      res.json({ status: "405", error: "Usuario invalido" });
+      res.json({ status: "405", error: "Contraseña invalido" });
     }
   }
 });
@@ -308,10 +307,6 @@ app.post("/doctorsForm", async (req, res) => {
     pasientes,
   } = req.body;
 
-  if (!docUsername || typeof docUsername !== "string") {
-    return res.json({ status: "error", error: "Invalid username" });
-  }
-
   if (plainTextPassword.length < 5) {
     return res.json({
       status: "passError",
@@ -335,11 +330,7 @@ app.post("/doctorsForm", async (req, res) => {
       pasientes,
     });
   } catch (error) {
-    if (error.code === 11000) {
-      // duplicate key
-      return res.json({ status: "errorExiste", error: "Usuario ya existe" });
-    }
-    throw error;
+    return res.json({ status: "errorExiste", error: error });
   }
   let transporter = nodemailer.createTransport({
     service: "gmail",
@@ -366,11 +357,8 @@ app.post("/doctorsForm", async (req, res) => {
   };
 
   transporter.sendMail(mailOption, function (err, data) {
-    if (err) {
-      return res.json({ status: "500", msg: err });
-    }
-  });
-
+    console.log("Success")
+  })
   res.json({ status: "202", msg: "Doctor Agregado" });
 });
 

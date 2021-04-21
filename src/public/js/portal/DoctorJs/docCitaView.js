@@ -81,6 +81,12 @@ document.addEventListener("DOMContentLoaded", function () {
           successCallback(events);
         });
     },
+    eventClick: function(info) {
+      if (info.event.url) {
+        info.jsEvent.preventDefault(); 
+        window.open(info.event.url);
+      }
+  },
   });
   calendar.render();
 });

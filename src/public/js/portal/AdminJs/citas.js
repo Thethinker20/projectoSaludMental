@@ -168,7 +168,7 @@ async function citas1(event) {
   }).then((res) => res.json());
 
   if (result1.status == 202) {
-    Swal.fire({ icon: "success", title: result1.msg }).then(function () {
+    Swal.fire({ icon: "success", title:"Paciente:", text: result1.msg}).then(function () {
       location.reload();
     });
   } else {

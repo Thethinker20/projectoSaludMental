@@ -78,8 +78,7 @@ $(window).on("load", function () {
           localStorage.setItem("tokenPaciente", result.data);
           window.location.replace("/inicioPacientes");
         }
-      }
-      if (result.status == "404") {
+      }if (result.status == "404") {
         Swal.fire({
           icon: "error",
           title: result.error,
