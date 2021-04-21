@@ -134,7 +134,7 @@ app.post("/registerForm", async (req, res) => {
       },
     });
 
-    const linkPortal = "http://saludmentalum.um.edu.mx/login";
+    const linkPortal = "https://saludmentalum.um.edu.mx/login";
     let mailOption = {
       from: "cedafam.admi@gmail.com",
       to: email,
@@ -340,7 +340,7 @@ app.post("/doctorsForm", async (req, res) => {
     },
   });
 
-  const SMUMLINK = "http://saludmentalum.um.edu.mx/login";
+  const SMUMLINK = "https://saludmentalum.um.edu.mx/login";
 
   let mailOption = {
     from: "nathacarcool@gmail.com",
