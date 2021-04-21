@@ -18,6 +18,17 @@ $(window).on("load", function () {
   }
 });
 
+  /* To Disable Inspect Element */
+  $(document).bind("contextmenu",function(e) {
+    e.preventDefault();
+   });
+   
+   $(document).keydown(function(e){
+       if(e.which === 123){
+          return false;
+       }
+   });
+
 var sidebarOpen = false;
 var sidebar = document.getElementById("sidebar");
 var sidebarCloseIcon = document.getElementById("sidebarIcon");

@@ -2,6 +2,17 @@ $(document).ready(function () {
   getDoctorsAdmin();
 });
 
+  /* To Disable Inspect Element */
+  $(document).bind("contextmenu",function(e) {
+    e.preventDefault();
+   });
+   
+   $(document).keydown(function(e){
+       if(e.which === 123){
+          return false;
+       }
+   });
+
 $(window).on("load", function () {
   if ($("#preloader").length) {
     $("#preloader")
