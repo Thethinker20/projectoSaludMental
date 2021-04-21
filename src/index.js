@@ -435,7 +435,7 @@ app.post("/addLinkForm", async (req, res) => {
         to: pasieEmail,
         subject: "Cita asigando",
         html:
-          "<h3>Felicitacones tu cita ha sido creado</h3><h5>Si aun no has hecho el pago de tu consulta te pedimos que lo hagas antes del este fecha " +
+          "<h3>Felicitacones tu cita ha sido agendado por el administrados</h3><h5>Si aun no has hecho el pago de tu consulta te pedimos que lo hagas antes del este fecha " +
           date +
           " en tu portal de Salud Mental UM</h5><h5>La fecha nueva de la consulta es: " +
           date +
