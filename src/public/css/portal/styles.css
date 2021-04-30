@@ -17,6 +17,11 @@
     width: 27%;
 }
 }
+@media only screen and (max-width: 768px) {
+  .profImg > img{
+    width: 14%;
+}
+}
 
 .profImg > h6{
     padding-top: 10px;
