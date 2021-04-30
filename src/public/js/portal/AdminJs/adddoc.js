@@ -91,6 +91,7 @@ function getDoctorsAdmin() {
     method: "get",
     success: function (response) {
       table = $("#tableDoctores").DataTable({
+        responsive: true,
         data: response,
         columns: [
           { data: "docUsername" },
@@ -165,3 +166,7 @@ function closeSidebar() {
     sidebarOpen = false;
   }
 }
+
+$('.toggle-sidebar').click(function (e) {
+  $('.main-sidebar').toggleClass('open');
+});

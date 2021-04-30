@@ -48,6 +48,10 @@ function closeSidebar() {
   }
 }
 
+$('.toggle-sidebar').click(function (e) {
+  $('.main-sidebar').toggleClass('open');
+});
+
 function getDoctInfo() {
   var tokenEncrypt = localStorage.getItem("tokenDoc");
   var base64Url = tokenEncrypt.split(".")[1];
@@ -78,6 +82,7 @@ function getDoctInfo() {
   .then(res => res.json())
   .then(data => {
     table = $("#tablePacientesD").DataTable({
+      responsive: true,
       data: data,
       columns: [
         { data: "name" },

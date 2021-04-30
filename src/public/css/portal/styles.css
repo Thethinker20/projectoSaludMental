@@ -12,6 +12,12 @@
     border-radius: 100%;
 }
 
+@media only screen and (max-width: 360px) {
+  .profImg > img{
+    width: 27%;
+}
+}
+
 .profImg > h6{
     padding-top: 10px;
 }
@@ -52,7 +58,6 @@
     -o-animation: fade-in ease-in-out 2s both;
     animation: fade-in 2s ease;
     visibility: visible;
-    -webkit-backface-visibility: hidden;
     width: 100%;
     height: 30vh;
     object-fit: cover;
@@ -123,6 +128,11 @@ table > tbody > tr > td{
     animation: animate-preloader 1s linear infinite;
   }
   
+  
+  .taTables_wrapper div.dataTables_filter input {
+    width: 100px !important;
+  }
+
   @-webkit-keyframes animate-preloader {
     0% {
       transform: rotate(0deg);

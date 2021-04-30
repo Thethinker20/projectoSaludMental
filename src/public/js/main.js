@@ -227,6 +227,7 @@ $(document).bind("contextmenu",function(e) {
   // Initiate the venobox plugin
   $(document).ready(function () {
     $(".venobox").venobox();
+    getPacientes();
   });
 
   // Initiate the datepicker plugin
@@ -299,3 +300,18 @@ const promise = fetch("/preguntasEmail", options)
     }
   });
 })
+
+// countPaciente
+
+function getPacientes(){
+  $.ajax({
+    url: "/all-data",
+    method: "get",
+    success: function (response) {
+      document.getElementById("countPaciente").innerHTML = 1779 + response["length"];
+    },
+    error: function (response) {
+      alert("server error");
+    },
+  });
+}

@@ -24,22 +24,22 @@ $(document).ready(function () {
 });
 
   /* To Disable Inspect Element */
-  $(document).bind("contextmenu",function(e) {
-    e.preventDefault();
-   });
+  // $(document).bind("contextmenu",function(e) {
+  //   e.preventDefault();
+  //  });
    
-   $(document).keydown(function(e){
-       if(e.which === 123){
-          return false;
-       }
-   });
+  //  $(document).keydown(function(e){
+  //      if(e.which === 123){
+  //         return false;
+  //      }
+  //  });
 
 function loadPacienteInfo() {
   $.ajax({
     url: "/all-data",
     method: "get",
     success: function (response) {
-      document.getElementById("numPaAdmin").innerHTML = response["length"];
+      document.getElementById("numPaAdmin").innerHTML = response.length;
     },
     error: function (response) {
       alert("server error");
@@ -78,3 +78,7 @@ function closeSidebar() {
     sidebarOpen = false;
   }
 }
+
+$('.toggle-sidebar').click(function (e) {
+  $('.main-sidebar').toggleClass('open');
+});

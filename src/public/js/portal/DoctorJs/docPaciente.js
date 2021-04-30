@@ -43,6 +43,10 @@ function closeSidebar() {
   }
 }
 
+$('.toggle-sidebar').click(function (e) {
+  $('.main-sidebar').toggleClass('open');
+});
+
 function getDoctInfo() {
   var tokenEncrypt = localStorage.getItem("tokenDoc");
   var base64Url = tokenEncrypt.split(".")[1];
@@ -75,6 +79,7 @@ function getDoctInfo() {
     .then((res) => res.json())
     .then((data) => {
       table = $("#tablePacienD").DataTable({
+        responsive: true,
         data: data,
         columns: [
           { data: "username" },
@@ -133,12 +138,10 @@ async function commentarios(event) {
       paciId,
       comentario,
     }),
-  }).then((res) => res.json());
-
+  }).then((res) => res.json())
   if (result.status == 202) {
-    Swal.fire({
-      icon: "success",
-      text: result.msg,
+    Swal.fire({ icon: "success", title: "Listo!", text: result.msg }).then(function () {
+      location.reload();
     });
   } else {
     Swal.fire({

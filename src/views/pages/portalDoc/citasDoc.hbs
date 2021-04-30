@@ -7,12 +7,12 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script src="https://kit.fontawesome.com/14fac1d4b2.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet' href="/css/portal/styles.css">
     <link rel='stylesheet' href="/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/vendor/fullCalendar/lib/main.css">
-    <link rel='stylesheet' href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+    <link rel='stylesheet' href="https://cdn.datatables.net/responsive/2.2.7/css/responsive.dataTables.min.css">
     <link rel='stylesheet' href="/vendor/shards-dashboards.1.1.0.min.css">
     <link rel='stylesheet' href="/vendor/extras.1.1.0.min.css">
-    <link rel='stylesheet' href="/css/portal/styles.css">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.6/quill.snow.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.css">
@@ -198,10 +198,54 @@
                                 <div id="calendarCita"></div>
                             </div>
                         </div>
-                        <div class="col-lg col-md-4 col-sm-6 mb-4">
+                        <div class="col-md-4 col-sm-6 mb-4">
+                            
+                            <div class="card card-small mb-4">
+                                <div class="card-header border-bottom">
+                                    <h6 class="m-0">Agregar cita al paciente</h6>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item p-3">
+                                        <div class="row">
+                                            <div class="col">
+                                                <form id="citasForm1" method="post">
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-12 mb-0">
+                                                            <label for="feEmailAddress">Paciente</label>
+                                                            <div class="form-group" name="paciente">
+                                                                <select id="pacienteIdAdmin2" class="form-control">
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-md-12 mb-3">
+                                                            <label for="feEmailAddress">Dia</label>
+                                                            <input type="date" name="date"
+                                                                class="form-control" id="dateAdmin"
+                                                                placeholder="Dia de consulta" required>
+                                                        </div>
+                                                        <div class="form-group col-md-12 mb-3">
+                                                            <label for="feEmailAddress">Horario</label>
+                                                            <input type="time" name="time"
+                                                                class="form-control" id="timeAdmin"
+                                                                placeholder="Horario de consulta" required>
+                                                        </div>
+                                                        <div class="form-group col-md-12">
+                                                            <label for="feFirstName">Liga</label>
+                                                            <input type="text" class="form-control" id="ligaZoom"
+                                                                placeholder="Liga de zoom" name="zoomLink">
+                                                        </div>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-accent">Agregar cita</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
                             <div class="card card-small card-post card-post--1">
                                 <div class="card-body">
-                                    <table id="tablePaCita" class="table table-bordered"
+                                    <table id="tablePaCita" class="table table-bordered responsive" width="100%"
                                         style="margin-top: 0px !important;">
                                         <thead class="bg-primary text-white">
                                             <tr>
@@ -216,6 +260,7 @@
                                 </div>
                             </div>
                         </div>
+                            
                     </div>
                 </div>
                 
@@ -233,7 +278,8 @@
     <script src="/vendor/fullCalendar/lib/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://unpkg.com/shards-ui@latest/dist/js/shards.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sharrre/2.0.1/jquery.sharrre.min.js"></script>

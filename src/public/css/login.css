@@ -53,7 +53,7 @@ span {
 }
 
 .passInput1{
-  width: 298px;
+  width: 297px;
   height: 30px;
   background: none;
   outline: none;
@@ -72,19 +72,22 @@ span {
   background: #fff;
   cursor: pointer;
   border-radius: 2px;
-  color: #5581b5;
+  color: #008ead;
   font-size: 16px;
   font-weight: 500;
-  width: 50%;
+  width: 95%;
 }
 
 .butLogin:hover {
-  background: #5581b5;
+  background: #008ead;
   color: #fff;
 }
 
 .imgLogin {
   height: 90px;
+  animation: fadeIn 0.5s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
 }
 
 .fade-in {
@@ -96,11 +99,11 @@ cursor: pointer;
 }
 
 .fa-eye{
-  color: #527daf;
+  color: #008ead;
   cursor: pointer;
 }
 .fa-eye-slash{
-  color: #527daf;
+  color: #008ead;
   cursor: pointer;
 }
 
@@ -110,10 +113,227 @@ cursor: pointer;
 }
 
 .fa-arrow-circle-left:hover{
- color:#5581b5;
+ color:#008ead;
 }
 
 @keyframes fadeIn {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+.title {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  justify-content: center;
+}
+.block {
+  width: 0%;
+  height: inherit;
+  background:#008ead;
+  position: absolute;
+  animation: mainBlock 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  display: flex;
+}
+.title h1 {
+  color: #fff;
+  font-size: 3rem;
+  animation: mainFadeIn 1.5s forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+
+.title h1 span {
+  width:0px;
+  height: 0px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+  background: #ad6a42;
+  -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
+  animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
+  animation-delay: 2s;
+  margin-left: 5px;
+  margin-top: -10px;
+  position: absolute;
+  bottom: 13px;
+  right: -12px;
+
+}
+
+
+.role {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-top: -10px;
+  justify-content: center;
+}
+
+.block2 {
+  width: 0%;
+  height: inherit;
+  background: #71d6ec;
+  position: absolute;
+  animation: secBlock 1s cubic-bezier(.74, .06, .4, .92) forwards;
+  animation-delay: 1s;
+  display: flex;
+}
+
+.role p {
+  animation: secFadeIn 1s forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+   font-weight: 400;
+  font-family: 'Lato';
+  color: #ffffff;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.regLink{
+color: #008ead;
+text-decoration: none;
+}
+
+.inLog{
+  animation: mainFadeIn 1s forwards;
+  animation-delay: 2s;
+  opacity: 0;
+}
+.inP{
+  animation: mainFadeIn 1s forwards;
+  animation-delay: 2.5s;
+  opacity: 0;
+}
+@media only screen and (max-width: 768px)  {
+  .butLogin{
+    width: 47%;
+  }
+}
+
+@media only screen and (max-width: 360px)  {
+  .imgLogin{
+    height: 75px;
+  }
+
+  .title h1{
+    font-size: 2.3rem;
+  }
+
+  .role p{
+    font-size: 10px;
+  }
+
+  .passInput{
+    width: 290px;
+  }
+
+  .passInput1{
+    width: 260px;
+  }
+
+  .butLogin{
+    width: 96%;
+  }
+
+  .inP p{
+    font-size: 14px;
+  }
+}
+
+
+
+@keyframes mainBlock {
+  0% {
+      width: 0%;
+      left: 0;
+  }
+  50% {
+      width: 100%;
+      left: 0;
+  }
+  100% {
+      width: 0;
+      left: 100%;
+  }
+}
+
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+
+  }
+  50% {
+    width: 100%;
+    left: 0;
+
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes mainFadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+@keyframes secFadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 0.5;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: #ad6a42;
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: #ad6a42;
+    opacity: 1;
+    bottom: 45px;
+  }
+   65% {
+      width: 7px;
+    height: 7px;
+      bottom: 0px;
+      width: 15px
+   }
+   80% {
+      width: 10px;
+    height: 10px;
+      bottom: 20px
+   }
+  100% {
+    width: 7px;
+    height: 7px;
+    background: #ad6a42;
+    border: 0px solid #222;
+    bottom: 13px;
+
+  }
 }

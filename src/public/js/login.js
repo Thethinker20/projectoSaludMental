@@ -9,15 +9,15 @@ $(window).on("load", function () {
   });
 
   /* To Disable Inspect Element */
-$(document).bind("contextmenu",function(e) {
-  e.preventDefault();
- });
+// $(document).bind("contextmenu",function(e) {
+//   e.preventDefault();
+//  });
  
- $(document).keydown(function(e){
-     if(e.which === 123){
-        return false;
-     }
- });
+//  $(document).keydown(function(e){
+//      if(e.which === 123){
+//         return false;
+//      }
+//  });
   
   const togglePassword = document.querySelector('#togglePassword');
   const password = document.querySelector('#password');
@@ -55,8 +55,7 @@ $(document).bind("contextmenu",function(e) {
       if (result.status === "ok") {
         localStorage.setItem("tokenDoc", result.data);
         window.location.replace("/inicioDoctor");
-      }
-      if (result.status == "error1") {
+      }else if (result.status == "error1") {
         Swal.fire({
           icon: "error",
           title: result.error,
@@ -89,13 +88,12 @@ $(document).bind("contextmenu",function(e) {
           localStorage.setItem("tokenPaciente", result.data);
           window.location.replace("/inicioPacientes");
         }
-      }if (result.status == "404") {
+      }if (result.status == "error1") {
         Swal.fire({
           icon: "error",
           title: result.error,
         });
-      }
-      if (result.status == "405") {
+      }else if (result.status == "404") {
         Swal.fire({
           icon: "error",
           title: result.error,

@@ -16,21 +16,26 @@
 
 <body class="logIn" id="loginContent">
     <div class="row w-100 h-100 ">
-        <div class="col-sm-2" style="height:50px;">
-            <a href="/"><i class="fas fa-arrow-circle-left" title="Regresar"></i></a>
-        </div>
-        <div class="col-lg-12 h-75 ">
+        <div class="col-lg-12 h-100 ">
+            
+            <a href="/" style="height:50px; position:absolute;"><i class="fas fa-arrow-circle-left" title="Regresar"></i></a>
+        
             <form id="loginForm" action="POST" class="w-100 h-100 d-flex justify-content-center align-items-center">
                 <div class="row d-flex justify-content-center text-center">
                     <div class="col-lg-7 mb-4">
                         <img class="imgLogin" src="/media/SMUMLogo.png" alt="">
                     </div>
                     <div class="col-lg-7">
-                        <h1>
-                            <div>Salud<span> Mental UM</span></div>
-                        </h1>
+                        <div class="title"> 
+                            <span class="block"></span>
+                            <h1>Iniciar Sesión<span></span></h1>
+                        </div>
+                        <div class="role pt-2">
+                            <div class="block2"></div>
+                            <p>Salud Mental UM</p>
+                        </div>
                     </div>
-                    <div class="col-lg-7 d-flex justify-content-center flex-column align-items-center">
+                    <div class="col-lg-7 d-flex justify-content-center flex-column align-items-center inLog">
                         <div class="input-group text-center" style="width: auto; min-width: 0;">
                             <input class="mt-2 passInput" type="text" placeholder="Usuario" name="username"
                                 id="username">
@@ -44,13 +49,13 @@
                                 </span>
                             </div>
                         </div>
+                        <div class="col-lg-7 mt-4">
+                            <button type="submit" value="Login" class="btn btn-primary butLogin">LogIn</button>
+                        </div>
                     </div>
-                    <div class="col-lg-7 mt-4">
-                        <button type="submit" value="Login" class="btn btn-primary butLogin">LogIn</button>
+                    <div class="col-lg-7 mt-2 inP">
+                        <p>No tienes una cuenta?<a href="/register" class="regLink">Registrarse</a></p>  
                     </div>
-                    {{!-- <div class="col-lg-7 mt-2">
-                        <a href="/recoverPassword">Cambiar contraseña</a>
-                    </div> --}}
                 </div>
             </form>
         </div>

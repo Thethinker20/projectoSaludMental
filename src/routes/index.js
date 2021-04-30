@@ -62,6 +62,10 @@ router.get("/pacienteCita", (req, res) => {
   res.render("pages/portalPaciente/pacienteCita" , { layout: false });
 });
 
+router.get("/paCreaCita", (req, res) => {
+  res.render("pages/portalPaciente/pacienteGeneraCita" , { layout: false });
+});
+
 //routa formulario de pagos
 router.get("/pacientePago", (req, res) => {
   res.render("auth/formPagos" , { layout: false });

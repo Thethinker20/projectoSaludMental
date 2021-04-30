@@ -15,15 +15,15 @@ $(window).on("load", function () {
 });
 
   /* To Disable Inspect Element */
-  $(document).bind("contextmenu",function(e) {
-    e.preventDefault();
-   });
+  // $(document).bind("contextmenu",function(e) {
+  //   e.preventDefault();
+  //  });
    
-   $(document).keydown(function(e){
-       if(e.which === 123){
-          return false;
-       }
-   });
+  //  $(document).keydown(function(e){
+  //      if(e.which === 123){
+  //         return false;
+  //      }
+  //  });
 
 var sidebarOpen = false;
 var sidebar = document.getElementById("sidebar");
@@ -43,6 +43,10 @@ function closeSidebar() {
     sidebarOpen = false;
   }
 }
+
+$('.toggle-sidebar').click(function (e) {
+  $('.main-sidebar').toggleClass('open');
+});
 
 function loadDoctores() {
   $.ajax({
@@ -93,6 +97,7 @@ function loadCitaTable() {
     method: "get",
     success: function (response) {
       table = $("#citasTable").DataTable({
+        responsive: true,
         data: response,
         columns: [
           { data: "paciente" },
@@ -150,6 +155,8 @@ async function citas(event) {
   }
 }
 
+
+
 //agregar cita a paciente
 const form1 = document.getElementById("citasForm1");
 form1.addEventListener("submit", citas1);
@@ -161,8 +168,15 @@ async function citas1(event) {
   const date = document.getElementById("dateAdmin").value;
   const time = document.getElementById("timeAdmin").value;
   const zoomLink = document.getElementById("ligaZoom").value;
+  var bonoCita = document.getElementById("noBono");
+if (bonoCita.checked == true){
+  bonoCita = "Bono";
+} else {
+   bonoCita = "noBono";
+}
+console.log(bonoCita)
 
-  event.preventDefault();
+ event.preventDefault();
 
   const result1 = await fetch("/addLinkForm", {
     method: "POST",
@@ -175,6 +189,7 @@ async function citas1(event) {
       date,
       time,
       zoomLink,
+      bonoCita,
     }),
   }).then((res) => res.json());
 

@@ -29,6 +29,7 @@ function getPacientesAdmin() {
       method: "get",
       success: function (response) {
         table = $("#tablePacientes").DataTable({
+          responsive:true,
           data: response,
           columns: [
             { data: "username" },
@@ -76,3 +77,7 @@ function closeSidebar() {
     sidebarOpen = false;
   }
 }
+
+$('.toggle-sidebar').click(function (e) {
+  $('.main-sidebar').toggleClass('open');
+});

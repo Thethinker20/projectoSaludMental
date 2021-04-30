@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel='stylesheet' href="/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/vendor/fullCalendar/lib/main.css">
-    <link rel='stylesheet' href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+    <link rel='stylesheet' href="https://cdn.datatables.net/responsive/2.2.7/css/responsive.dataTables.min.css">
     <link rel='stylesheet' href="/vendor/shards-dashboards.1.1.0.min.css">
     <link rel='stylesheet' href="/vendor/extras.1.1.0.min.css">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -190,7 +190,10 @@
                     <div class="page-header row no-gutters py-4">
                         <div class="col-lg-12 col-sm-4 text-center text-sm-left mb-0">
                             <h3 class="page-title mb-2">Agregar Citas</h3>
-                            <span style="font-weight: 400;">En este sección usted va poder agregar un doctor/psicologo a un paciente y tambien asignar un cita a un paciente.<br> Primero asignas un paciente a un doctor/psicologo y despues agregas una cita al paciente que acabas de agregar al doctor.</span>
+                            <span style="font-weight: 400;">En este sección usted va poder agregar un doctor/psicologo a
+                                un paciente y tambien asignar un cita a un paciente.<br> Primero asignas un paciente a
+                                un doctor/psicologo y despues agregas una cita al paciente que acabas de agregar al
+                                doctor.</span>
                         </div>
                     </div>
                     <!-- End Page Header -->
@@ -211,19 +214,21 @@
                                     <li class="list-group-item p-3">
                                         <div class="row">
                                             <div class="col">
-                                                <form id="citasForm" method="post" autocomplete="off" >
+                                                <form id="citasForm" method="post" autocomplete="off">
                                                     <div class="form-row">
                                                         <div class="form-group col-md-12 mb-0">
                                                             <label for="fePassword">Doctores</label>
                                                             <div class="form-group" name="doctor">
-                                                                <select id="doctorIdAdmin" class="form-control" required>
+                                                                <select id="doctorIdAdmin" class="form-control"
+                                                                    required>
                                                                 </select>
                                                             </div>
                                                         </div>
                                                         <div class="form-group col-md-12 mb-0">
                                                             <label for="feEmailAddress">Paciente</label>
                                                             <div class="form-group" name="paciente">
-                                                                <select id="pacienteIdAdmin" class="form-control" required>
+                                                                <select id="pacienteIdAdmin" class="form-control"
+                                                                    required>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -255,20 +260,23 @@
                                                         </div>
                                                         <div class="form-group col-md-12 mb-3">
                                                             <label for="feEmailAddress">Dia</label>
-                                                            <input type="date" name="date"
-                                                                class="form-control" id="dateAdmin"
-                                                                placeholder="Dia de consulta" required>
+                                                            <input type="date" name="date" class="form-control"
+                                                                id="dateAdmin" placeholder="Dia de consulta" required>
                                                         </div>
                                                         <div class="form-group col-md-12 mb-3">
                                                             <label for="feEmailAddress">Horario</label>
-                                                            <input type="time" name="time"
-                                                                class="form-control" id="timeAdmin"
-                                                                placeholder="Horario de consulta" required>
+                                                            <input type="time" name="time" class="form-control"
+                                                                id="timeAdmin" placeholder="Horario de consulta"
+                                                                required>
                                                         </div>
-                                                        <div class="form-group col-md-12">
+                                                        <div class="form-group col-md-12 mb-3">
                                                             <label for="feFirstName">Liga</label>
                                                             <input type="text" class="form-control" id="ligaZoom"
                                                                 placeholder="Liga de zoom" name="zoomLink">
+                                                        </div>
+                                                        <div class="form-check form-check-inline col-md-12 mb-3 d-flex flex-column pr-3">
+                                                            <label class="form-check-label" for="inlineCheckbox1">Si el paciente va conseguir la cita gratis, haz el check aqui</label>
+                                                            <input class="form-check-input" type="checkbox" id="noBono" style="margin-right: 19.8rem;">
                                                         </div>
                                                     </div>
                                                     <button type="submit" class="btn btn-accent">Agregar cita</button>
@@ -322,7 +330,8 @@
     <script src="/vendor/moments.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://unpkg.com/shards-ui@latest/dist/js/shards.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sharrre/2.0.1/jquery.sharrre.min.js"></script>

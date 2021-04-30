@@ -137,7 +137,7 @@ app.post("/registerForm", async (req, res) => {
     const linkPortal = "https://saludmentalum.um.edu.mx/login";
     let mailOption = {
       from: "cedafam.admi@gmail.com",
-      to: email,
+      to: `${email} ,cedafam.admi@gmail.com`,
       subject: "Confirmacion registro",
       html:
         "<h2>Bienvenido</h2><h5>Buendia has hecho un registro en Salud mental UM para tener un cita</h5><h5>En este link: " +
@@ -183,14 +183,14 @@ app.post("/login", async (req, res) => {
         },
         JWT_SECRET
       );
-      console.log("yess")
+      console.log("yess");
       res.json({ status: "ok", data: token });
     } else {
       res.json({ status: "404", error: "Contraseña invalido" });
     }
-  } else if(!user){
+  } else if (!user) {
     return res.json({ status: "error1", error: "Usuario invalido" });
-  }else {
+  } else {
     if (await bcrypt.compare(password, user.password)) {
       const token = jwt.sign(
         {
@@ -220,8 +220,10 @@ app.post("/login", async (req, res) => {
         JWT_SECRET
       );
       res.json({ status: "ok", data: token });
+    } else if (!user) {
+      return res.json({ status: "error1", error: "Usuario invalido" });
     } else {
-      res.json({ status: "405", error: "Contraseña invalido" });
+      res.json({ status: "404", error: "Contraseña invalido" });
     }
   }
 });
@@ -357,8 +359,8 @@ app.post("/doctorsForm", async (req, res) => {
   };
 
   transporter.sendMail(mailOption, function (err, data) {
-    console.log("Success")
-  })
+    console.log("Success");
+  });
   res.json({ status: "202", msg: "Doctor Agregado" });
 });
 
@@ -403,13 +405,14 @@ app.post("/addDoctorsForm", async (req, res) => {
 
 //agregar link horario dia a un paciente
 app.post("/addLinkForm", async (req, res) => {
-  const { pasieId, paciente, date, time, zoomLink } = req.body;
+  const { pasieId, paciente, date, time, zoomLink, bonoCita } = req.body;
 
   const newLink = await Citas.create({
     paciente,
     date,
     time,
     zoomLink,
+    bonoCita,
   });
 
   try {
@@ -433,7 +436,7 @@ app.post("/addLinkForm", async (req, res) => {
       let mailOption = {
         from: "cedafam.admi@gmail.com",
         to: pasieEmail,
-        subject: "Cita asigando",
+        subject: "Cita creado",
         html:
           "<h3>Felicitacones tu cita ha sido agendado por el administrados</h3><h5>Si aun no has hecho el pago de tu consulta te pedimos que lo hagas antes del este fecha " +
           date +
@@ -477,13 +480,18 @@ app.post("/getAllPacientOdDoc", (req, res, next) => {
 //get citas by id from database
 app.post("/getCitaById", (req, res) => {
   const data = req.body.idCita;
-  Citas.findById({ _id: data })
-    .then((result) => {
-      res.send(result);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  if (data == undefined) {
+    console.log("nooo");
+    return res.json({ status: "404", msg: [] });
+  } else {
+    Citas.findById({ _id: data })
+      .then((result) => {
+        res.send(result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 });
 
 //enviar commentarios por id
@@ -761,6 +769,37 @@ app.post("/getPagoPaciente", (req, res) => {
           console.error(error);
         });
     });
+});
+
+app.post("/changeDateTime", (req, res) => {
+  const { newDate, pacieName, newTime, pacieEmail } = req.body;
+
+  let transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "cedafam.admi@gmail.com",
+      pass: "CEDAFAM2021",
+    },
+  });
+
+  let mailOption = {
+    from: pacieEmail,
+    to: "cedafam.admi@gmail.com",
+    subject: "Nuevo Cita",
+    html:
+      "<h3>Paciente: " + pacieName + " ha enviado su fecha y horario nuevo para su consulta </h3><h5>Dia: "+newDate+" y Horario: "+newTime+"</h5>"
+  };
+
+  transporter.sendMail(mailOption, function (err, data) {
+    if (err) {
+      return res.json({ status: "500", msg: err });
+    } else {
+      return res.json({
+        status: "202",
+        msg: "Cita fue agregado y enviado",
+      });
+    }
+  });
 });
 
 // Routes
