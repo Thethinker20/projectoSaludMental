@@ -90,7 +90,7 @@ function checkPagoyBono() {
       const bonodata = data.bonoCita;
       if(data.status == "404"){
         Swal.fire({
-          icon: "error",
+          icon: "warning",
           title: "Perdon...",
           text: "Tu consulta un no ha sido creado, porfavor volver cuando consigues un correo de creado.",
         });

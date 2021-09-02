@@ -19,9 +19,9 @@
   });
 
     /* To Disable Inspect Element */
-$(document).bind("contextmenu",function(e) {
-  e.preventDefault();
- });
+// $(document).bind("contextmenu",function(e) {
+//   e.preventDefault();
+//  });
  
  $(document).keydown(function(e){
      if(e.which === 123){
@@ -293,7 +293,7 @@ const promise = fetch("/preguntasEmail", options)
       return false;
     }else{
       Swal.fire({
-        icon: "success",
+        icon: "error",
         text: data.err,
       });
       return false;

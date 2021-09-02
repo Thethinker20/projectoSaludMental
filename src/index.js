@@ -183,7 +183,6 @@ app.post("/login", async (req, res) => {
         },
         JWT_SECRET
       );
-      console.log("yess");
       res.json({ status: "ok", data: token });
     } else {
       res.json({ status: "404", error: "Contraseña invalido" });
@@ -449,7 +448,7 @@ app.post("/addLinkForm", async (req, res) => {
 
       transporter.sendMail(mailOption, function (err, data) {
         if (err) {
-          return res.json({ status: "500", msg: err });
+          return res.json({ status: "500", msg: "Correo no ha enviado" });
         } else {
           return res.json({
             status: "202",
@@ -707,14 +706,14 @@ app.post("/preguntasEmail", (req, res) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "cedafam.admi@gmail.com",
-      pass: "CEDAFAM2021",
+      user: "nathacarcool@gmail.com",
+      pass: "NikonD3300",
     },
   });
 
   let mailOption = {
     from: email,
-    to: "cedafam.admi@gmail.com",
+    to: "nathacarcool@gmail.com",
     subject: subject,
     text: message,
     html:
@@ -728,10 +727,10 @@ app.post("/preguntasEmail", (req, res) => {
   };
 
   transporter.sendMail(mailOption, function (err, data) {
-    if (err) {
-      return res.json({ status: "500", msg: err });
-    } else {
+    if (data) {
       return res.json({ status: "202", msg: "Pregunta enviado" });
+    } else {
+      return res.json({ status: "500", msg: err });
     }
   });
 });

@@ -132,7 +132,6 @@ form.addEventListener("submit", citas);
 async function citas(event) {
   const docId = document.getElementById("doctorIdAdmin").value;
   const pasieId = document.getElementById("pacienteIdAdmin").value;
-  console.log(docId);
   event.preventDefault();
 
   const result = await fetch("/addDoctorsForm", {
@@ -174,7 +173,6 @@ if (bonoCita.checked == true){
 } else {
    bonoCita = "noBono";
 }
-console.log(bonoCita)
 
  event.preventDefault();
 
