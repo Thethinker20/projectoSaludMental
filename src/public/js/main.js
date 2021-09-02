@@ -19,15 +19,15 @@
   });
 
     /* To Disable Inspect Element */
-$(document).bind("contextmenu",function(e) {
-  e.preventDefault();
- });
+// $(document).bind("contextmenu",function(e) {
+//   e.preventDefault();
+//  });
  
- $(document).keydown(function(e){
-     if(e.which === 123){
-        return false;
-     }
- });
+//  $(document).keydown(function(e){
+//      if(e.which === 123){
+//         return false;
+//      }
+//  });
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
   var scrolltoOffset = $("#header").outerHeight() - 1;

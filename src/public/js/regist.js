@@ -48,7 +48,7 @@ $("#txtConfirmPassword").change(function () {
 });
 
 //Carga pais estado y ciudad
-$.ajax({
+$.ajax({//consseguir la ruta en json
   url: "/json/countries+states+cities.json",
   method: "get",
   success: function (response) {

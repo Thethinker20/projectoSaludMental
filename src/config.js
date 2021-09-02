@@ -1,6 +1,8 @@
+
+
 /* eslint-disable no-unused-vars */
 const path = require("path");
-const merge = require("lodash/merge");
+const merge = require("lodash.merge");
 
 /* istanbul ignore next */
 const requireProcessEnv = name => {

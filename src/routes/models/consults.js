@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+const mongoose = require("mongoose");//MONGO DB
+const Schema = mongoose.Schema;//ESQUEMA
 const ObjectId = Schema.ObjectId; 
 
 // User's Atributes

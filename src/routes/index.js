@@ -71,4 +71,27 @@ router.get("/pacientePago", (req, res) => {
   res.render("auth/formPagos" , { layout: false });
 });
 
+//departamentos
+router.get("/coae", (req, res) => {
+  res.render("pages/departamentos/coae");
+});
+
+router.get("/redpum", (req, res) => {
+  res.render("pages/departamentos/redpum");
+});
+
+router.get("/fapsi", (req, res) => {
+  res.render("pages/departamentos/fapsi");
+});
+
+router.get("/cedafam", (req, res) => {
+  res.render("pages/departamentos/cedafam");
+});
+
+router.get("/cip", (req, res) => {
+  res.render("pages/departamentos/cip");
+});
+
+
+
 module.exports = router;
