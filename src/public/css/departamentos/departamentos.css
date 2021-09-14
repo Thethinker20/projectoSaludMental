@@ -1499,7 +1499,7 @@ body {
   
   .testimonials .swiper-pagination {
     margin-top: 20px;
-    position: relative;
+    position: absolute;
   }
   
   .testimonials .swiper-pagination .swiper-pagination-bullet {
@@ -2006,6 +2006,9 @@ body {
   .swiper-container {
     width: 100%;
     height: 100%;
+  }
+  .blog .swiper-pagination{
+    position: relative;
   }
   
   .swiper-slide {
