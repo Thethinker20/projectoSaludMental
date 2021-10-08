@@ -455,6 +455,114 @@ body {
     background-size: cover;
     margin-bottom: -200px;
   }
+
+/*---FAPSI----*/
+  #hero-fapsi {
+    width: 100%;
+    height: 90vh;
+    background: url("/media/fapsi-conservatorio 2.jpeg") top center;
+    opacity: 0.85;
+    background-size: cover;
+    margin-bottom: -200px;
+  }
+
+  #hero-fapsi h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: white;
+  }
+  
+  #hero-fapsi h2 {
+    color: whitesmoke;
+    margin: 10px 0 0 0;
+    font-size: 24px;
+  }
+
+  #hero-fapsi .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 35px;
+    margin-top: 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: #1977cc;
+  }
+  
+  #hero-fapsi .btn-get-started:hover {
+    background: #3291e6;
+  }
+  
+  @media (min-width: 1024px) {
+    #hero-fapsi {
+      background-attachment: fixed;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    #hero-fapsi {
+      margin-bottom: 0;
+      height: 100vh;
+    }
+    #hero-fapsi .container {
+      padding-bottom: 63px;
+    }
+    #hero-fapsi h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    #hero-fapsi h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-height: 600px) {
+    #hero-fapsi {
+      height: auto;
+    }
+  }
+/*************************/
+
+  #hero-coae {
+    width: 100%;
+    height: 90vh;
+    background: url("/media/hero-bg.jpg") top center;
+    background-size: cover;
+    margin-bottom: -200px;
+  }
+/*---CEDAFAM---*/
+  #hero-cedafam {
+    width: 100%;
+    height: 90vh;
+    background: url("/media/hero-bg.jpg") top center;
+    background-size: cover;
+    margin-bottom: -200px;
+  }
+
+  #hero-redpum {
+    width: 100%;
+    height: 90vh;
+    background: url("/media/hero-bg.jpg") top center;
+    background-size: cover;
+    margin-bottom: -200px;
+  }
+
+  #hero-cip {
+    width: 100%;
+    height: 90vh;
+    background: url("/media/hero-bg.jpg") top center;
+    background-size: cover;
+    margin-bottom: -200px;
+  }
   
   #hero .container {
     position: relative;
@@ -2083,7 +2191,7 @@ body {
     font-size: 1.2rem;
   }
   .bg-horario {
-    background-image: url(/media/departments-3.jpg);
+    background-image: url(/media/fapsi-clinica.jpeg);
     background-repeat: no-repeat;
     background-position: center center;
     min-height: 40rem;
@@ -2581,7 +2689,7 @@ body {
 # Cta CEDAFAMP 
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("/media/carusel-1.jpg") fixed center center;
+  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("/media/cedafamp-profesionales.jpeg") fixed center center;
   background-size: cover;
   padding: 120px 0;
 }
@@ -2635,7 +2743,88 @@ body {
   }
 }
 
-  
-  
-  
-  
+/*--------------------------------------------------------------
+# Líneas de investigación CIP 
+--------------------------------------------------------------*/
+
+.cip-inv .faq-list {
+  padding: 0 100px;
+}
+
+.cip-inv .faq-list ul {
+  padding: 0;
+  list-style: none;
+}
+
+.cip-inv .faq-list li + li {
+  margin-top: 15px;
+}
+
+.cip-inv .faq-list li {
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+}
+
+.cip-inv .faq-list a {
+  display: block;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 0 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.cip-inv .faq-list span{
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* @media (max-width: 1200px) {
+  .cip-inv .faq-list {
+    padding: 0;
+  }
+} */
+
+
+.cip-inv .faq-list .icon-show, .cip-inv .faq-list .icon-close {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.cip-inv .faq-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+}
+
+.cip-inv .faq-list .icon-show {
+  display: none;
+}
+
+.cip-inv .faq-list a.collapsed {
+  color: #343a40;
+}
+
+.cip-inv .faq-list a.collapsed:hover {
+  color: #1977cc;
+}
+
+.cip-inv .faq-list a.collapsed .icon-show {
+  display: inline-block;
+}
+
+.cip-inv .faq-list a.collapsed .icon-close {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .cip-inv .faq-list {
+    padding: 0;
+  }
+} 
