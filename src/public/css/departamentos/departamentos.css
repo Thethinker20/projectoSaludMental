@@ -532,22 +532,156 @@ body {
   }
 /*************************/
 
+/*---COAE----*/
   #hero-coae {
     width: 100%;
     height: 90vh;
-    background: url("/media/hero-bg.jpg") top center;
-    background-size: cover;
-    margin-bottom: -200px;
-  }
-/*---CEDAFAM---*/
-  #hero-cedafam {
-    width: 100%;
-    height: 90vh;
-    background: url("/media/hero-bg.jpg") top center;
+    background: url("/media/coae-k.jpeg") top center;
     background-size: cover;
     margin-bottom: -200px;
   }
 
+  #hero-coae h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: white;
+  }
+  
+  #hero-coae h2 {
+    color: whitesmoke;
+    margin: 8px 0 0 0;
+    font-size: 28px;
+  }
+
+  #hero-coae .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 35px;
+    margin-top: 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: #1977cc;
+  }
+  
+  #hero-coae .btn-get-started:hover {
+    background: #3291e6;
+  }
+  
+  @media (min-width: 1024px) {
+    #hero-coae {
+      background-attachment: fixed;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    #hero-coae {
+      margin-bottom: 0;
+      height: 100vh;
+    }
+    #hero-coae .container {
+      padding-bottom: 63px;
+    }
+    #hero-coae h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    #hero-coae h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-height: 600px) {
+    #hero-coae {
+      height: auto;
+    }
+  }
+/*******************************/
+
+/*---CEDAFAM---*/
+  #hero-cedafam {
+    width: 100%;
+    height: 90vh;
+    background: url("/media/cedafam-estudiantes.jpg") center;
+    background-size: cover;
+    margin-bottom: -200px;
+  }
+
+  #hero-cedafam h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: white;
+  }
+  
+  #hero-cedafam h2 {
+    color: whitesmoke;
+    margin: 8px 0 0 0;
+    font-size: 28px;
+  }
+
+  #hero-cedafam .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 35px;
+    margin-top: 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: #1977cc;
+  }
+  
+  #hero-cedafam .btn-get-started:hover {
+    background: #3291e6;
+  }
+  
+  @media (min-width: 1024px) {
+    #hero-cedafam {
+      background-attachment: fixed;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    #hero-cedafam {
+      margin-bottom: 0;
+      height: 100vh;
+    }
+    #hero-cedafam .container {
+      padding-bottom: 63px;
+    }
+    #hero-cedafam h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    #hero-cedafam h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-height: 600px) {
+    #hero-cedafam {
+      height: auto;
+    }
+  }
+/************************/
+/*---REDPUM----*/
   #hero-redpum {
     width: 100%;
     height: 90vh;
@@ -555,14 +689,83 @@ body {
     background-size: cover;
     margin-bottom: -200px;
   }
+/********************/
 
+/*--CIP--*/
   #hero-cip {
     width: 100%;
     height: 90vh;
-    background: url("/media/hero-bg.jpg") top center;
+    background: url("/media/cip-revista.jpeg") center;
     background-size: cover;
     margin-bottom: -200px;
   }
+
+  #hero-cip h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: black;
+  }
+  
+  #hero-cip h2 {
+    color: black;
+    margin: 8px 0 0 0;
+    font-size: 28px;
+  }
+
+  #hero-cip .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 35px;
+    margin-top: 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: #1977cc;
+  }
+  
+  #hero-cip .btn-get-started:hover {
+    background: #3291e6;
+  }
+  
+  @media (min-width: 1024px) {
+    #hero-cip {
+      background-attachment: fixed;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    #hero-cip {
+      margin-bottom: 0;
+      height: 100vh;
+    }
+    #hero-cip .container {
+      padding-bottom: 63px;
+    }
+    #hero-cip h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    #hero-cip h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-height: 600px) {
+    #hero-cip {
+      height: auto;
+    }
+  }
+
+/********************/
   
   #hero .container {
     position: relative;
@@ -2746,6 +2949,9 @@ body {
 /*--------------------------------------------------------------
 # Líneas de investigación CIP 
 --------------------------------------------------------------*/
+.cip-inv {
+  background-color: #d6e9fa;
+}
 
 .cip-inv .faq-list {
   padding: 0 100px;
@@ -2784,12 +2990,15 @@ body {
   margin-right: 10px;
 }
 
-/* @media (max-width: 1200px) {
-  .cip-inv .faq-list {
-    padding: 0;
+@media (max-width: 974px) {
+  .cip-inv .imagen-revista img{
+    display: none;
   }
-} */
+}
 
+.cip-inv .btn-revista {
+  text-decoration: underline;
+}
 
 .cip-inv .faq-list .icon-show, .cip-inv .faq-list .icon-close {
   font-size: 24px;
@@ -2801,6 +3010,7 @@ body {
 .cip-inv .faq-list p {
   margin-bottom: 0;
   padding: 10px 0 0 0;
+  margin-left: 30px;
 }
 
 .cip-inv .faq-list .icon-show {

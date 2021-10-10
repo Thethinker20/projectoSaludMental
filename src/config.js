@@ -2,7 +2,7 @@
 
 /* eslint-disable no-unused-vars */
 const path = require("path");
-const merge = require("lodash.merge");
+const merge = require("lodash.merge");// (.) espra localhost (/) de manera online
 
 /* istanbul ignore next */
 const requireProcessEnv = name => {
