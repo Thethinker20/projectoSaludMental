@@ -1,0 +1,248 @@
+#formContenido\:messageListCarNat {
+    margin-top: 3px !important;
+}
+
+#formContenido\:IDCPersonaFisicaDatosIngresoPnl {
+    margin-top: 46px;
+}
+
+#formContenido\:messageList24 button {
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+#formContenido\:j_idt116 {
+    margin-bottom: 3px !important;
+}
+
+#formContenido\:j_idt117 {
+    margin-bottom: 3px !important;
+}
+
+#formContenido\:cvePaisResidencia {
+    margin-bottom: 18px !important;
+}
+
+#formContenido\:j_idt88 {
+    margin-bottom: 0px !important;
+}
+
+#formContenido\:j_idt101 {
+    margin-bottom: 0px !important;
+}
+
+#formContenido\:plantillaTelefonos\:panelTelefonos_header {
+    height: 0px !important;
+    padding: 0px !important;
+}
+
+#formContenido\:plantillaCorreos\:panelCorreos_header {
+    height: 0px !important;
+    padding: 0px !important;
+}
+
+#formContenido\:plantillaTelefonos\:tablaTelefonos_head > tr th {
+    vertical-align: bottom !important;
+    padding: 0px !important;
+}
+
+#formContenido\:plantillaCorreos\:tablaCorreoElectronico_head > tr th {
+    padding: 0px !important;
+    vertical-align: bottom !important;
+}
+
+.basurero {
+    background-position: center;
+    background-image: url("../images/trash_def.png")!important;
+    background-size: 15px 15px !important;
+}
+
+#formContenido\:referencias {
+    padding: 0px !important;
+}
+
+#formContenido\:detalleDomicilio {
+    margin-top: 25px !important;
+}
+
+#formContenido\:btnAgregar {
+    margin-top: 14px !important;
+}
+
+#formContenido\:layoutDetalleDomicPG {
+    margin-top: 0px !important;
+}
+
+#formContenido\:detalleDomicilioPG {
+    margin-top: 0px !important;
+}
+
+#formContenido\:detalleDomicilioPG td[role~='gridcell'] {
+    padding: 0px !important;
+}
+
+.anchoDetalleDomicilioPG {
+    width: 1209px !important;
+    margin-left: 10px !important;
+    /*Revisar todos los domicilios de tramites*/
+}
+
+.anchoRefDetDom {
+    width: 773px !important;
+    box-sizing: initial;
+}
+
+.anchoCaractDetDom {
+    width: 765px !important;
+    box-sizing: initial;
+}
+
+.ui-state-error {
+    background: WHITE !important;
+    border: 1px solid #D0021B !important;
+}
+
+.ui-state-error .ui-state-default {
+    background: #EEEEEE !important;
+}
+
+.margenTipoTelefono {
+    padding-left: 1px !important;
+    margin-bottom: 8px !important;
+}
+
+.margenLada {
+    margin-left: -8px !important;
+    padding-left: 0px !important;
+    margin-bottom: 8px !important;
+}
+
+.margenTelefono {
+    margin-left: -8px !important;
+    padding-left: 0px !important;
+    margin-bottom: 8px !important;
+}
+
+.margenTelefonoBoton {
+    margin-left: -8px !important;
+    padding-left: 0px !important;
+    margin-bottom: 12px !important;
+    margin-top: 0px !important;
+}
+/*Renglones*/
+.altoRenglonMuni {
+    height: 43px !important;
+    vertical-align: bottom !important;
+}
+
+.altoRenglonMuniCaja {
+    height: 48px !important;
+}
+
+.altoRenglonTCalle {
+    height: 39px !important;
+    vertical-align: bottom !important;
+}
+
+.altoRenglonTCalleCaja {
+    height: 48px !important;
+}
+
+.altoRenglonInt {
+    height: 39px !important;
+    vertical-align: bottom !important;
+}
+
+.altoRenglonIntCaja {
+    height: 48px !important;
+}
+
+.altoRenglonCaract {
+    height: 39px !important;
+    vertical-align: bottom !important;
+}
+
+.altoRenglonCaractCaja {
+    height: 48px !important;
+}
+
+.altoRenglonRef {
+    height: 39px !important;
+    vertical-align: bottom !important;
+}
+
+.altoRenglonRefCaja {
+    height: 121px !important;
+}
+
+.altoRenglonTel {
+    height: 112px !important;
+}
+
+.altoRenglon {
+    height: 35px !important;
+}
+
+.tituloDom {
+    margin-top: -10px !important;
+    margin-bottom: 60px !important;
+}
+
+.alineacionVerticalTipoTel {
+    vertical-align: bottom !important;
+}
+/*Ancho Columnas*/
+.anchoColumna {
+    width: 403px !important;
+}
+
+.anchoColumna2 {
+    width: 403px !important;
+    margin-left: 50px !important;
+}
+
+.agregarIPFCont {
+    width: 1170px !important;
+    margin-left: -15px !important;
+    height: 90px !important;
+}
+
+.anchoColumna3 {
+    width: 403px !important;
+}
+/*Ancho Combos*/
+.anchoMDetDom {
+    width: 362px !important;
+    box-sizing: initial;
+}
+/*Ancho Cajas*/
+.anchoBoxDetDom {
+    width: 362px !important;
+    box-sizing: initial;
+}
+
+.anchoCorreoContri {
+    width: 373px !important;
+}
+
+.anchoCorreoContriRR {
+    margin-left: -8px !important;
+}
+/*Autocomplete*/
+#formContenido\:somLocalidad_input {
+    width: 343px !important;
+}
+
+#formContenido\:somColonia_input {
+    width: 343px !important;
+}
+
+.tablaGridDom {
+    width: 1180px !important;
+    margin-left: -16px !important
+}
+
+.ui-state-error {
+    background: WHITE !important;
+    border: 1px solid #ccc !important;
+}

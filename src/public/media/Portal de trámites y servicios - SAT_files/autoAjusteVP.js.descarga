@@ -1,0 +1,131 @@
+var va373 = 46;
+var va373Exce = 51;
+var va373Mayus = 40;
+
+var va776 = 103;
+var va272 = 33;
+var vaObliga = 50;
+var vaPreguntaRespuesta = 133;
+var vaCorreo = 29;
+var vaLada = 10;
+
+var list776 = ['pruebaError', 'regimendescLenguajeCiudadano'];
+var list373 = ['tipoSolInsPF','tipoMovimientoPF','nombreTramitePM','fechaMovimientoPM','fechaFirmaPM','regimenCapitalPM','municipioCont', 'localidadCont', 'coloniaCont', 'tipoVialidad', 'nombreCalleCont', 'noLetraExt', 'noInterior', 'entreCalle', 'yCalle', 'referenciasAdici'];
+
+
+
+var list373Mayus = ['maternoPF','paternoPF','nombrePF','denominacionRazonSocPM'];
+
+var list373Exce = ['nombreComercialPM','fechaIniOperaPM'];
+
+
+var listcorreoElectronico = ['correoElectronico'];
+
+var lisLada = ['ladaCelular','ladaFijo'];
+
+
+
+//Itemas en lista 
+var list272 = ['actividadEconDesSat'];
+
+var listObliga = ['obligacionDesLenguajeCiudadano','obligacionDesVencimiento'];
+
+var listPreguntaRespuesta = ['respuestasConcatenadas'];
+
+
+//Para elementos unicos 
+for (var keyOne of list776) {
+        if ($('#' + keyOne).text().trim().length > va776) {
+            var va = parseInt(($('#' + keyOne).text().trim().length / va776) + 1) * 39;
+            document.getElementById(keyOne).style.cssText = 'height: ' + va + 'px !important; text-indent: 3px !important;';
+        }
+}
+
+//Para elementos unicos 
+for (var keyTwo of list373) {
+        console.log(keyTwo);
+
+        console.log($('#' + keyTwo).text().trim().length);
+
+    if ($('#' + keyTwo).text().trim().length > va373) {
+        console.log("Entro al if ");
+        var vaFL = parseInt(($('#' + keyTwo).text().trim().length / va373) + 1) * 39;
+        console.log(vaFL);
+        
+        document.getElementById(keyTwo).style.cssText = 'height: ' + vaFL + 'px !important; text-indent: 3px !important;';
+    }
+}
+//Para elementos unicos con exceptions
+for (var keyTwoExce of list373Exce) {
+    if ($('#' + keyTwoExce).text().trim().length > va373Exce) {
+        var vaFL = parseInt(($('#' + keyTwoExce).text().trim().length / va373Exce) + 1) * 39;
+        document.getElementById(keyTwoExce).style.cssText = 'height: ' + vaFL + 'px !important; text-indent: 3px !important;';
+    }
+}
+
+for (var keyTwoMayus of list373Mayus) {
+    if ($('#' + keyTwoMayus).text().trim().length > va373Mayus) {
+        var vaFLMy = parseInt(($('#' + keyTwoMayus).text().trim().length / va373Mayus) + 1) * 39;
+        document.getElementById(keyTwoMayus).style.cssText = 'height: ' + vaFLMy + 'px !important; text-indent: 3px !important;';
+    }
+}
+
+//Para elementos unicos 
+for (var keyOneF of listcorreoElectronico) {
+        if ($('#' + keyOneF).text().trim().length > vaCorreo) {
+            var va = parseInt(($('#' + keyOneF).text().trim().length / vaCorreo) + 1) * 39;
+            document.getElementById(keyOneF).style.cssText = 'height: ' + va + 'px !important; text-indent: 3px !important;';
+        }
+} 
+
+//Para elementos unicos 
+for (var keyTree of lisLada) {
+    if ($('#' + keyTree).text().trim().length > vaLada) {
+        var vaFL = parseInt(($('#' + keyTree).text().trim().length / vaLada) + 1) * 39;
+        document.getElementById(keyTree).style.cssText = 'height: ' + vaFL + 'px !important; padding-left: 3px !important;';
+    }
+}
+
+
+//Para tablas 
+for (var keyTree of list272) {
+    var elems = document.querySelectorAll('#'+keyTree);
+    var index = 0, length = elems.length;
+    for ( ; index < length; index++) {    
+         if (elems[index].firstChild.nodeValue.trim().length > va272){
+        var va = parseInt((elems[index].firstChild.nodeValue.trim().length / va272) + 1) * 39;
+        elems[index].style.cssText = 'height: ' + va + 'px !important; text-indent: 3px !important;';
+        }
+    }
+
+}
+
+for (var keyTree of listObliga) {
+    var elems = document.querySelectorAll('#'+keyTree);
+    var index = 0, length = elems.length;
+    for ( ; index < length; index++) {
+         if (elems[index].firstChild.nodeValue.trim().length > vaObliga){
+        var va = parseInt((elems[index].firstChild.nodeValue.trim().length / vaObliga) + 1) * 39;
+        elems[index].style.cssText = 'height: ' + va + 'px !important; text-indent: 3px !important;';
+        }
+    }
+}
+
+
+for (var keyTree of listPreguntaRespuesta) {
+    var elems = document.querySelectorAll('#'+keyTree);
+    var index = 0, length = elems.length;
+    for ( ; index < length; index++) {
+         if (elems[index].firstChild.nodeValue.trim().length > vaPreguntaRespuesta){
+        var va = parseInt((elems[index].firstChild.nodeValue.trim().length / vaPreguntaRespuesta) + 1) * 39;
+        elems[index].style.cssText = 'height: ' + va + 'px !important; text-indent: 3px !important;';
+        }
+    }
+}
+
+//Para tablas con rows dimanicos
+
+//'nombreComercialPM','regimenCapitalPM','denominacionRazonSocPM'
+
+
+

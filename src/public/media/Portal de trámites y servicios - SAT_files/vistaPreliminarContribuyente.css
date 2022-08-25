@@ -1,0 +1,18 @@
+
+.paddinTopDatosSolicitante{
+    height: 25px !important;
+}
+
+.tablaEmision{
+    width: 1180px !important; 
+    margin-left: -13px !important;
+    border-collapse: collapse !important;
+}
+
+table.tablaEmision td, th{
+    
+    border:1px solid #E2E2E2 !important;
+    height: 39px !important;
+    
+}
+

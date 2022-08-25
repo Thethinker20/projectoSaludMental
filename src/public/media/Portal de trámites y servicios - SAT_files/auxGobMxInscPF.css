@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+#formContenido:panelIdentificaPF {
+    margin-top: 19px !important;
+}
+
+#formContenido\:pnlRepresentanteLegal {
+    margin-top: 21px !important;
+}
+
+#formContenido\:pnlRepresentanteLegal_content > #separadorSinHeader {
+    margin-bottom: 58px !important;
+}
+
+#formContenido:IDCPersonaFisicaPaso3Panel {
+    margin-top: 22px !important;
+}
+
+#formContenido\:domiciliosId_content > #separadorSinHeader {
+    margin-bottom: 72px !important;
+}
+
+#formContenido\:detalleDomicilio {
+    margin-top: 20px !important;
+}
+
+#formContenido\:detalleDomicilio_content > #separadorSinHeader {
+    margin-bottom: 63px !important;
+}
+
+#formContenido\:idPanelDatosIngreso {
+    margin-top: 20px !important;
+}
+
+#formContenido\:idPanelDatosIngreso_content > #separador23 {
+    margin-bottom: 67px !important;
+}
+/**/
+#formContenido\:pnlVistaPreliminar_header {
+    padding-top: 27px !important;
+    /*padding-bottom: 0px !important;*/
+}
+
+#formContenido\:pnlVistaPreliminar_content {
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+}
+
+#formContenido\:pnlVistaPreliminar_content > #separadorSinHeader {
+    margin-bottom: 67px !important;
+}
+
+.tablaEmision {
+    margin-top: 0px !important;
+}
+/**/

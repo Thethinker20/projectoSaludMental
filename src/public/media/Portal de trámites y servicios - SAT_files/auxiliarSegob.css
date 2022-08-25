@@ -1,0 +1,2498 @@
+/*
+    Estilos que complementan a los de Segob para la inscripcion por CURP.
+*/
+.txtField{ /*para los componentes: inputText*/
+    TEXT-TRANSFORM: uppercase !important;
+    /*font-size: 14.0px !important;*/
+}
+
+.autocompleteDomicilio .ui-inputfield{
+
+    padding-top:6px !important;padding-bottom:7px !important
+}
+.autocompleteDomicilio .ui-autocomplete-input {
+    width: 359px !important;
+    TEXT-TRANSFORM: uppercase !important;
+    border-right: none !important;
+    box-sizing: initial;
+}
+
+.autocompleteDomicilio .ui-button {
+    width: 23px !important;
+    height: 38px !important;
+    padding: 0 !important;
+    /*Agregadas*/
+    display: inline-block;
+    position: relative;
+    line-height: normal;
+    margin-right: .1em;
+    margin-left: -4px;
+    margin-top: 7px;
+    box-sizing: initial;
+    top: 1px;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+    overflow: visible;
+    background:#f6f6f6 !important;
+    color:#000 !important;
+    border: 1px solid #ddd !important;
+    box-shadow: 0px 0px 0px #fff !important;
+}
+.autocompleteDomicilioRojo .ui-button {
+    border: 1px solid #D0021B !important;
+    box-shadow: 0px 0px 0px #D0021B !important;
+}
+.autocompleteDomicilioRojo .ui-inputfield{
+    border: 1px solid #D0021B !important;
+    box-shadow: 0px 0px 0px #D0021B !important;
+}
+
+.autocompleteDomicilio .ui-autocomplete-input:hover{
+	background:#ddd !important;
+        border: 1px solid #c4c4c4 !important;
+}
+
+.autocompleteDomicilio .ui-button .ui-icon {
+    background-image: url("../css_segob/imagesSegob/ui-icons_000_256x240.png");
+}
+
+.txtGenerico{  /*para los componentes: calendar, selectOneMenu*/
+    /*font-size: 14px !important;
+    font-family: 'Open Sans', sans-serif !important;*/
+}
+
+.selectOneMenu5px {
+    margin-top: -6px  !important;
+}
+
+.ui-button{
+	float:none !important;
+}
+
+.anchoAuto{width:auto !important;}
+.ancho10{width:10% !important;}
+.ancho80{width:80% !important;}
+.ancho90{width:90% !important;}
+.ancho100{width:100% !important;}
+.ancho30px{width:30px !important;}
+.ancho40px{width:40px !important;}
+.ancho50px{width:50px !important;}
+.ancho60px{width:60px !important;}
+.ancho70px{width:70px !important;}
+.ancho80px{width:80px !important;}
+.ancho84px{width:84px !important;}
+.ancho89px{width:89px !important;}
+.ancho90px{width:90px !important;}
+.ancho95px{width:95px !important;}
+.ancho100px{width:100px !important;}
+.ancho105px{width:105px !important;}
+.ancho110px{width:110px !important;}
+.ancho130pxCont{width:130px !important;}
+.ancho150px{width:150px !important;}
+.ancho150pxCont{width:150px !important;}
+.ancho160px{width:160px !important;}
+.ancho200px{width:200px !important;}
+.ancho210px{width:210px !important;}
+.ancho240px{width:240px !important;}
+.ancho300px{width:300px !important;}
+.ancho300pxpm{width:300px !important;}
+.ancho318px{width:318px !important;}
+.ancho328px{width:328px !important;}
+.ancho330px{width:330px !important;}
+.ancho335px{width:335px !important;}
+.ancho345px{width:345px !important;}
+.ancho350pxpm{width:350px !important;}
+.ancho365pxpm{width:365px !important;}
+.ancho362pxpm{width:362px !important;}
+.ancho367pxpm{width:367px !important;}
+.ancho340px{width:340px !important;}
+.ancho342px{width:342px !important;}
+.ancho373px{width:373px !important;}
+.ancho380px{width:380px !important;}
+.ancho400px{width:400px !important;}
+.anchoCorreoCont{width:480px !important;}
+.ancho450px{width:450px !important;}
+.ancho570pxpm{width: 545px !important;}
+.ancho570px{width:570px !important;}
+.ancho500px{width:500px !important;}
+.ancho500pxCont{width:500px !important;}
+.ancho590px{width:590px !important;}
+.ancho592px{width:592px !important;}
+.ancho640px{width:640px !important;}
+.ancho700px{width:700px !important;}
+.ancho746px{width:730px !important;}
+.ancho776px{width:776px !important;}
+.ancho780px{width:780px !important;}
+.ancho791px{width:791px !important;}
+.ancho650px{width:650px !important;}
+.ancho1100px{width:1100px !important;}
+.ancho1110px{width:1110px !important;}
+.ancho1180px{width:1180px !important;}
+.ancho1190px{width:1190px !important;}
+.ancho1200px{width:1200px !important;}
+.ancho1476px{width:1476px !important;}
+.anchoTel{width:150px !important;}
+.anchoCorreo{width:250px !important;}
+.ancho650DetDom{width:657px !important;box-sizing: initial;}
+.ancho310DetDom{width:310px !important;box-sizing: initial;}
+.ajuste{padding-top:2px !important;padding-bottom:3px !important}
+.ajuste1{padding-top:6px !important;padding-bottom:7px !important}
+.paddingDerecho{padding: 0 20px 0 0 !important}
+.ui-inputfield{padding-top:6px !important;padding-bottom:7px !important}
+.anchoVer{width:74px !important; padding:0px !important; box-sizing: initial;}
+.anchoBorrar{width:70px !important; padding:0px !important}
+.alineacionVerticalEnmedio{vertical-align: middle !important;}
+.margenIzquierdo5px{margin-left: -0px !important;}
+.margenIzquierdo1px{margin-left: -1px !important;}
+.margenIzquierdo3px{margin-left: -3px !important;}
+.margenAbajo25px{margin-bottom: 20px !important;}
+
+.ui-panelgrid table, .ui-widget-content table {
+    width: 100%;
+}
+
+.ui-panelgrid td {
+    border-width: 1px;
+    border-style: inherit;
+    border-color: inherit;
+    padding: 4px 10px;
+}
+
+.panelGrid{
+    /*font-size: 16px !important;
+    font-family: 'Open Sans', sans-serif !important;
+    margin-bottom:10px;*/
+    width:900px;
+    border:0px;
+}
+
+.panelGrid tr, .panelGrid td {
+    border: none;
+}
+
+.txtLabel{    /*para los componentes: outputLabel, outputText, selectBooleanCheckbox, selectOneRadio*/
+    /*font-size: 16px !important;
+    font-family: 'Open Sans', sans-serif !important;*/
+    font-style: normal !important;
+    font-weight:normal !important;
+}
+
+.centrar{text-align:center !important;}
+.derecha{text-align:right !important;}
+.sinBorde{border:none !important;}
+.textoRojo{color:red !important;}
+.textoGris{color:#777777 !important;}
+
+.ui-datatable thead th{
+    table-layout:fixed;
+    overflow:hidden;
+    white-space: normal;
+    word-wrap:break-word;
+    padding: 5px 0px 5px 0px;
+    /*font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;*/
+    text-align: center !important;
+}
+
+.ui-datatable tbody td{
+    table-layout:fixed;
+    overflow:hidden;
+    word-wrap:break-word;
+    white-space: normal;
+    padding: 0px 0px 0px 9px;
+    border-color: #e2e2e2
+    /*font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;*/
+}
+
+.txtLabel3c{
+    white-space: pre-wrap;
+    display: block;
+    white-space: normal;
+    word-wrap:break-word;
+}
+
+a.verdomicilio:link {text-decoration: underline !important;} /* Link no visitado*/
+a.verdomicilio:visited {text-decoration: none !important; color:blue  !important} /*Link visitado*/
+a.verdomicilio:active {text-decoration: none; color: black !important; background-color: #5E92B9 !important; } /*Link activo*/
+a.verdomicilio:hover {cursor: pointer; text-decoration: underline !important; color: #7B9CF0 !important; background-color: transparent  !important; } /*Mouse sobre el link*/
+
+label.labelMouseOver:hover{
+text-decoration: underline !important;
+cursor:pointer;
+}
+.ui-selectonemenu .ui-selectonemenu-trigger .ui-icon {
+  margin-left: 0px !important;
+}
+
+/* Estilos solo para look and feel de gob.mx */
+.ui-menuitem-text{
+    color: #555;
+}
+.ui-selectonemenu-item:hover{
+	background:#3399FF !important;
+	color:#fff !important;
+}
+.panelCorreosTelefonos{
+    width: 360px !important;
+    border-style: none !important;
+}
+.noBorder tr, .noBorder td{
+    border: 0px !important;
+}
+.panelDetDom{
+    width:1165px !important;
+    /*border: 1px solid #e2e2e2 !important;*/
+}
+.contenedor{
+    margin-top:-4px !important;
+    min-width:700px;
+    max-width:1200px;
+    margin:auto;
+    border: 0px solid red !important;
+}
+.menuIPF{
+    width: 1180px !important;
+    margin-left: -11px  !important;
+}
+.menuGMX{
+    margin-left: -12px !important;
+}
+.gmxNobordePanelAlign{
+    margin-left: 0px !important;
+    margin-top: 23px !important;
+}
+
+.gmxNoborde4e{
+    margin-left: 0px !important;
+    margin-top: -27px !important;
+}
+
+.gmxNoborde70{
+    margin-top: -15px !important;
+}
+
+.gmxNoborde60Curp{
+    margin-top: 48px !important;
+}
+
+.gmxNoborde71{
+    margin-top: -1px !important;
+}
+
+.gmxNoborde75{
+    margin-top: -12px !important;
+}
+
+.gmxNobordePanelAlignSuspension{
+    margin-left: 0px !important;
+    margin-top: 23px !important;
+    margin-bottom: 45px !important;
+}
+
+.gmxNobordePanelAlign1{
+    margin-left: 23px !important;
+}
+
+.gmxNobordePanelAlignComple{
+    margin-left: 0px !important;
+    margin-top: 6px !important;
+}
+
+.gmxNobordePanelAlignCD{
+    margin-left: 0px !important;
+    margin-top: -15px !important;
+}
+
+.gmxNobordePaneSGridD{
+    margin-left: 0px !important;
+    margin-top: -68px !important;
+}
+.gmxAlineaPF{
+    margin-left: 10px !important;
+}
+.gmxAlineaPFF{
+    margin-left: 5px !important;
+}
+
+.panelIPF {
+    width:1170px; margin-left: -25px; border: 1px solid #fff !important;
+}
+.panelIPFCURP {
+    width:1180px; margin-left: 0px; border: 1px solid #fff !important;
+}
+.panelIPFCURPCURP {
+    width:1180px; margin-left: -15px; border: 1px solid #fff !important;
+}
+.panelIPFRaM {
+    margin-bottom: -7px !important
+}
+
+.panelIPM {
+    width:1180px; margin-left: -16px; border: 1px solid #fff !important;
+}
+.panelIPMRes {
+    width:1200px; margin-left: -30px; border: 1px solid #fff !important;
+}
+.panelIPMDocProt {
+    width:1180px; margin-left: -16px; border: 1px solid #fff !important;
+}
+
+.panelIPMDocProt2 {
+    width:1200px; margin-left: -16px; border: 1px solid #fff !important;
+}
+.panelIPFDI {
+    width:1192px !important; margin-left: -25px; border: 1px solid #fff !important;
+}
+.panelIPFDIR{
+    margin-top: -11px !important; width: 1167px !important;
+}
+
+.panelIPF3 {
+    width:1192px !important; margin-left: -25px; border: none  !important;
+}
+
+.panelIPFX {
+    width:1180px; margin-left: -38px; border: 1px solid #fff !important;
+}
+.panelIPFD {
+    width:1182px;
+    margin-left: -16px;
+    border: 1px solid #fff !important;
+}
+.panelIPFCURP {
+    border: 1px solid red !important;
+    width:1180px;
+    margin-left: 0px;
+    border: 1px solid #fff !important;
+}
+.panelIPFDet {
+    width:1180px; margin-left: -15px; border: 1px solid #fff !important;
+}
+.pnlDet{
+    margin-left: -15px !important;
+}
+.pnlHdrDet{
+     margin-left: -35px !important;
+}
+.pnlHdrActEcoDet{
+     margin-left: -40px !important;
+}
+.datosUbi .ui-datagrid-content{
+    border: 1px solid #fff !important;
+    margin-left: -15px !important
+}
+.panelIPFDet1 {
+    width:1170px; margin-left: -20px; border: 0px solid #fff !important;
+}
+
+.panelIPF1{
+    width:1170px; margin-left: 45px; border: 0px solid #fff !important;
+}
+.panelIPF2{
+    width:1170px; margin-left: 0px; border: 0px solid #fff !important;
+}
+.panelIPF4{
+    width:1150px; margin-left: 55px; border: 0px solid #fff !important;
+}
+.panelIPF5{
+    width:1150px; margin-left: 55px; border: 0px solid #fff !important;
+}
+.panelIPF6{
+    width:1185px; margin-left: 38px; border: 0px solid #fff !important;
+}
+.panelIPF7{
+    margin-left: 45px !important; width: 870px !important;
+}
+
+.pnlAumDisFecMov{
+    width: 1190px !important; margin-left: -55px !important;
+}
+
+.panelreact{
+    margin-left: -25px;  width: 1180px !important
+}
+.panelIPFRL{
+    margin-left: -15px;  width: 1180px !important
+}
+
+.panelIPFRL2{
+    margin-bottom: -16px; margin-left: -25px;  width: 1266px !important
+}
+.panelSusp{
+    width: 1190px !important;
+    margin-left: -25px !important;
+}
+.panelCoincidendias{
+    width: 1190px !important;
+    margin-left: -30px !important;
+}
+
+.panelCoincidendiasPF{
+    width: 1180px !important;
+    margin-left: 40px !important;
+}
+.panelSeparadorAYC{
+    margin-left: 0px !important;
+    margin-top: 29px !important;
+}
+
+.sinoPMDatIng{
+     margin-left: -4px !important;
+     margin-bottom: 4px !important;
+}
+
+
+.detalleDomicilioHeader{
+ width: 1250px !important;
+ margin-left: -14px !important;
+}
+.detalleDomicilioHeaderSP{
+ width: 1250px !important;
+ margin-left: 0px !important;
+}
+.detalleDomicilio {
+    width:2000px;
+    margin-left: -26px;
+    border: 1px solid #fff !important;
+}
+.flujoIPF{
+    width: 1176px !important;
+    margin-left: 40px !important;
+}
+.sinSombra{
+    box-shadow: 0px 0px 0px #fff !important;
+}
+.botonesDetIPF{
+    width:1170px !important;
+}
+.tablaIPF{
+    width: 1175px !important;
+    margin-left: -16px !important
+}
+.agregarIPF{
+    width: 1170px !important;
+    margin-left: -25px !important
+}
+.bordeBlanco{
+    border: 1px solid #fff !important;
+}
+
+.datalist-noborder{
+    border: 0px solid #000 !important;
+    width:200px;
+}
+
+.VPdatalist-noborder{
+    border: 0px solid #000 !important;
+    width:360px;
+}
+
+.datalist-correo{
+    width: 500px !important;
+}
+.ui-datalist-content{
+    border: 0px solid #000 !important;
+}
+.izquierda{
+    text-align: left !important;
+}
+.margenizquierdo{
+    margin-left: -20px !important;
+}
+.AyCPaso2{
+    margin-left: -26px !important;
+}
+.panelGridRojo tr, .panelGridRojo td {
+    border: 1px solid red !important;
+}
+.panel1{
+    width: 1100px !important;
+    margin-left: -18px !important;
+}
+.panel2 table{
+    width: 950px !important;
+    margin-left: -18px !important;
+}
+
+a.liga{
+    color:blue;
+    text-decoration:none !important;
+    background-color: transparent !important;
+    font-weight: normal !important;
+}
+a.liga:hover, a.liga:active {
+    color: #7B9CF0 !important;
+    text-decoration: underline !important;
+    background-color: transparent !important;
+}
+
+a.generaconstancia{
+    color:blue;
+    text-decoration:none !important;
+    background-color: transparent !important;
+    font-weight: normal !important;
+     width: 150px !important;
+}
+a.generaconstancia:hover, a.liga:active {
+    color: #7B9CF0 !important;
+    text-decoration: underline !important;
+    background-color: transparent !important;
+    width: 150px !important;
+}
+
+.anchoDatosUbica{
+    width:1180px !important;
+    margin-left: 15px !important;
+}
+
+.ui-selectonemenu .ui-widget .ui-state-default{
+    padding-top:2px;padding-bottom:2px
+}
+.menuItem:hover{
+    background: #ddd !important;
+}
+.arriba{
+ vertical-align: top !important;
+}
+.abajo{
+ vertical-align: bottom !important; padding: 0px !important;
+}
+.captcha{
+    width:700px !important; margin-left:-90px !important;
+}
+.izq45{
+     margin-left: -45px !important
+}
+.izq25{
+    margin-left: -25px !important;
+}
+.izq15{
+    margin-left: -15px !important;
+}
+.izq10{
+    margin-left: -10px !important
+}
+.izq3{
+    margin-left: 46px !important
+}
+.der18{
+    margin-left: -55px !important
+}
+
+.derSuspension{
+    margin-left: -17px !important;
+}
+
+
+.der2{
+    margin-left: -2px !important;
+}
+.captchaPF{
+    width:700px !important; margin-left:-25px !important;
+}
+
+.textoJustificado{
+    text-align: justify; width: 1200px;
+}
+.textoJustificado1{
+    text-align: justify;
+    margin-bottom: 70px !important;
+}
+.textoJustificado70{
+    text-align: justify;
+    margin-bottom: 59px !important;
+}
+
+.textoJustificado10{
+    margin-bottom: 59px !important;
+}
+.camposObligatoriosIPFDI{
+    text-align: right; margin-left: -6px !important
+}
+.camposIPF{
+
+}
+.negritas{
+    font-weight:bold !important;
+}
+.textoJustificado2 {
+    text-align: justify; width: 1200px; margin-left:-18px !important;
+}
+.paisFiscalPM{
+    margin-left: -10px !important;
+    width: 545px !important;
+}
+.telefonoPanel{
+    margin-left: 5px !important;
+    margin-top: -10px !important;
+    padding:0px !important;
+}
+.telefonoEncabezado{
+    margin-left: 0px !important;
+    font-weight:normal !important;
+}
+.telefonoTable{
+ margin-left: -22.5px !important;margin-top: -10px !important; margin-bottom: 0px !important; box-sizing: initial;
+}
+.correoPanel{
+    margin-left: 9px !important;
+    margin-top: -24px !important;
+    padding:0px !important;
+}
+.correoEncabezado{
+    margin-left: 2px !important;
+    font-weight:normal !important;
+}
+.correoTable{
+    margin-top: -5px !important;
+    width:380px !important;
+    margin-left: -25px !important;
+    margin-bottom: 0px !important;
+    box-sizing: initial;
+}
+.botonesFlujo{
+    width:1182px !important;
+    margin-left: 0px !important;
+    display: inline-block !important;
+    padding: 0px !important;
+    margin:auto !important;
+    margin-top: 20px !important;
+    border: 0px solid red;
+    margin-bottom: 64px !important;
+    margin-left:0px !important;
+}
+
+.botonesFlujo23{
+    margin-left:-7px !important;
+    margin-bottom: 72px !important;
+}
+
+.botonesFlujo27{
+    margin-top: 20px !important;
+}
+
+.botonesFlujoPF{
+    width:1189px !important;
+    margin-left: 0px !important;
+    display: inline-block !important;
+    padding: 0px !important;
+    margin:auto !important;
+    margin-top: 20px !important;
+    border: 0px solid red;
+    margin-left:0px !important;
+}
+
+.botonesFlujoPFP2{
+    width:1189px !important;
+    margin-left: 0px !important;
+    display: inline-block !important;
+    padding: 0px !important;
+    margin:auto !important;
+    margin-top: 20px !important;
+    border: 0px solid red;
+    margin-left:15px !important;
+}
+
+.botonesFlujoPFD{
+    margin-top: 13px !important;
+}
+.botonesFlujoPFDD{
+    margin-top: 9px !important;
+}
+.botonesFlujoPFDI{
+    margin-top: 22px !important;
+}
+.botonesFlujoCorrec{
+    margin-top: -3px !important;
+}
+
+.botonesFlujoCorrecV{
+    margin-top: 66px !important;
+    margin-bottom: 62px !important;
+    margin-left:2px !important;
+}
+
+.botonesFlujoVisPre{
+    margin-top: 57px !important;
+    margin-bottom: 53px !important;
+}
+.botonesFlujoVisPreAC{
+    margin-top: 64px !important;
+/*    margin-bottom: 53px !important;*/
+}
+
+.botonesFlujoVisPreSusp{
+    margin-top: 64px !important;
+/*    margin-bottom: 53px !important;*/
+}
+.botonesFlujoVisPrePF{
+    margin-top: 25px !important;
+    width: 1183px !important;
+    margin-bottom: 0px !important;
+}
+/** botones representante legal inscripcion */
+.botonesFlujoVisPre2{
+    margin-top: 57px !important;
+    margin-bottom: 60px !important;
+}
+
+.botonesFlujoFoo{
+    margin-bottom: 53px !important;
+}
+
+.botonesFlujoFoo2{
+    margin-bottom: 30px !important;
+}
+.botonesFlujoFooPM{
+    margin-top: 26px !important;
+    margin-bottom: 38px !important;
+}
+.botonesFlujoFooPMDom{
+    margin-top: 12px !important;
+    margin-bottom: 38px !important;
+}
+.botonesFlujoFooPMDocto{
+    margin-bottom: 60px !important;
+}
+
+.botonesFlujoFooDoctoDI{
+    margin-top: 14px !important;
+    margin-bottom: 63px !important;
+    margin-left: -13px !important;
+}
+
+.botonesFlujoVisPre2 {
+    margin-top: 67px !important;
+    margin-bottom: 64px !important;
+}
+
+/* terminan botones representante legal */
+.botonesFlujo button{
+    margin: 0 0 0 5px !important;
+    height: 46px !important;
+}
+.botonesFlujoVisPreAp{
+    margin-top: 64px !important;
+/*    margin-bottom: 60px !important;*/
+}
+.botonesFirma{
+    width:753px !important;
+    margin-left: 25px !important;
+    display: block !important;
+    padding: 0px !important;
+    text-align: right !important;
+    margin-top: -9px !important;
+}
+
+.botonesFirmaFD{
+    margin-top: -6px !important;
+}
+.botonesFlujoFooPM{
+    margin-top: 13px !important;
+    margin-bottom: 40px !important;
+}
+.botonesFielOtp{
+    width:1125px !important;
+    margin-left: -73px !important;
+    display: block !important;
+    padding: 0px !important;
+    text-align: left !important;
+}
+.componenteFiel{
+    margin-left: -68px !important;
+    padding-bottom: 30px !important;
+}
+.componenteFielBottom20px{
+    margin-left: -68px !important;
+    padding-bottom: 20px !important;
+}
+.componenteOtp{
+    padding-bottom: 40px !important;
+}
+.botonesFirma button{
+    margin: 0 0 0 5px !important;
+    height: 46px !important;
+}
+.botonesFlujoDlg{
+    width: 370px !important;
+    height: 50px !important;
+    display: block !important;
+    padding: 0px !important;
+    text-align: right !important;
+
+}
+.botonesFlujoDlg button{
+    margin: 0 0 0 5px !important;
+    height: 46px !important;
+}
+
+.botonesFlujoC1{
+    margin-top: 11px !important;
+    margin-bottom: 67px !important;
+}
+
+.botonesFlujoC2{
+    margin-bottom: -10px !important;
+}
+
+.botonesFlujoC23{
+    margin-bottom: -10px !important;
+    margin-top: 56px !important;
+}
+
+.panelC23{
+    margin-top: -6px !important;
+}
+
+.panelC24{
+    margin-top: 45px  !important;
+}
+
+.botonesFlujoC3{
+    margin-bottom: -10px !important;
+    margin-left: 100px !important;
+}
+
+.botonesFlujoC5{
+    margin-top: 21px !important;
+    margin-bottom: 67px !important;
+}
+
+.botonesFlujoC7{
+    margin-top: 16px !important;
+}
+
+.panelGIPF{
+    width:1140px !important;
+    border: 1px solid #fff !important;
+    margin-left: -25px !important;
+}
+.ui-messages-error-icon{
+    background: url("../../resources/images/ayu.gif") no-repeat !important;
+    display: none !important;
+}
+.ui-messages{
+    width: 1180px !important;
+    margin-left: -15px !important;
+}
+.ui-messages ul {
+    margin: 0;
+    text-align: center !important;
+}
+.ui-messages-error, .ui-message-error {
+        color: #545454;
+        border: 2px solid #D0021B !important;
+        background: #F2DEDE !important;
+margin-top: -39px !important;
+margin-bottom: 30px !important;
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+        border-radius: 6px !important;
+}
+
+.ui-messages-info-icon{
+    background: url("../../resources/images/ayu.gif") no-repeat !important;
+    display: none !important;
+}
+.ui-messages-info, .ui-message-info {
+        color: #31708F ;
+        border: 2px solid #BCE8F1 !important;
+        background: #D9EDF7 !important;
+margin-top: -39px !important;
+margin-bottom: 30px !important;
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+        border-radius: 6px !important;
+}
+
+.panelIPMD {
+    width:1170px; margin-left: -20px; border: 1px solid #fff !important;
+}
+.camposObligatoriosIPMDI{
+    text-align: right; margin-left: -6px !important
+}
+.panelIPMDIREPL {
+    width:1170px; margin-left: -20px; border: 1px solid #fff !important;
+}
+.camposObligatoriosIPMDIREPL{
+    text-align: right; margin-left: -6px !important
+}
+.gmxNobordePanel .ui-panel-title {
+    font-size: 28px !important;
+    font-weight: normal !important;
+    color:#545454;
+}
+.ui-tooltip,.ui-tooltip .ui-widget-content {
+    border: 1px solid #9d9d9d;
+    color: #fff;
+    background: #000;
+    text-align: justify;
+
+}
+
+
+.preguntas .ui-datagrid-content{
+    border: 1px solid #fff !important;
+}
+
+.avisoVista .ui-widget-content{
+    border: 1px solid #fff !important;
+}
+.avisoVistaDlg button{
+    margin: 0 0 0 5px !important;
+    height: 46px !important;
+}
+.addDom {
+    margin: 0 0 0 0 !important;
+    height: 46px !important;
+}
+.izqDocIdentidadCont{
+    margin-left: -25px !important;
+}
+
+.izqDocIdentidadContRR{
+    margin-left: -15px !important;
+    margin-bottom: 10px !important;
+}
+
+.panelGridDIN{
+    width: 853px;
+    margin-left: -200px
+}
+
+.panelGridSuspe1{
+  margin-top: 15px !important;
+}
+
+.ui-confirm-dialog{
+    top: 70px !important;
+}
+
+.datosRegPubProp{
+    margin-top: 10px !important;
+    width: 776px !important;
+    padding: 0px !important;
+    margin-left: 0px !important;
+}
+.datosRegPubPropChrome{
+    margin-top: 0px !important;
+    width: 776px !important;
+    padding: 0px !important;
+    margin-left: 0px !important;
+}
+
+.paisPFCamDom{
+    width:315px !important;
+    top: 10px !important;
+}
+
+.ui-selectonemenu .ui-selectonemenu-trigger {
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    cursor: pointer;
+    width: 24px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+   padding: 0 3px;
+}
+
+.aycPaso1Ajuste{
+        margin-top: 18px  !important;
+}
+
+
+/*_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/*/
+/*_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/ Estilos desarrollados para la segunda fase de GOBMX /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/*/
+/*_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/*/
+
+
+.panelNacionaldad .ui-selectonemenu-list {
+    width:300px !important;
+}
+
+.panelNacionaldad .ui-selectonemenu-filter{
+    padding-right: 15px;
+    width: 300px !important;
+    height: 39px !important;
+}
+
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited,
+.ui-state-focus a,
+.ui-state-focus a:hover,
+.ui-state-focus a:link,
+.ui-state-focus a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+.estiloCalendario + .ui-state-active
+ {
+	border: 1px solid;
+        background: #000 url("../css_segob/imagesSegob/ui-bg_flat_100_fff_40x100.png") 50% 50% repeat-x;
+	font-weight: normal;
+	color: #fff;
+        border-radius: 50% !important;
+}
+
+/**********************************************************************************************************************/
+/*******************************************    Seccion para los Paneles    *******************************************/
+/**********************************************************************************************************************/
+#formContenido\:contenidoPanel {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+#formContenido\:contenidoPanel > div{
+  margin: 0px !important;
+  border: 0px !important;
+  padding: 0px !important;
+  margin-top: -25px !important;
+}
+
+/* Estilo para arreglar la separacion de los botones (Botonera) */
+#formContenido\:IDCPersonaFisicaPaso1Panel_content {
+  margin-bottom: 0px !important;
+  border: 0px !important;
+  padding: 0px !important;
+}
+
+#formContenido\:IDCPersonaFisicaPaso3DomDetallePanel_content {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+#formContenido\:IDCPersonaFisicaPaso3DomDetallePanel{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+
+/**********************************************************************************************************************/
+/*******************************************   Seccion para el datePicker   *******************************************/
+/**********************************************************************************************************************/
+.ui-datepicker {
+    width: 17em;
+    padding: .2em .2em 0;
+    display: none;
+    z-index:1 !important;
+}
+.ui-datepicker .ui-datepicker-header {
+    position: relative;
+    padding: .2em 0;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+    position: absolute;
+    top: 2px;
+    width: 1.8em;
+    height: 1.8em;
+}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+    top: 1px;
+}
+.ui-datepicker .ui-datepicker-prev {
+    left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+    right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+    left: 1px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+    right: 1px;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    top: 50%;
+    margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title {
+    margin: 0 2.3em;
+    line-height: 1.8em;
+    text-align: center;
+}
+.ui-datepicker .ui-datepicker-title select {
+    font-size: 1em;
+    margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+    width: 49%;
+}
+.ui-datepicker table {
+    width: 100%;
+    font-size: .9em;
+    border-collapse: collapse;
+    margin: 0 0 .4em;
+}
+.ui-datepicker th {
+    padding: .7em .3em;
+    text-align: center;
+    font-weight: bold;
+    border: 0;
+}
+.ui-datepicker td {
+    border: 0;
+    padding: 1px;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+    display: block;
+    padding: .2em;
+    text-align: right;
+    text-decoration: none;
+}
+.ui-datepicker a:link {
+    display: block;
+    padding: .2em;
+    text-align: right;
+    text-decoration: none;
+    color: #000 !important;
+    font-weight:normal !important;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+    background-image: none;
+    margin: .7em 0 0 0;
+    padding: 0 .2em;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+    float: right;
+    margin: .5em .2em .4em;
+    cursor: pointer;
+    padding: .2em .6em .3em .6em;
+    width: auto;
+    overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+    float: left;
+}
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {
+    width: auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+    float: left;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+    width: 95%;
+    margin: 0 auto .4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {
+    width: 50%;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+    width: 33.3%;
+}
+.ui-datepicker-multi-4 .ui-datepicker-group {
+    width: 25%;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+    border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+    clear: left;
+}
+.ui-datepicker-row-break {
+    clear: both;
+    width: 100%;
+    font-size: 0;
+}
+
+/* RTL support */
+.ui-datepicker-rtl {
+    direction: rtl;
+}
+.ui-datepicker-rtl .ui-datepicker-prev {
+    right: 2px;
+    left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next {
+    left: 2px;
+    right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+    right: 1px;
+    left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+    left: 1px;
+    right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+    clear: right;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+    float: left;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+.ui-datepicker-rtl .ui-datepicker-group {
+    float: right;
+}
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+    border-right-width: 0;
+    border-left-width: 1px;
+}
+
+.ui-datepicker-week-end .ui-state-default{
+    background:#eeeeee;
+}
+
+
+.ui-datepicker .ui-state-hover{
+    background: #2276D7 !important;
+    color: #ffffff !important;
+}
+.ui-datepicker .ui-state-hover:link{
+    color: #ffffff !important;
+    text-decoration:none;
+}
+
+
+
+
+.ui-datepicker .ui-datepicker-header {
+         background-color: #222;
+         color: #fff;
+         padding: 5px 20px;
+         margin-bottom: 20px;
+         }
+        .ui-datepicker .ui-datepicker-header {
+         position: relative;
+         border-bottom: 0;
+         }
+
+        .ui-datepicker {
+        width: 18em;
+        padding: 0;
+        box-sizing: initial;
+        display: none;
+        }
+
+        .ui-datepicker td {
+        border: 0;
+        width: 32px !important;
+        height: 32px !important;
+        line-height: 32px;
+        }
+
+
+        .ui-datepicker-today .ui-state-default {
+        background: 0 0;
+        border: 1px solid #4A90E2;
+        border-radius: 50%;
+        }
+
+
+        .ui-datepicker .ui-state-default {
+        background: #fff;
+        border: none;
+        }
+
+        td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled{
+        background: #fff !important;
+        border: none !important;
+        }
+        .ui-datepicker th {
+        border: none !important;
+        text-align: center !important;
+        }
+        .ui-datepicker a:link {
+        display: block;
+        padding: .2em;
+        text-align: center !important;
+        text-decoration: none;
+        color: #000 !important;
+        font-weight: normal !important;
+        }
+        .ui-datepicker a:link:hover {
+        color: #000 !important;
+        font-weight: normal !important;
+        border-radius:50%;
+        background:#eeeeee !important;
+        }
+        .ui-state-default.ui-state-highlight{
+        border:solid 1px #4A90E2 !important;
+        border-radius:50%;
+        }
+        .ui-datepicker .ui-datepicker-prev:before {
+        font-size: 19px;
+        color: #fff;
+        position: absolute;
+        top: 5px;
+        left: 15px;
+        content: '<';
+        visibility: visible;
+        text-decoration: none;
+        }
+        .ui-datepicker-prev .ui-icon.ui-icon-circle-triangle-w{
+        display:none !important;
+        }
+        .ui-datepicker-prev:hover{
+        background:#222222 !important;
+        border:solid 1px #222222 !important;
+        }
+
+        .ui-datepicker-next:before {
+        font-size: 19px;
+        color: #fff;
+        position: absolute;
+        top: 5px;
+        left:5px;
+        content: '>';
+        visibility: visible;
+        text-decoration: none;
+        }
+        .ui-datepicker-next .ui-icon.ui-icon-circle-triangle-e{
+        display:none !important;
+        }
+        .ui-datepicker-next:hover{
+        background:#222222 !important;
+        border:solid 1px #222222 !important;
+        }
+
+        .ui-datepicker th {
+        border: none !important;
+        text-align: center !important;
+        font-size: 10px;
+        color:#9d9d9d !important;
+        }
+        .ui-datepicker-month, .ui-datepicker-year, .ui-datepicker-prev, .ui-datepicker-next{
+        font-weight:normal !important;
+        }
+        .ui-slider-handle, ui-state-default{
+            background: #DADADA !important;
+            border-radius: 50% !important;
+        }
+        .ui-datepicker .ui-state-active{
+            background: #4A90E2 none repeat scroll 0% 0% !important;
+            border-radius: 50% !important;
+            color: #FFF !important;
+        }
+        .ui-datepicker a.ui-state-active{
+            color:#fff !important;
+        }
+
+        .ui-datepicker .ui-state-disabled{
+            background-color:#fff !important;
+        }
+        a.ui-datepicker-prev.ui-state-disabled{
+            background:#222222 !important;
+        }
+        .ui-datepicker a.ui-slider-handle.ui-state-default{
+            background-color: #222 !important;
+
+        }
+        .ui-datepicker a.ui-slider-handle.ui-state-hover{
+            background-color: #222 !important;
+		}
+
+/**********************************************************************************************************************/
+/***************************************************     migaja       *********************************************/
+/**********************************************************************************************************************/
+ul.migaja {
+ list-style: none !important;
+ font-size: 16px !important;
+ font-family: 'Open Sans', sans-serif !important;
+ border: 0px solid lime !important;
+ margin-left: -10px;
+ padding: 0px;
+ margin-top: 15px !important;
+ margin-bottom: 0px  !important;
+}
+
+.migajaHome {
+ width: 15px !important;
+ height: 18px !important;
+ margin-right: 0px !important;
+ padding-bottom: 0px !important;
+ border: 0px solid red !important;
+ display: inline-block !important;
+
+}
+.migaja .ui-commandlink:hover{
+    color: #555 !important;
+    background: white !important;
+    background-color: white !important;
+    font-weight: normal !important;
+    text-decoration: underline;
+}
+.migajaActivo {
+    color: #545454 !important;
+    background: white !important;
+    background-color: white !important;
+    font-weight: bold !important;
+    text-decoration: none;
+    margin-left: 0px !important;
+    /*display: inline-block !important;*/
+    border: 0px Red solid !important;
+}
+.liMigaja{
+    width: 8px !important;
+    height: 13px !important;
+    margin-left: 4.5px !important;
+    margin-right: 5px !important;
+    /*display: inline-block;*/
+    border: 0px Red solid !important;
+}
+.migajaMayor{
+  width: 8px !important;
+  height: 13px !important;
+  margin-right: 7px !important;
+}
+.migajaInactivo {
+    color: #391313 !important;
+    background: white !important;
+    background-color: white;
+    font-weight: normal !important;
+    text-decoration: none !important;
+    /*display: inline-block !important; */
+}
+.migajaInactivoHome {
+    color: #391313 !important;
+    background: white !important;
+    background-color: white;
+    font-weight: normal !important;
+    text-decoration: none;
+    margin-left: 1px !important;
+    padding-right: -10px !important;
+    border: 0px solid red !important;
+    width: 16px !important;
+}
+
+
+ul.migaja li {
+ display: inline !important;
+}
+
+
+.migajaLi {
+ display: inline-block !important;
+}
+
+
+/**********************************************************************************************************************/
+/*************************************************     Barra Separadora     *******************************************/.redLine{
+  display: inline-block;
+  width: 35px;
+  height: 0px;
+  border: 3px solid #D0021B;/*se ponen un borde de 3px porque de esta forma al sumar el borde superior y el inferior dan los 6px que solicitan.*/
+  margin-left: -15px;
+  margin-top: 10px;
+  margin-bottom: 70px;
+}
+/**********************************************************************************************************************/
+
+.redLine23{
+  display: inline-block;
+  width: 35px;
+  height: 0px;
+  border: 3px solid #D0021B;/*se ponen un borde de 3px porque de esta forma al sumar el borde superior y el inferior dan los 6px que solicitan.*/
+  margin-left: -15px;
+  margin-top: 10px;
+  margin-bottom: 65px;
+}
+
+
+#separador > hr{
+  position: relative;
+  top: -3px !important;
+  right: -32px;
+  width: 1146px;
+  border: 1px solid #DDDDDD;
+  margin: 0px !important;
+}
+
+#separador23 > hr{
+  position: relative;
+  top: -3px !important;
+  right: -32px;
+  width: 741px;
+  border: 1px solid #DDDDDD;
+  margin: 0px !important;
+}
+
+
+
+#separadorSinHeader > hr{
+  position: relative;
+  top: -3px !important;
+  right: -32px;
+  width: 1144px;
+  border: 1px solid #DDDDDD;
+  margin: 0px !important;
+}
+
+/**********************************************************************************************************************/
+/***********************************************Panel Captcha *********************************************/
+/**********************************************************************************************************************/
+
+#formContenido\:pgCaptcha div[class~="ui-panel-content"] {
+  padding: 0px !important;
+  margin: 0px  !important;
+}
+
+#formContenido\:pgCaptcha {
+  padding: 0px !important;
+  border-spacing: 0px !important;
+  margin: 0px  !important;
+}
+
+#formContenido\:pgCaptcha td {
+  vertical-align: bottom !important;
+}
+
+#formContenido\:pgCaptchaPF div[class~="ui-panel-content"] {
+  padding: 0px !important;
+  margin: -10px  !important;
+}
+
+#formContenido\:pgCaptchaPF {
+  padding: 0px !important;
+  border-spacing: 0px !important;
+  margin: 0px  !important;
+}
+
+#formContenido\:pgCaptchaPF td {
+  vertical-align: bottom !important;
+}
+
+/**********************************************************************************************************************/
+/***********************************************radioButtons*********************************************/
+/**********************************************************************************************************************/
+
+
+
+
+
+/**********************************************************************************************************************/
+/**************************************************Cajas de Texto******************************************************/
+/**********************************************************************************************************************/
+.paddingLeft0px{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.paddingLeft {
+    padding-left: 0px !important;
+    padding-right: 15px !important;
+}
+.paddingCenter {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+.paddingRight {
+    padding-left: 15px !important;
+    padding-right: 0px !important;
+}
+
+.paddingLeftPMDoc {
+    padding-left: 0px !important;
+    padding-right: 2px !important;
+}
+.paddingCenterPMDoc {
+    padding-left: 0px !important;
+    padding-right: 15px !important;
+}
+.paddingRightPMDoc {
+    padding-left: 15px !important;
+    padding-right: 0px !important;
+}
+
+.paddingLeft20px {
+    padding-left: 20px !important;
+}
+.paddingLeft15px {
+    padding-left: 15px !important;
+}
+.paddingLeftRight15px {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+.paddingRight15px {
+    padding-right: 15px !important;
+}
+
+
+input[type="text"]:required{
+   border: 1px solid red !important;
+}
+
+input[type="text"]:disabled:hover{
+    cursor:not-allowed !important;
+}
+
+.ui-state-disabled :hover{
+    cursor:not-allowed !important;
+}
+
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+.inputText618px{
+    width: 671px !important;
+    margin-top: 0px !important;
+    margin-bottom: 20px !important;
+}
+
+.inputText776px{
+    width: 775px  !important;
+    margin-top: 0px !important;
+    margin-bottom: 20px !important;
+}
+
+
+
+
+/**********************************************************************************************************************/
+/**************************************************Select One Menu*****************************************************/
+/**********************************************************************************************************************/
+.bordeRojoSelectOneMenu {
+    border: 1px solid #D0021B !important;
+}
+
+/**********************************************************************************************************************/
+/******************************************* Leyenda Campos Obligatorios **********************************************/
+/**********************************************************************************************************************/
+.conLeyendaCamposObligatoriosIPF {
+    width: 951px !important;
+    display: inline-block !important;
+    margin-left:2px;
+}
+
+.conLeyendaCamposDinamico {
+    width: 548px  !important;
+    display: inline-block !important;
+    margin-left:2px;
+}
+
+
+.conLeyendaCamposObligatorios {
+    width: 945px !important;
+    display: inline-block !important;
+    margin-left:2px;
+}
+
+.conLeyendaCamposObligatoriosDocPro {
+    width: 720px !important;
+    display: inline-block !important;
+    margin-left:2px;
+}
+
+.conLeyendaCamposSuspencion {
+    width: 946px !important;
+    display: inline-block !important;
+    margin-left:2px;
+}
+.conLeyendaCamposObligatoriosDatosIngreso {
+    width: 543px  !important;
+    display: inline-block !important;
+    margin-left:2px;
+}
+
+.conLeyendaCamposObligatoriosDatosIngresoPFC {
+    width: 543px  !important;
+    display: inline-block !important;
+    margin-left:9px;
+}
+.conLeyendaCamposObligatoriosLimpiar {
+    width: 760px !important;
+    display: inline-block !important;
+    margin-left: -12px;
+}
+.sinLeyendaCamposObligatoriosIPF{
+    width: 934px  !important;
+    display: inline-block !important;
+}
+.sinLeyendaCamposObligatoriosIPF3BTNS{
+    width: 743px !important;
+    display: inline-block !important;
+    margin-left: 0px !important;
+}
+
+.sinLeyendaCamposObligatoriosD12{
+    width: 741px !important;
+    display: inline-block !important;
+    margin-left: -12px !important;
+}
+
+
+.sinLeyendaCamposObligatoriosCD{
+    width: 755px !important;
+    display: inline-block !important;
+    margin-left: -12px !important;
+}
+.sinLeyendaCamposObligatorios{
+    width: 933px !important;
+    display: inline-block !important;
+}
+
+.sinLeyendaCamposObligatoriosPFCVP{
+    width: 946px !important;
+    display: inline-block !important;
+}
+.sinLeyendaCamposObligatoriosVPSusp{
+    width: 946px !important;
+    display: inline-block !important;
+}
+.sinLeyendaCamposObligatoriosDatosIngreso{
+    width: 543px !important;
+    display: inline-block !important;
+}
+.sinLeyendaCamposObligatoriosPFPaso6VP{
+    width: 947px !important;
+    display: inline-block !important;
+}
+.sinLeyendaCamposObligatoriosVer{
+    width: 865px !important;
+    display: inline-block !important;
+}
+.conLeyendaCamposObligatoriosPM {
+    width: 947px !important;
+    display: inline-block !important;
+    margin-left:-13px !important;
+}
+.conLeyendaCamposObligatoriosPM_PASO3 {
+    width: 946px !important;
+    display: inline-block !important;
+    margin-left:2px !important;
+}
+.conLeyendaCamposObligatoriosCDRL {
+    width: 945px !important;
+    display: inline-block !important;
+    margin-left:2px;
+}
+
+.sinLeyendaCamposObligatoriosPmVP{
+    width: 946px !important;
+    display: inline-block !important;
+}
+
+/**********************************************************************************************************************/
+/******************************************** Font titulos y subtitulos ***********************************************/
+/**********************************************************************************************************************/
+
+
+#formContenido\:pnlCartaNat span[class~="ui-panel-title"] {
+    font-size: 28px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+#formContenido\:pnlCartaNat {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#formContenido\:pnlCartaNat_header {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+#formContenido\:pnlCartaNat_content {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+#formContenido\:pnlDocIdentidad span[class~="ui-panel-title"] {
+  font-size: 28px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+#formContenido\:pnlDocIdentidad{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#formContenido\:pnlDocIdentidad_header{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#formContenido\:pnlDocIdentidad_content{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#formContenido\:domiciliosId span[class~="ui-panel-title"] {
+    font-size: 28px !important;
+}
+#formContenido\:detalleDomicilio span[class~="ui-panel-title"] {
+    font-size: 28px !important;
+}
+#formContenido\:plantillaTelefonos\:panelTelefonos span[class~="ui-panel-title"] {
+    font-size: 28px !important;
+}
+
+#formContenido\:plantillaCorreos\:panelCorreos span[class~="ui-panel-title"] {
+    font-size: 28px !important;
+}
+}
+#formContenido\:datosIngresosPanel{
+  border:0px !important;
+  margin-left: -12px !important;
+}
+#formContenido\:IDCPersonaFisicaDatosIngresoPnl span[class~="ui-panel-title"] {
+    font-size: 28px !important;
+}
+#formContenido\:IDCPersonaFisicaDatosIngresoPnl {
+    margin-left: -16px !important;
+}
+/*Verificar si no impacta este estilo*/
+#formContenido\:pnlDocIdentidad_header {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+#formContenido\:datosIngresosPanel span[class~="ui-panel-title"] {
+  font-size: 28px !important;
+  margin-left: -4px !important;
+}
+
+#formContenido\:datosIngresosPanel_header{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#formContenido\:datosIngresosPanel_content{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  margin-left: -2px !important;
+}
+
+#formContenido\:domiciliosId{
+  margin-left: -14px !important;
+}
+
+#formContenido\:pnlRepresentanteLegal span[class~="ui-panel-title"] {
+    font-size: 28px !important;
+}
+
+#formContenido\:pnlDoctoProtocolizado span[class~="ui-panel-title"] {
+  font-size: 28px !important;
+}
+
+#formContenido\:pnlDoctoProtocolizado_header{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#formContenido\:pnlDoctoProtocolizado_content{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#menuForm\:menuPanel_content{
+  padding-top:0px !important;
+  padding-bottom:0px !important;
+}
+#formContenido\:IDCPersonaFisicaPaso2Panel_content {
+    padding-left: 0px !important;
+    margin-top: -44px !important;
+}
+
+#formContenido\:IDCPersonaFisicaPaso3Panel_content {
+    margin-top: -30px !important;
+}
+
+#formContenido\:panelIdentificaPF {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#formContenido\:personaMoralPanel_header {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#formContenido\:personaMoralPanel_content {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#formContenido\:personaMoralPanel{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  margin-left: -14px !important;
+  border: 0px solid red !important;
+    margin-bottom: -14px !important;
+}
+#formContenido\:IDCPersonaMoralPaso1Panel_header{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#formContenido\:IDCPersonaMoralPaso1Panel_content{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#formContenido\:IDCPersonaMoralPaso1Panel {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#formContenido\:panelIdentificaPF span[class~="ui-panel-title"] {
+    font-size: 28px !important;
+}
+#formContenido\:panelIdentificaPF_header {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#formContenido\:panelIdentificaPF_content{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+#formContenido\:IDCPersonaFisicaPaso1Panel{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+#formContenido\:idPanelDatosIngreso{
+    margin-left: 0px !important;
+}
+#formContenido\:idPanelDatosIngreso_header {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#formContenido\:idPanelDatosIngreso_content {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+#formContenido\:pnlRepresentanteLegal_header {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#formContenido\:pnlRepresentanteLegal_content {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+#formContenido\:domiciliosId_header {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#formContenido\:domiciliosId_content {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+#formContenido\:docMigratorio_header {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#formContenido\:docMigratorio_content {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+
+#formContenido\:IDCPersonaMoralPaso3Panel_content {
+    padding-left: 0px !important;
+}
+#formContenido\:IDCPersonaMoralPaso5_6Panel_content {
+    padding: 0px !important;
+}
+
+#formContenido\:IDCPersonaFisicaPaso5_6Panel {
+  padding-left: 1px !important;
+}
+#formContenido\:IDCPersonaFisicaPaso5_6Panel_content {
+  padding-left: 1px !important;
+}
+#formContenido\:idCurp > tbody tr td[role~="gridcell"]{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+#menuForm\:IDCPersFisicaMenu > ul{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+
+}
+/*formContenido\:plantillaTelefonos\:tablaTelefonos\:0\:tipoTelCombo{*/
+.rojocb{
+  color: #545454;
+  border: 1px solid #D0021B !important;
+}
+#formContenido\:panelDialogo {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+#formContenido\:panelDialogo_content {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+#formContenido\:detalleDomicilio_header{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+#formContenido\:detalleDomicilio_content{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+#formContenido\:panelFirmaFiel span[class~="ui-panel-title"] {
+    font-size: 28px !important;
+}
+#formContenido\:menuTramiteCambioDomicilioPanel_content{
+    padding-left: 0 !important;
+    margin-top: 41px !important;
+}
+#formContenido\:menuTramiteCambioDomicilioPanel_content div[class~="detalleDomicilioHeader"] {
+    margin-left: 0px !important;
+}
+
+#formContenido\:IDCRepresentanteLegalPnl_content{
+    padding-left: 0 !important;
+    margin-top: 18px !important;
+}
+
+#formContenido\:panelFirmaFiel_header {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+#formContenido\:IDCReanudacionDomicilioPnl_content {
+    margin-top: 18px !important;
+}
+
+#formContenido\:panelAumDisminObligPaso1_content{
+    padding-left: 0 !important;
+}
+
+#formContenido\:IDCAyCPaso1Panel_content{
+    padding-left: 0 !important;
+}
+
+.panelIPFIdent{
+    margin-left: -15px !important;
+    width:423px  !important;
+}
+
+.panelGIPFIdent{
+    margin-left: -15px !important;
+}
+
+
+.margin0pxFirma{
+    margin-left: -13px !important;
+}
+
+.panelIPF7Firma{
+    margin-left: 54px !important;
+}
+
+.paddingLeft0RA{
+    padding-left: 0px !important;
+}
+
+.marginTop37PF{
+	margin-top: -37px !important;
+}
+.marginTop3PFDD{
+    margin-top: -41px !important;
+}
+
+.marginTop44PFDI{
+    margin-top: -44px !important;
+}
+
+.marginTop37PFVP{
+    margin-top: -73px !important;
+}
+.marginTopPFP1{
+    margin-top: -8px !important;
+}
+
+.marginTopPFPS{
+    margin-top: -2px !important;
+}
+
+/**********************************************************************************************************************/
+/************************************************ Mensajes de error ***************************************************/
+/**********************************************************************************************************************/
+.ui-messages-error-summary {
+    font-weight: normal;
+    text-align: center !important;
+    display: block !important;
+}
+
+/**********************************************************************************************************************/
+/**************************************************Por clasificar******************************************************/
+/**********************************************************************************************************************/
+.bordeRojo{border: 1px solid #D0021B !important;}
+
+.ocultar{
+  display: none !important;
+}
+
+
+.logotipos{
+    width:1182px !important;
+    margin-left: 0px !important;
+    display: inline-block !important;
+    padding: 0px !important;
+    margin:auto !important;
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+    border: 0px solid red !important;
+    margin-left:-12px !important;
+}
+
+.titulo {
+    font-size: 38px !important;
+    font-family: 'Open Sans', sans-serif !important;
+    margin-bottom: 60px !important;
+    border: 0px solid red !important;
+    margin-left: -12px !important;
+}
+
+.ui-menuitem-link {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+.asterisco{
+    color: #D0021B !important;
+}
+
+.ui-tabmenu .ui-tabmenu-nav .ui-tabmenuitem {
+    margin: 0 0 1px 0 !important;
+}
+
+.ui-messages-info-summary, .ui-messages-warn-summary, .ui-messages-error-summary, .ui-messages-fatal-summary, .ui-message-info-summary, .ui-message-warn-summary, .ui-message-error-summary, .ui-message-fatal-summary {
+    margin-left: 10px;
+    font-weight: normal !important;
+}
+
+.labelTitles{
+    margin-left: -25px !important;
+    margin-bottom: 10px !important;
+}
+
+.labelText373Panel{
+    width: 396px !important;
+    margin-left: 0px !important;
+    margin-right: 10px !important;
+}
+
+#formContenido\:panelSuspensionActPaso1_content{
+    padding-left: 0 !important;
+}
+
+#formContenido\:datosIngresos{
+    margin-left: -14px !important;
+}
+
+#formContenido\:datosIngresos2{
+    margin-left: -15px !important;
+}
+
+#formContenido\:datosIngresos3{
+    margin-left: -15px !important;
+}
+
+.topRadioDV{
+    margin-top: -4px !important;
+}
+
+.ui-panelgrid td {
+    padding: 0px 0px;
+}
+.panelGridCurp{
+    margin-top: 51px !important;
+}
+.panelGridCurpDomi{
+    margin-top: 25px !important;
+}
+
+.topRadioDV2{
+    margin-top: -30px !important;
+}
+
+.topRadioDV3{
+    margin-top: -25px !important;
+}
+
+.topRadioDVSuspension{
+    margin-top: -30px !important;
+    width: 106px !important;
+}
+
+.topRadioDVPF{
+    margin-top: 0px !important;
+    width: 95px !important;
+    margin-left: 20px !important;
+}
+
+.ui-selectmanycheckbox label, .ui-selectoneradio label {
+    margin-right: 1px !important;
+    margin-left: 4px !important;
+}
+
+.sinBordePM{
+    border:none !important;
+    margin-left: -19px !important;
+}
+
+/*
+   Estilo general solo afecta el contenido del panel no panelGrid.
+*/
+.ui-panel .ui-panel-content {
+  padding: 0 1em !important;
+}
+
+.gmxDPrd{
+    margin-top: 41px !important;
+}
+
+.gmxDPrd2{
+    margin-top: 33px !important;
+}
+
+.panelIPMDocProtFi {
+    width:1180px; margin-left: -16px; margin-top: -11px; border: 1px solid #fff !important;
+}
+
+
+.redLinerf{
+  margin-bottom: 59px !important;
+}
+
+.panelIPFXd {
+    margin-left: -13px !important;
+}
+
+.redLineCorrecion {
+    display: inline-block;
+    width: 35px;
+    height: 0px;
+    border: 3px solid #D0021B;
+    margin-left: -15px;
+    margin-top: -22px;
+    margin-bottom: 65px;
+}
+
+
+
+.panelIPFDRepLegal {
+    width: 1182px;
+    margin-left: -16px;
+    border: 1px solid #fff !important;
+    margin-top: -6px;
+}
+
+
+
+.botonesFlujoSuspension{
+    width:1182px !important;
+    margin-left: 0px !important;
+    display: inline-block !important;
+    padding: 0px !important;
+    margin:auto !important;
+    margin-top: -11px !important;
+    border: 0px solid red;
+    margin-bottom: 46px !important;
+    margin-left:0px !important;
+}
+
+.labelTitlesAumDisObl{
+    margin-left: -25px !important;
+    margin-bottom: 10px !important;
+    margin-right: 35px !important;
+    width: 808px;
+}
+
+.labelTitlesAumDisObl2{
+    margin-left: 0px !important;
+    margin-bottom: 10px !important;
+    margin-right: 35px !important;
+    width: 776px;
+}
+
+.fechaMovAumDisObl {
+    margin-left: 9px !important;
+    margin-top: 36px !important;
+}
+
+.fechaMovAumDisOblLeyenda {
+    padding-bottom: 53px !important;
+}
+
+.correcionStylesIPF {
+    padding-left: 15px !important; padding-right: 15px !important;
+}
+
+.correcionStylesIPF2{
+    padding-right: 15px !important;
+}
+
+.correcionStylesIPF6{
+    padding-left: 15px !important;
+}
+
+.correcionStylesIPF3{
+    float: left; margin-left: -115px !important; width:600px; height: 65px; border: 0px solid red !important;
+}
+.correcionStylesIPF4{
+    width: 1137px; height: 80px; margin-left: -12px !important; border: 0px solid red !important;
+}
+
+.correcionStylesIPF5{
+    float: left; width:500px; height: 80px; margin-left: -2px !important;
+}
+
+.marginLeft5{
+    margin-top: -5px !important;
+}
+
+.dIngresoSoM{
+    margin-bottom: 20px  !important; margin-right: 8px  !important;  margin-top: -1px  !important;
+}
+
+.dIngresoSoMRV{
+    margin-bottom: 13px  !important;
+    margin-left: -2px  !important;
+}
+
+.dIngresoSRV{
+    width: 384px  !important; margin-top: -20px !important
+    }
+
+.radioPFDIP4{
+    width: 384px  !important; margin-bottom: 10px !important; margin-top: -7px !important;
+    margin-left: -22px !important;
+}
+
+.radioPMDIP4{
+    width: 384px  !important; margin-bottom: -3px !important; margin-top: -5px !important;
+}
+
+.dIngresoPanel{
+    margin-top: -33px !important;
+}
+.marginleft30{
+    margin-left: 30px !important;
+}
+
+.marginRight30{
+    margin-right: 30px !important;
+}
+
+
+.panelDP1{
+    width:423px ! important; margin-top: -17px !important;
+}
+
+.dPInputTxt{
+    margin-bottom: 20px !important; margin-top: 0px !important;
+}
+
+.dpCalendario{
+    margin-bottom: 25px !important; margin-top: 0px !important;
+}
+
+.panelRFP2{ margin-top: 24px !important;
+}
+
+#formContenido\:messageListCarNat{
+    width:776px ! important;
+    margin-bottom: -6px !important;
+}
+
+#messageListCD{
+    margin-left: 0px  !important;
+}
+
+
+#formContenido\:messageListAD{
+    margin-top: 15px !important;
+    margin-left: 5px !important;
+}
+
+#formContenido\:messageListDI{
+    width:776px ! important;
+}
+
+#messageListAC{
+    margin-left: 8px !important;
+}
+
+#formContenido\:messageListRL{
+    margin-top: 10px !important;
+    margin-bottom: -6px !important;
+    margin-left: -15px !important;
+}
+
+
+#formContenido\:calendarIDPF {
+    padding: 0 !important;
+    margin-left: -15px !important;
+}
+
+#messageListSusp{
+    margin-top: 36px !important; margin-left: 8px !important;
+}
+
+#messageListRA{
+    margin-top: 36px !important; margin-left: 6px !important;
+}
+
+
+.DMigratorio{
+    margin-top: -12px !important; margin-bottom: 7px !important;
+}
+.DCartaMigraPanelInter{
+    margin-top: 5px !important; margin-bottom: 9px !important;
+}
+
+.marginLeft21px {
+    margin-left: 20px !important;
+}
+
+.ajusteMXTelefono {
+    margin-left:-9px !important;
+}
+
+.ancho50pxMx{
+    width:50px !important;
+}
+
+.classAjuste3px{
+    text-indent: 3px !important;
+}
+
+#ajustePanelMenuPrincipal{
+    border: 0px solid red; margin-bottom: 38px !important;
+}
+
+#ajustePanelMenuPrincipalPM{
+    border: 0px solid red; margin-bottom: 38px !important;
+}
+
+.panelAjusteCalendarRL {
+    width:409px ! important; margin-top: -8px !important; margin-bottom: 8px !important;
+}
+
+
+.panelAjusteCalendarSus {
+    width:409px ! important; margin-top: -8px !important; margin-bottom: 5px !important;
+}
+
+.panelPMDatosIngresos {
+    margin-left: -16px; margin-top: -5px !important;   margin-bottom: 60px !important;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}

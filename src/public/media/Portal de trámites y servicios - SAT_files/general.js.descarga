@@ -1,0 +1,55 @@
+function deteccionIE() {
+    if ($.browser.msie) {
+        if ($.prototype.jquery != "1.8.3") {
+            $.noConflict();
+        }
+    }
+}
+
+function hasMessages() {
+    //Validamos si hay errores para ir al final de la pagina donde se despliegan los errores
+    if ($("#messageList").children().length > 0) {
+            document.location.href = "#areaMensajes";
+    }
+    return;
+}
+
+// Ocultar CommandButton para evitar que varios click cuando la invocacion no es por ajax
+// _objeto_ es nombre de los objetos separados por coma ej, #form\\:id
+function disabledCommandButton(_objeto_){
+    var _ids_ = _objeto_.split(',');
+    for (var _i_=0; _i_ < _ids_.length; ++_i_){
+        $(_ids_[_i_]).hide();
+    }
+}
+
+function fechaFormulario(_anyDate_, _ancho_){
+    if (window.location.pathname.indexOf('/PTSC/IdcSiat') >=0 ){
+        var _estilo = jQuery('[id="' + _anyDate_ + '"]');
+        _estilo.attr("style", "width: " + _ancho_ + " !important; ")
+        colorBotonFechas();
+    }
+}
+
+function colorBotonFechas(){
+    
+    if (window.location.pathname.indexOf('/PTSC/IdcSiat') >=0 ){
+        var _clases = jQuery('button[class^="ui-datepicker-trigger"]');
+        
+        if (_clases.length > 1){
+            for(var _i_=0; _i_ < _clases.length; ++_i_){
+                var _clase = _clases[_i_];
+                if (_clase.className.indexOf('gmxNeutro') < 0){
+                    _clase.className = _clase.className + ' gmxNeutro';
+                }
+            }
+        }else{
+                jQuery(_clases.addClass('gmxNeutro'));
+        }
+    }
+}
+
+function cambiaClaseIPFCurp(){
+    var _fcpipf = jQuery('[id="formContenido:panelIdentificaPF"]');
+    _fcpipf.attr("class", _fcpipf.attr("class").replace('panelIPF4', 'panelIPF'));
+}

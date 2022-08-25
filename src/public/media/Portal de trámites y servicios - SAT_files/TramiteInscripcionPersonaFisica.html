@@ -1,0 +1,850 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0083)https://rfcampc.siat.sat.gob.mx/PTSC/IdcSiat/IDCPersonaFisica/PFVistaPreliminar.jsf -->
+<html xmlns="http://www.w3.org/1999/xhtml" data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta http-equiv="x-ua-compatible" content="IE=edge">
+            <link type="text/css" rel="stylesheet" href="./theme.css.jsf"><link type="text/css" rel="stylesheet" href="./primefaces.css.jsf"><script type="text/javascript">BMCRum = { startTime : new Date().getTime(),app:'9B2776EC',fid:'0',sr:100,met:undefined,name:'/PTSC/IdcSiat/IDCPersonaFisica/PFVistaPreliminar.jsf',per:false,ref:undefined,sip:'10.56.194.94',ssd:107,sse:false,st:-1,uid:'2a17_2957086',tid:'af002b0a-5c56-48bc-9c32-babdc555bc06',ts:1640548579686,pxyInf:{"beaconsRes":"/apm-proxy/rest/beacons","httpPort":"8304","host":"acost1.sat.gob.mx","httpsPort":"443"}};</script><script type="text/javascript" src="https://acost1.sat.gob.mx/static-resources/aeuem.min.js"></script><script type="text/javascript" src="./jquery.js.jsf"></script><script type="text/javascript" src="./primefaces.js.jsf"></script><script type="text/javascript" src="./jquery-plugins.js.jsf"></script>
+                <link type="text/css" rel="stylesheet" href="./segob.css">
+                <link type="text/css" rel="stylesheet" href="./auxiliarSegob.css">
+                <link type="text/css" rel="stylesheet" href="./vistaPreliminarContribuyente.css">
+                <link type="text/css" rel="stylesheet" href="./domicilioContribuyente.css">
+				<link type="text/css" rel="stylesheet" href="./auxGobMxInscPF.css">
+                <script type="text/javascript" language="JavaScript" src="./HFgobmx.js.descarga"></script>
+        
+        <script type="text/javascript" src="./general.js.descarga"></script>
+        <script type="text/javascript" src="./calendar_es.js.descarga"></script>
+
+        <link rel="shortcut icon" href="https://rfcampc.siat.sat.gob.mx/PTSC/IdcSiat/resources/images/favicon.ico"></head><body onload="deteccionIE(); colorBotonFechas();" style=" padding: 0px !important; margin-top: 0px !important;"><div id="j_idt9"></div><div id="j_idt10" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow" role="dialog" aria-labelledby="j_idt10_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="j_idt10_title" class="ui-dialog-title">Procesando...</span></div><div class="ui-dialog-content ui-widget-content" style="height: auto;"><label id="j_idt11" class="ui-outputlabel txtLabel">Espere por favor ...</label></div></div>
+            <div id="container" class="contenedor">
+                <div id="content">
+                    <div id="inner">
+                        <div id="contentFlujo">
+                            <div id="menu">
+<form id="menuForm" name="menuForm" method="post" action="https://rfcampc.siat.sat.gob.mx/PTSC/IdcSiat/IDCPersonaFisica/PFVistaPreliminar.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="menuForm" value="menuForm">
+<div id="menuForm:menuPanel" class="ui-panel ui-widget ui-widget-content ui-corner-all sinBorde"><div id="menuForm:menuPanel_content" class="ui-panel-content ui-widget-content">
+                                            <div class="titulo"><label id="menuForm:j_idt14" class="ui-outputlabel">Preinscripción de personas físicas</label>
+                                            </div><div id="menuForm:IDCPersFisicaMenu" class="ui-tabmenu ui-widget ui-widget-content ui-corner-all centrar menuIPF gmxNoborde"><ul class="ui-tabmenu-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist"><li class="ui-tabmenuitem ui-state-default ui-corner-top" role="tab" aria-expanded="false"><a id="menuForm:j_idt16" class="ui-menuitem-link ui-corner-all menuItem" href="javascript:void(0)" onclick="PrimeFaces.ab({source:&#39;menuForm:j_idt16&#39;,update:&#39;menuForm:menuPanel formContenido:contenidoPanel&#39;,params:[{name:&#39;nuevoPasoActual&#39;,value:&#39;0&#39;}],formId:&#39;menuForm&#39;});return false;"><span class="ui-menuitem-text">Paso 1. Datos de identificación</span></a></li><li class="ui-tabmenuitem ui-state-default ui-corner-top" role="tab" aria-expanded="false"><a id="menuForm:j_idt18" class="ui-menuitem-link ui-corner-all menuItem" href="javascript:void(0)" onclick="PrimeFaces.ab({source:&#39;menuForm:j_idt18&#39;,update:&#39;menuForm:menuPanel formContenido:contenidoPanel&#39;,params:[{name:&#39;nuevoPasoActual&#39;,value:&#39;1&#39;}],formId:&#39;menuForm&#39;});return false;"><span class="ui-menuitem-text">Paso 2. Datos de representante legal</span></a></li><li class="ui-tabmenuitem ui-state-default ui-corner-top" role="tab" aria-expanded="false"><a id="menuForm:TabPaso3" class="ui-menuitem-link ui-corner-all menuItem" href="javascript:void(0)" onclick="PrimeFaces.ab({source:&#39;menuForm:TabPaso3&#39;,update:&#39;menuForm:menuPanel formContenido:contenidoPanel&#39;,params:[{name:&#39;nuevoPasoActual&#39;,value:&#39;2&#39;}],formId:&#39;menuForm&#39;});return false;"><span class="ui-menuitem-text">Paso 3. Datos de ubicación</span></a></li><li class="ui-tabmenuitem ui-state-default ui-corner-top" role="tab" aria-expanded="false"><a id="menuForm:TabPaso4" class="ui-menuitem-link ui-corner-all menuItem" href="javascript:void(0)" onclick="PrimeFaces.ab({source:&#39;menuForm:TabPaso4&#39;,update:&#39;menuForm:menuPanel formContenido:contenidoPanel&#39;,params:[{name:&#39;nuevoPasoActual&#39;,value:&#39;3&#39;}],formId:&#39;menuForm&#39;});return false;"><span class="ui-menuitem-text">Paso 4. Datos de ingresos</span></a></li><li class="ui-tabmenuitem ui-state-default ui-state-active ui-corner-top" role="tab" aria-expanded="true"><a id="menuForm:TabPaso5" class="ui-menuitem-link ui-corner-all menuItem" href="javascript:void(0)" onclick="PrimeFaces.ab({source:&#39;menuForm:TabPaso5&#39;,update:&#39;menuForm:menuPanel formContenido:contenidoPanel&#39;,params:[{name:&#39;nuevoPasoActual&#39;,value:&#39;4&#39;}],formId:&#39;menuForm&#39;});return false;"><span class="ui-menuitem-text">Paso 5. Vista preliminar</span></a></li></ul></div>
+                                        
+                                        <div id="ajustePanelMenuPrincipal"><a id="menuForm:version" name="menuForm:version" href="https://rfcampc.siat.sat.gob.mx/PTSC/IdcSiat/IDCPersonaFisica/PFVistaPreliminar.jsf#" style="color: #fff;">&nbsp;&nbsp;</a>
+                                        </div></div></div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="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" autocomplete="off">
+</form>
+                            </div>
+                            <div id="content">
+<form id="formContenido" name="formContenido" method="post" action="https://rfcampc.siat.sat.gob.mx/PTSC/IdcSiat/IDCPersonaFisica/PFVistaPreliminar.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formContenido" value="formContenido">
+<div id="formContenido:contenidoPanel" class="ui-panel ui-widget ui-widget-content ui-corner-all panelGrid"><div id="formContenido:contenidoPanel_content" class="ui-panel-content ui-widget-content"><div id="formContenido:IDCPersonaFisicaPaso5_6Panel" class="ui-panel ui-widget ui-widget-content ui-corner-all panelGrid marginTop37PFVP" style="margin-top: -10px !important;"><div id="formContenido:IDCPersonaFisicaPaso5_6Panel_content" class="ui-panel-content ui-widget-content"><div id="formContenido:pnlVistaPreliminar" class="ui-panel ui-widget ui-widget-content ui-corner-all  panelIPF gmxNobordePanel gmxNoborde4e"><div id="formContenido:pnlVistaPreliminar_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title"><label id="formContenido:j_idt36" class="ui-outputlabel">Solicitud de inscripción al Registro Federal de Contribuyentes</label></span></div><div id="formContenido:pnlVistaPreliminar_content" class="ui-panel-content ui-widget-content">
+                <div id="separadorSinHeader" class="redLine">
+                  <hr>
+                </div> 
+
+          <strong>
+            </strong>
+            
+            
+            <!--Lugar y Fecha Emision-->
+           <table class="tablaEmision">
+                <tbody><tr>
+                    <td colspan="1" style="width: 776px !important; background-color: #E7E7E6 !important;" align="center">
+                    Lugar de emisión
+                    </td>
+                    <td style="width: 130.75px !important; border: 0px !important;">
+                    
+                    </td>
+                    <td colspan="5" style="width: 272.25px !important; background-color: #E7E7E6 !important;" align="center">
+                    Fecha de emisión
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="width: 748px !important; text-indent: 3px !important;">
+                    MONTEMORELOS, NUEVO LEON, 
+                    </td>
+                    <td style="width: 97.25px !important; border: 0px !important;">
+                    
+                    </td>
+                    <td style="width: 70.75px !important;" align="center"><label id="formContenido:txtFechaInicioTramite1" class="txtLabel">26</label>
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;">
+                    </td>
+                    <td style="width: 70.75px !important" align="center"><label id="formContenido:txtFechaInicioTramite2" class="txtLabel capitalizar">12</label>
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;">
+                    </td>
+                    <td style="width: 70.75px !important" align="center"><label id="formContenido:txtFechaInicioTramite3" class="txtLabel">2021</label>
+                    </td>
+                </tr>
+           </tbody></table>
+           <!-- SEPARAR -->
+		   <div class="paddinTopDatosSolicitante">
+		   </div>
+           <!--Inicia Datos Identificacion PF-->
+           <table class="tablaEmision">
+                <tbody><tr>
+                    <td style="width: 359px !important; background-color: #E7E7E6 !important;" align="center">
+                    Datos de identificación del solicitante
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 359px !important; background-color: #E7E7E6 !important;" align="center">
+                    Tipo de movimiento
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 359px !important; background-color: #E7E7E6 !important; " align="center">
+                    Inscripción
+                    </td>
+                </tr>
+                <tr>
+                
+
+                    <td style="width: 359px !important; text-indent: 3px !important; display:none !important">
+                       RFC: 
+                    </td>
+                
+                    <td style="width: 359px !important; text-indent: 3px !important; ">
+                        CURP: CACJ030119HDFSHSA9
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+
+                    <td id="tipoMovimientoPF" style="height: 78px !important; text-indent: 3px !important;" class="tdTop">
+                        Nombre del trámite: Inscripción de Persona Física sin Activ. Económica
+                    </td>
+
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td id="tipoSolInsPF" style="height: 78px !important; text-indent: 3px !important;" class="tdTop">
+                        Tipo de solicitud de inscripción: Inscripción de Persona Física sin Activ. Económica
+                    </td>
+                        
+                    
+                    
+                    
+                    
+                    
+                </tr>
+                
+                <tr>
+                
+                    <td style="width: 359px !important; text-indent: 3px !important; display:none !important">
+                        CURP: CACJ030119HDFSHSA9
+                    </td>
+                    <td id="nombrePF" style="width: 359px !important; text-indent: 3px !important; ">
+                        Nombre(s): JOSE
+                    </td>                    
+                    
+                    
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    
+                    <td style="width: 359px !important; text-indent: 3px !important;  height: 39px !important; ">
+                        Fecha de movimiento: 
+                        <span id="formContenido:lblFecaMovimiento2Test" class="txtLabel txtLabel2c"></span>
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 359px !important; text-indent: 3px !important;  height: 39px !important; ">
+                        Fecha de nacimiento: 
+                        <span id="formContenido:lblFechaFirmaNAc2Test" class="txtLabel">19/01/2003</span>
+                    </td>                    
+
+                </tr>
+                
+                <tr>
+                    <td id="paternoPF" style="width: 359px !important; text-indent: 3px !important; ">
+                        Primer apellido: CASTAÑON
+                    </td>                    
+                    
+                    
+                    <td style="width: 30px !important; border: 0px !important;"></td>                    
+                    <td style="width: 359px !important; border: 0px !important;"></td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 359px !important; text-indent: 3px !important;  height: 39px !important; ">
+                        Fecha de inicio de operaciones: 
+                        <span id="formContenido:lblFechaIniOpera2Test" class="txtLabel">26/12/2021</span>
+                    </td>                    
+                    <td style="width: 359px !important; text-indent: 3px !important; border: 0px solid #E2E2E2 !important; height: 39px !important; display:none !important">
+                    </td>                    
+                    
+                </tr>                
+                
+                <tr>
+                    <td id="maternoPF" style="width: 359px !important; text-indent: 3px !important; ">
+                        Segundo apellido: CHONTAL
+                    </td>  
+    
+                    <td style="width: 30px !important; border: 0px !important;"></td>    
+                </tr>     
+                
+                <tr style="display:none !important">
+                
+                    <td id="maternoPF" style="width: 359px !important; text-indent: 3px !important; ">
+                        Segundo apellido: CHONTAL
+                    </td>
+                    
+                    <td style="width: 30px !important; border: 0px !important;"></td>    
+                </tr>   
+                
+
+                <tr>
+                    <td colspan="5" style="width: 1137px !important; text-indent: 3px !important; ">
+                        Nombre comercial o de identificación al público: 
+                    </td>
+                </tr>
+           </tbody></table>
+            <!--Termina Datos Identificacion PF-->
+            <!-- SEPARAR PF -->
+		   <div class="paddinTopDatosSolicitante">
+		   </div>
+            
+            <!--Inicia Datos Identificacion PM-->
+           <table class="tablaEmision" style="display:none !important">
+                <tbody><tr>
+                    <td style="width: 359px !important; background-color: #E7E7E6 !important;" align="center">
+                        Datos de identificación del solicitante
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 359px !important; background-color: #E7E7E6 !important;" align="center">
+                        Tipo de movimiento
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>                    
+                    <td style="width: 359px !important; background-color: #E7E7E6 !important;" align="center">
+                        Inscripción
+                    </td>                    
+                </tr>
+                <tr>
+                
+
+                    <td style="width: 359px !important; text-indent: 3px !important; display:none !important">
+                       RFC: 
+                    </td>                 
+                    <td id="denominacionRazonSocPM" style="width: 359px !important; text-indent: 3px !important;" class="tdTop">
+                        Denominación o razón social: 
+                    </td>                                        
+                    
+                    
+                    
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td id="nombreTramitePM" style="height: 78px !important; text-indent: 3px !important;">
+                        Nombre del trámite: Inscripción de Persona Física sin Activ. Económica
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td id="tipoSolInsPM" style="width: 359px !important; text-indent: 3px !important;">
+                        Tipo de solicitud de inscripción: Inscripción de Persona Física sin Activ. Económica
+                    </td>                    
+                </tr>
+                
+                
+                <tr>                    
+                    <td id="regimenCapitalPM" style=" text-indent: 3px !important; height: 117px !important;">                        
+                        Régimen de capital: 
+                    </td>
+                    
+                    
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    
+                    <td style="width: 359px !important; text-indent: 3px !important;">
+                        Fecha de movimiento: 
+                        <span id="formContenido:lblFecaMovimientoPM" class="txtLabel txtLabel2c"></span>
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td id="fechaFirmaPM" style="height: 156px !important; text-indent: 3px !important;" class="tdTop">
+                        Fecha de firma de la escritura constitutiva, documento constitutivo o de la celebración del contrato, o de publicación del decreto que le otorga personalidad jurídica: <span id="formContenido:lblFechaFirma21Test" class="txtLabel"></span>
+                    </td>                                        
+                </tr>
+                <tr>
+                    <td id="nombreComercialPM" style="width: 359px !important; text-indent: 3px !important; " class="tdTop">
+                        Nombre comercial o de identificación al público: 
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 359px !important; border: 0px !important;"></td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 359px !important; text-indent: 3px !important;  height: 39px !important;">
+                        Fecha de inicio de operaciones: 
+                        <span class="txtLabel">26/12/2021</span>
+                    </td>                    
+                </tr>   
+    
+
+                
+                
+           </tbody></table>
+            <!--Termina Datos Identificacion PM-->
+            
+            <!-- SEPARAR PM-->
+		   <div class="paddinTopDatosSolicitante" style="display:none !important">
+		   </div>
+                   
+            <!--Inicia Extranjero PF-->
+                <table class="tablaEmision" style="display:none !important">               
+                    <tbody><tr>
+                        <td colspan="2" style="width: 1180px !important;  background-color: #E7E7E6 !important;" align="center">
+                            Contribuyentes residentes en el extranjero
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="width: 1180px !important;  text-indent: 3px !important;">
+                            País de residencia fiscal: ESTADOS UNIDOS MEXICANOS
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="width: 1180px !important; text-indent: 3px !important;">
+                            Nacionalidad: ESTADOS UNIDOS MEXICANOS
+                        </td>
+                        
+                    </tr>
+                    <tr style="display:none !important">
+                        <td colspan="2" style="width: 1180px !important;  text-indent: 3px !important;">
+                            Tiene fuente de ingresos en territorio nacional: No
+                        </td>
+                        
+                    </tr>
+                    <tr style="display:none !important">
+                        <td colspan="2" style="width: 1180px !important; text-indent: 3px !important;">
+                            Su casa habitación o centro principal de actividades por las que recibe ingresos, se encuentra en México: No
+                        </td>
+                       
+                    </tr>
+                    <tr style="display:none !important">
+                        <td colspan="2" style="width: 1180px !important; text-indent: 3px !important;">
+                            Cuenta con establecimiento permanente en México: No
+                        </td>
+                        
+                    </tr>
+                </tbody></table>
+            <!--Termina Extranjero PF-->
+            
+            <!-- SEPARAR EXT PF-->
+		   <div class="paddinTopDatosSolicitante" style="display:none !important">
+		   </div>
+                   
+            <!--Inicia Extranjero PM-->
+                <table class="tablaEmision" style="display:none !important">               
+                    <tbody><tr>
+                        <td colspan="2" style="width: 1180px !important;  background-color: #E7E7E6 !important;" align="center">
+                            Contribuyentes residentes en el extranjero
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="width: 1180px !important; text-indent: 3px !important;">
+                            País de residencia fiscal: ESTADOS UNIDOS MEXICANOS
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="width: 1180px !important; text-indent: 3px !important ;">
+                            País de constitución: ESTADOS UNIDOS MEXICANOS
+                        </td>
+                        
+                    </tr>
+                    <tr style="display:none !important">
+                        <td colspan="2" style="width: 1180px !important; text-indent: 3px !important;">
+                            Número de identificación fiscal asignado en el país de residencia: 
+                        </td>
+                       
+                    </tr>
+                    <tr style="display:none !important">
+                        <td colspan="2" style="width: 1180px !important; text-indent: 3px !important;">
+                            Tiene fuente de ingresos en territorio nacional: No
+                        </td>
+                        
+                    </tr>
+                    <tr style="display:none !important">
+                        <td colspan="2" style="width: 1180px !important; text-indent: 3px !important;">
+                            Es residente en el país: No
+                        </td>
+                        
+                    </tr>
+                    <tr style="display:none !important">
+                        <td colspan="2" style="width: 1180px !important; text-indent: 3px !important;">
+                            Cuenta con establecimiento permanente en México: No
+                        </td>
+                       
+                    </tr>
+                </tbody></table>
+            <!--Termina Extranjero PM-->
+            
+            <!-- SEPARAR EXT PM-->
+		   <div class="paddinTopDatosSolicitante" style="display:none !important">
+		   </div>
+                   
+            <!--Inicia Documento Protocolizado-->
+            <table class="tablaEmision" style="display:none !important">
+                <tbody><tr>
+                    <td colspan="3" style="width: 1180px !important; background-color: #E7E7E6 !important;" align="center">
+                        Datos del documento protocolizado
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 776px !important; text-indent: 3px !important;">
+                        Número de escritura: 
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 373px !important; text-indent: 3px !important;">
+                        Libro: 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 776px !important; text-indent: 3px !important;">
+                        Fecha: 
+                        <span id="formContenido:txtfecha" class="txtLabel"></span>
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 373px !important; text-indent: 3px !important;">
+                        Foja: 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 776px !important; text-indent: 3px !important;">
+                        Clave del RFC del federatario público: 
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 373px !important; border: 0px !important;"></td>
+                </tr>
+                <tr>
+                    <td style="width: 776px !important; text-indent: 3px !important;">
+                        Datos del registro público de la propiedad y del comercio: 
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 373px !important; border: 0px !important;"></td>
+                </tr>
+            </tbody></table>
+            <!--Termina Documento Protocolizado-->
+            <!-- SEPARAR EXT PM-->
+		   <div class="paddinTopDatosSolicitante" style="display:none !important">
+		   </div>
+                   
+            <!--Inicia Escision-->
+                <table class="tablaEmision" style="display:none !important">               
+                    <tbody><tr>
+                        <td colspan="2" style="width: 1180px !important;  background-color: #E7E7E6 !important;" align="center">
+                            Movimiento de escisión:
+                        </td>
+                    </tr>
+                    <tr style="display:none !important">
+                        <td style="width: 590px !important; border-right: 1px solid white !important;">
+                            RFC de la sociedad escindente:
+                        </td>
+                        <td style="width: 590px !important; border-left: 1px solid white !important;">
+                            
+                        </td>
+                    </tr>
+                    <tr style="display:none !important">
+                        <td style="width: 590px !important; border-right: 1px solid white !important;">
+                            ¿La sociedad escindida será la designada?:
+                        </td>
+                        <td style="width: 590px !important; border-left: 1px solid white !important;">
+                            
+                        </td>
+                    </tr>
+                </tbody></table>
+            <!--Termina Escision-->
+            <!-- SEPARAR Escision-->
+		   <div class="paddinTopDatosSolicitante" style="display:none !important">
+		   </div>
+            
+            <!--Inicia Datos Ubicacion-->
+            <table class="tablaEmision">
+
+                <tbody><tr>
+                    <td colspan="9" style="width: 1180px !important;  background-color: #E7E7E6 !important;" align="center">
+                        Datos de ubicación
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="width: 373px !important; text-indent: 3px !important;">
+                        Tipo de domicilio: DOMICILIO FISCAL
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td colspan="3" style="width: 373px !important; text-indent: 3px !important;">
+                        Código Postal: 67530
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important; text-indent: 3px !important;"></td>
+                    <td style="width: 373px !important; text-indent: 3px !important;">
+                        Entidad Federativa: NUEVO LEON
+                    </td>
+                </tr>
+                <tr>
+                    <td id="municipioCont" colspan="3" style="height: 78px !important; text-indent: 3px !important;">
+                        Municipio o Demarcación Territorial: MONTEMORELOS
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td id="localidadCont" colspan="3" style="width: 373px !important; text-indent: 3px !important;">
+                        Localidad: MONTEMORELOS
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td id="coloniaCont" style="width: 373px !important; text-indent: 3px !important;">
+                        Colonia: 
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tipoVialidad" colspan="3" style="width: 373px !important; text-indent: 3px !important;">
+                        Tipo de calle: CALLE
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td id="nombreCalleCont" colspan="3" style="width: 373px !important; text-indent: 3px !important;">
+                        Calle: CALLE COMOMFORT
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td id="noLetraExt" style="width: 373px !important; text-indent: 3px !important;">
+                        Número exterior: 1215
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td id="noInterior" colspan="3" style="width: 373px !important; text-indent: 3px !important;">
+                        Número interior: 2A
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td id="entreCalle" colspan="3" style="width: 373px !important; text-indent: 3px !important;">
+                        Entre calle: TAMPICO
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td id="yCalle" style="width: 373px !important; text-indent: 3px !important;">
+                        Y calle: MUTUALISMO
+                    </td>
+                </tr>
+                <tr>
+                    <td id="caracteristicasDomic" colspan="7" style="width: 776px !important; text-indent: 3px !important;">
+                        Características del domicilio: DEPARTEMENTOS BLANCOS
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td id="referenciasAdici" style="height: 78px !important; text-indent: 3px !important;">
+                        Referencias adicionales: CALLE FRENTE AL SCOTIABANK, DETRAS DEL RESTAURANTE CRAZY BURGUER
+                    </td>
+                </tr>
+                <tr>
+                
+                    <td id="ladaFijo" style="width: 77.83px !important; text-indent: 3px !important;"><div id="formContenido:j_idt90:0:j_idt92" class="ui-datalist ui-widget"><div id="formContenido:j_idt90:0:j_idt92_content" class="ui-datalist-content ui-widget-content"></div></div></td>
+                    
+                    
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    
+                    
+                    <td style="width: 265.49px !important;  padding-left: 3px !important;"><div id="formContenido:j_idt90:0:j_idt96" class="ui-datalist ui-widget"><div id="formContenido:j_idt90:0:j_idt96_content" class="ui-datalist-content ui-widget-content"></div></div></td>
+
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    
+                    <td id="ladaCelular" style="width: 77.83px !important; padding-left: 3px !important;"><div id="formContenido:j_idt90:0:j_idt100" class="ui-datalist ui-widget"><div id="formContenido:j_idt90:0:j_idt100_content" class="ui-datalist-content ui-widget-content"> Lada: 826<br></div></div></td>
+                    
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    
+                    <td style="width: 263.49px !important; padding-left: 3px !important;"><div id="formContenido:j_idt90:0:j_idt104" class="ui-datalist ui-widget"><div id="formContenido:j_idt90:0:j_idt104_content" class="ui-datalist-content ui-widget-content">Teléfono móvil: 1300852<br></div></div></td>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td id="correoElectronico" style="height: 78px !important; text-indent: 3px !important;">
+                        Correo electrónico:<div id="formContenido:j_idt90:0:j_idt108" class="ui-datalist ui-widget txtLabel txtLabel3c VPdatalist-noborder"><div id="formContenido:j_idt90:0:j_idt108_content" class="ui-datalist-content ui-widget-content">castanonJR10@gmail.com</div></div>
+                    </td>
+                </tr>
+                <tr>                
+                    <td style="width: 30px !important; border: 0px !important; height: 25px !important;"></td>
+                </tr>
+            </tbody></table>
+            <!--Termina Datos Ubicacion-->
+            
+            <!-- SEPARAR -->
+
+            
+            <!--Inicia Actividades Economicas-->
+            <table class="tablaEmision" style="display:none !important">
+                <tbody><tr>
+                    <td colspan="11" style="width: 1180px !important; background-color: #E7E7E6 !important;" align="center">
+                        Actividades económicas
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 70.83px !important; background-color: #E7E7E6 !important;" align="center">
+                        Orden
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 272.49px !important; background-color: #E7E7E6 !important;" align="center">
+                        Actividad económica
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 171.66px !important; background-color: #E7E7E6 !important;" align="center">
+                        Porcentaje
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 171.66px !important; background-color: #E7E7E6 !important;" align="center">
+                        Fecha de inicio
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 171.66px !important; background-color: #E7E7E6 !important;" align="center">
+                        Fecha final
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 171.66px !important; background-color: #E7E7E6 !important;" align="center">
+                        Estado
+                    </td>
+                </tr>
+            </tbody></table>            
+            <!--Termina Actividades Economicas-->
+            
+            <!-- SEPARAR ACTEC -->
+		   <div class="paddinTopDatosSolicitante" style="display:none !important">
+		   </div>
+            
+            <table class="tablaEmision" style="display:none !important">
+                <tbody><tr>
+                    <td colspan="11" style="width: 1180px !important; background-color: #E7E7E6 !important;" align="center">
+                        Relaciones
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 171.5px !important; background-color: #E7E7E6 !important; height: 78px !important;" align="center">
+                        Denominación o razón social
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 171.5px !important; background-color: #E7E7E6 !important;" align="center">
+                        RFC Relacionado
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 171.5px !important; background-color: #E7E7E6 !important;" align="center">
+                        Relación
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 171.5px !important; background-color: #E7E7E6 !important;" align="center">
+                        Fecha inicio
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 171.5px !important; background-color: #E7E7E6 !important;" align="center">
+                        Fecha fin
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 171.5px !important; background-color: #E7E7E6 !important;" align="center">
+                        Estado
+                    </td>
+                </tr>
+            </tbody></table>
+
+		   <div class="paddinTopDatosSolicitante" style="display:none !important">
+		   </div>            
+            
+            <!--Inicia Regimenes-->
+            <table class="tablaEmision">
+                <tbody><tr>
+                    <td colspan="11" style="width: 1180px !important; background-color: #E7E7E6 !important;" align="center">
+                        Regímenes
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 560.66px !important; background-color: #E7E7E6 !important;" align="center">
+                        Regimen
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 171.66px !important; background-color: #E7E7E6 !important;" align="center">
+                        Fecha de inicio
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 171.66px !important; background-color: #E7E7E6 !important;" align="center">
+                        Fecha final
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 171.66px !important; background-color: #E7E7E6 !important;" align="center">
+                        Estado
+                    </td>
+                </tr>
+                    <tr>
+                        <td id="regimendescLenguajeCiudadano" style="width: 560.66px !important; text-indent: 3px !important; ">
+                            Sin obligaciones fiscales
+                        </td>
+                        <td style="width: 30px !important; border: 0px !important;"></td>
+                        <td style="width: 171.66px !important; text-indent: 3px !important;"><span class="txtLabel">26/12/2021</span>
+                        </td>
+                        <td style="width: 30px !important; border: 0px !important;"></td>
+                        <td style="width: 171.66px !important; text-indent: 3px !important;"><span class="txtLabel"></span>
+                        </td>
+                        <td style="width: 30px !important; border: 0px !important;"></td>
+                        <td style="width: 171.66px !important; text-indent: 3px !important;">
+                            ALTA
+                        </td>
+                    </tr>
+            </tbody></table>
+            <!--Termina Regimenes-->
+            
+            <!-- SEPARAR REG-->
+		   <div class="paddinTopDatosSolicitante">
+		   </div>
+            
+            <!--Inicia Obligaciones-->
+            <table class="tablaEmision" style="display:none !important">
+                <tbody><tr>
+                    <td colspan="11" style="width: 1180px !important; background-color: #E7E7E6 !important;" align="center">
+                        Obligaciones
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 373px !important; background-color: #E7E7E6 !important;" align="center">
+                        Descripción de la obligación
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 373px !important; background-color: #E7E7E6 !important;" align="center">
+                        Descripción del movimiento
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 70.83px !important; background-color: #E7E7E6 !important;" align="center">
+                        Fecha de inicio
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 70.83px !important; background-color: #E7E7E6 !important;" align="center">
+                        Fecha final
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 70.83px !important; background-color: #E7E7E6 !important;" align="center">
+                        Estado
+                    </td>
+                </tr>
+            </tbody></table>
+                  
+            <!--Termina Obligaciones-->
+            
+            <!-- SEPARAR OBLIG-->
+		   <div class="paddinTopDatosSolicitante" style="display:none !important">
+		   </div>
+                   
+            <!--Inicia Preguntas y Respuestas-->
+            <table class="tablaEmision" style="display:none !important">
+                <tbody><tr>
+                    <td style="width: 1180px !important; background-color: #E7E7E6 !important;" align="center">Pregunta / Respuesta</td>
+                </tr>
+            </tbody></table>
+            <!--Termina Preguntas-->
+            
+            <!-- SEPARAR PREG-->
+		   <div class="paddinTopDatosSolicitante" style="display:none !important">
+		   </div>
+                   
+            <!--Inicia Representante Legal-->
+            <table class="tablaEmision" style="display:none !important">
+                <tbody><tr>
+                    <td colspan="5" style="width: 1180px !important; background-color: #E7E7E6 !important;" align="center">Datos del representante legal</td>
+                </tr>
+                <tr>
+                    <td style="width: 373px !important; text-indent: 3px !important;">
+                        RFC: 
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 373px !important; text-indent: 3px !important;">
+                        CURP: 
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 373px !important; text-indent: 3px !important;">
+                        Nombre(s): 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 373px !important; text-indent: 3px !important;">
+                        Primer apellido: 
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 373px !important; text-indent: 3px !important;">
+                        Segundo apellido: 
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 373px !important; text-indent: 3px !important;">
+                        Fecha de nacimiento: 
+                        <label id="formContenido:lblfechaNac2Test" class="txtLabel"></label>
+                    </td>
+                </tr>
+            </tbody></table>
+            <!--Termina Representante Legal-->
+            
+            <!-- SEPARAR REP-->
+		   <div class="paddinTopDatosSolicitante" style="display:none !important">
+		   </div>
+                   
+                   
+            <!--Inicia Representante Legal CambioResidencia-->
+            <table class="tablaEmision" style="display:none !important">
+                <tbody><tr>
+                    <td colspan="5" style="width: 1180px !important; background-color: #E7E7E6 !important;" align="center">Datos del representante legal por cambio de residencia fiscal</td>
+                </tr>
+                <tr>
+                    <td style="width: 373px !important; text-indent: 3px !important;">
+                        RFC: 
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 373px !important; text-indent: 3px !important;">
+                        CURP: 
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 373px !important; text-indent: 3px !important;">
+                        Nombre(s): 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 373px !important; text-indent: 3px !important;">
+                        Primer apellido: 
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 373px !important; text-indent: 3px !important;">
+                        Segundo apellido: 
+                    </td>
+                    <td style="width: 30px !important; border: 0px !important;"></td>
+                    <td style="width: 373px !important; text-indent: 3px !important;">
+                        Fecha de nacimiento: 
+                        <label class="txtLabel"></label>
+                    </td>
+                </tr>
+            </tbody></table>
+            <!--Termina Representante Legal CambioResidencia-->
+            
+            <!-- SEPARAR REP CambioResidencia-->
+		   <div class="paddinTopDatosSolicitante" style="display:none !important">
+		   </div>                   
+                   
+                   
+            <!--Inicia Footer-->
+            <table class="tablaEmision">
+                <tbody><tr>
+                    <td style="width: 373px !important; border-right: 1px solid white !important; text-indent: 3px !important;">
+                        Nombre del contribuyente o representante legal:
+                    </td>
+                    <td style="width: 30px !important; border-left: 1px solid white !important; border-right: 1px solid white !important;"></td>
+                    <td style="width: 776px !important; height: 117px !important; border-left: 1px solid white !important;" align="center">
+                        Declaro bajo protesta de decir verdad que los datos contenidos en esta forma oficial son ciertos.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="height: 25px !important; width: 30px !important; border-left: 1px solid white !important; border-right: 1px solid white !important;"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="height: 117px !important; width: 1180px !important; text-indent: 3px !important;">
+                        Firma de quien recibe el documento:
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="height: 25px !important; width: 30px !important; border-left: 1px solid white !important; border-right: 1px solid white !important;"></td>
+                </tr>
+                <tr>
+                    <td style="width: 373px !important; border-right: 1px solid white !important; text-indent: 3px !important;">
+                        Fecha y hora de recepción:
+                    </td>
+                    <td style="width: 30px !important; border-left: 1px solid white !important; border-right: 1px solid white !important;"></td>
+                    <td id="pruebaError" style="height: 117px !important; text-indent: 3px !important;" align="center">
+                        Firma o huella digital del contribuyente o bien del representante legal quien manifiesta bajo protesta de decir verdad, que a esta fecha el mandato con el que se ostenta no le ha sido modificado o revocado.
+                    </td>
+                </tr>
+            </tbody></table>
+            <!--Termina Footer--></div></div>
+        
+        
+    <script type="text/javascript" src="./autoAjusteVP.js.descarga"></script>
+        
+           
+            <!--p:separator styleClass="flujoIPF"/-->
+            <div class="panelGrid botonesFlujo botonesFlujoVisPre botonesFlujoVisPrePF"> 
+                <div class="sinLeyendaCamposObligatoriosPFPaso6VP" style="margin-top: 70px !important;"></div><button id="formContenido:btnCancelar" name="formContenido:btnCancelar" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only cmdButton gmxNegativo" onclick="PrimeFaces.ab({source:&#39;formContenido:btnCancelar&#39;,process:&#39;formContenido:btnCancelar&#39;,onsuccess:function(data,status,xhr){CancelarRegresaAMenu.show();}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Cancelar</span></button><button id="formContenido:btnMuestraAcuse" name="formContenido:btnMuestraAcuse" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only cmdButton gmxPositivo" onclick="jQuery(this).addClass(&#39;ui-state-disabled&#39;);" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Confirmar</span></button>
+                 
+				<br>
+            </div>
+                     <div id="divSeparadorFooter"><img id="formContenido:j_idt156" width="5px" height="63" alt="" src="./dot_clear.gif.jsf"></div></div></div></div></div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="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" autocomplete="off">
+</form>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div><div class="ui-dialog-docking-zone"></div><div id="menuForm:toolTipFade" class="ui-tooltip ui-widget ui-widget-content ui-shadow ui-corner-all">1.0-SNAPSHOT, 11/10/2021 15:03:30 SSCC16475JV_</div><div id="formContenido:cd" class="ui-confirm-dialog ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow avisoVista ui-overlay-hidden" role="dialog" aria-labelledby="formContenido:cd_title" aria-hidden="true" style="width: auto; height: auto; left: 302px; top: 180.5px; visibility: hidden; z-index: 1002; display: block;" aria-live="off"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span class="ui-dialog-title">Aviso</span></div><div class="ui-dialog-content ui-widget-content" style="height: auto;"><p><span class="ui-icon ui-icon-alert ui-confirm-dialog-severity"></span>Ha concluido con la captura de la información imprímala para su revisión.</p></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+            
+            <div class="avisoVistaDlg" align="right"><button id="formContenido:j_idt150" name="formContenido:j_idt150" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only cmdButton centrar gmxPositivo ui-state-focus" onclick="cd.hide();;" type="button" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Confirmar</span></button>
+            </div></div></div><div id="cancelarDlg" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow" role="dialog" aria-labelledby="cancelarDlg_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="cancelarDlg_title" class="ui-dialog-title">Cancelar</span><a href="https://rfcampc.siat.sat.gob.mx/PTSC/IdcSiat/IDCPersonaFisica/PFVistaPreliminar.jsf#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" style="height: auto;"></div></div></body></html>

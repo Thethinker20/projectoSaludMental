@@ -1,0 +1,149 @@
+// JavaScript Document
+function isIE(version, comparison) {
+	var cc      = 'IE',
+	    b       = document.createElement('B'),
+	    docElem = document.documentElement,
+	    isIE;
+	    
+	if(version){
+		cc += ' ' + version;
+		if(comparison){ cc = comparison + ' ' + cc; }
+	}
+	
+	b.innerHTML = '<!--[if '+ cc +']><b id="iecctest"></b><![endif]-->';
+	docElem.appendChild(b);
+	isIE = !!document.getElementById('iecctest');
+	docElem.removeChild(b);
+	return isIE;
+}
+$(document).ready( function cargar() 
+   {
+    var insideIframe = window.top !== window.self;
+          if (!insideIframe) {  
+               var hostLocation = window.location.hostname;
+               var host;
+               if(hostLocation.indexOf('www.siat.sat')!=-1 || hostLocation.indexOf('rfc.siat.sat')!=-1 
+                || hostLocation.indexOf('rfs.siat.sat')!=-1 || hostLocation.indexOf('aplicaciones.sat')!=-1
+                || hostLocation.indexOf('login.siat.sat')!=-1){
+                   host = 'https://www.siat.sat.gob.mx';
+               }else if(hostLocation.indexOf('uat')!=-1){
+                   host = 'https://wwwuat.siat.sat.gob.mx'
+               }else if(hostLocation.indexOf('dev')!=-1){
+                   host = 'https://ptscdev.siat.sat.gob.mx';
+               }else if(hostLocation.indexOf('localhost')!=-1){
+                   host = 'http://localhost:7101';
+               }else{
+                   host = 'https://www.siat.sat.gob.mx';
+               }
+               var header;
+                if(isIE(9,'lte')){
+                     header="<html><head><link href='" + host + "/PTSC/resources/header-footer-GMX/css/headerfootergmx.css' rel='stylesheet' type='text/css'><\/head> <div class='cont-exterior'><div class='cont-interior'><div><div class='logo'><a href='http://www.gob.mx/'><img style='padding:o' src='" + host + "/PTSC/resources/header-footer-GMX/images/gobmx-logo-header.fw.png' widht='98' height='50'/></a></div><div class='busqueda' onclick=window.open('http://www.gob.mx/busqueda','_blank')></div><div class='participa' onclick=window.open('http://www.gob.mx/participa','_blank')></div><div class='gobierno' onclick=window.open('http://www.gob.mx/gobierno','_blank')></div><div class='tramites' onclick=window.open('http://www.gob.mx/tramites','_blank')></div></div></div></div> <\/body><\/html>"; 
+                }else{
+                    header="<html><head><link href='" + host + "/PTSC/resources/header-footer-GMX/css/headerfootergmx.css' rel='stylesheet' type='text/css'><\/head> <div class='cont-exterior'><div class='cont-interior'><div><div class='logo'><a href='http://www.gob.mx/'><img style='padding:o' src='" + host + "/PTSC/resources/header-footer-GMX/images/gobmx_header.svg' widht='98' height='55'/></a></div><div class='busqueda' onclick=window.open('http://www.gob.mx/busqueda','_blank')></div><div class='participa' onclick=window.open('http://www.gob.mx/participa','_blank')></div><div class='gobierno' onclick=window.open('http://www.gob.mx/gobierno','_blank')></div><div class='tramites' onclick=window.open('http://www.gob.mx/tramites','_blank')></div></div></div></div> <\/body><\/html>"; 
+                }
+                $( ".hgobmx" ).html(header);
+                var footer;
+                if(isIE(9,'lte')){
+                     footer="<html><head><meta charset='utf-8'/></head><body><div id='pie' class='footerGobmx' >"+
+                    "<div id='linkcontenedor' class='contenido-footer'><div id='links' class='links_footer'><div class='links_footer1'><p class='tituloLink'>Enlaces</p>"+
+                    "<p class='contenidoLink'><a href='http://www.gob.mx/accesibilidad' target='_blank' >Declaración de Accesibilidad</a></p>"+
+                    "<p class='contenidoLink'><a href='http://www.gob.mx/privacidad' target='_blank' >Pol&iacute;tica de privacidad</a></p>"+
+                    "<p class='contenidoLink'><a href='http://www.gob.mx/terminos' target='_blank' >T&eacute;rminos y Condiciones</a></p>"+
+                    "<p class='contenidoLink'><a href='http://www.ordenjuridico.gob.mx/' target='_blank' >Marco Jur&iacute;dico</a></p>"+
+                    "<p class='contenidoLink'><a href='http://portaltransparencia.gob.mx' target='_blank' >Portal de Obligaciones de Transparencia</a></p>"+
+                    "<p class='contenidoLink'><a href='https://www.infomex.org.mx/gobiernofederal/home.action' target='_blank' >Sistema Infomex</a></p>"+
+                    "<p class='contenidoLink'><a href='http://inicio.ifai.org.mx/SitePages/ifai.aspx' target='_blank' >INAI</a></p>"+
+                    "<p class='contenidoLink'><a href='https://www.gob.mx/sitemap' target='_blank' >Mapa de sitio</a></p>"+
+                    "<p class='tituloLinksuscribe'><form role='form' id='subscribete'><p class='labelcampo'><label>Mantente informado. Suscríbete.</label></p>"+
+                    "<div class='form-group-icon'><input type='text' class='form-control' id='email' name='email' placeholder='usuario@ejemplo.com'>"+
+                    "<button id='subscribe' type='button' class='blue-right btn'><i class='icon-caret-right' onClick='cambiotamano'></i></button></div>"+
+                    "<div class='message-subscribe hidden'></div></form></p></div><div class='links_footer2'><p class='tituloLink'>¿Qué es gob.mx?</p>"+
+                    "<p class='contenidoLink'>Es el portal único de tr&aacute;mites, informaci&oacute;n y</p>"+
+                    "<p class='contenidoLink'>participación ciudadana. <a href='https://www.gob.mx/que-es-gobmx'>Leer m&aacute;s</a></p></br>"+
+                    "<p class='contenidoLink'><a href='http://www.gob.mx/en/index' target='_blank' >English</a></p>"+
+                    "<p class='contenidoLink'><a href='http://www.gob.mx/temas' target='_blank' >Temas</a></p>"+
+                    "<p class='contenidoLink'><a href='http://reformas.gob.mx/' target='_blank' >Reformas</a></p></div>"+
+                    "<div class='links_footer3'><p class='tituloLink'>Contacto</p>"+
+                    "<p class='contenidoLink'>Mesa de ayuda: dudas e informaci&oacute;n</p>" +
+                    "<p class='contenidoLink'>gobmx@funcionpublica.gob.mx</p></br>" +
+                    "<p class='contenidoLink'><a href='https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFP54' target='_blank'>Denuncia contra servidores p&uacute;blicos</a></p>"+
+                    "<br/><br/><br/><br/><br/>"+
+                    "<div class='rsoc'><p class='labelcampo'>Síguenos en</p><a href='https://www.facebook.com/PresidenciaMX' target='_blank'>"+
+                    "<div class='face'></div></a><a href='https://twitter.com/PresidenciaMX' target='_blank'>"+
+                    "<div class='tw'></div></a><!--<a href='https://instagram.com/PresidenciaMX/' target='_blank'>"+
+                    "<div class='ins'></div></a><a href='https://www.youtube.com/gobiernorepublicamx' target='_blank'>"+
+                    "<div class='you'></div></a><a href='https://www.flickr.com/photos/presidenciamx' target='_blank'>"+
+                    "<div class='flk'></div></a><a href='http://www.presidencia.gob.mx/feed/' target='_blank'>"+
+                    "<div class='fe'></div></a>--></div></div></div></div><div class='imagpie'><div class='imgp1'></div><div class='imgp2'></div><div class='imgp3'></div></div></div></body></html>"
+                }else{
+                    footer="<html><head><meta charset='utf-8'/></head><body><div id='pie' class='footerGobmx' >"+
+                    "<div id='linkcontenedor' class='contenido-footer'><div id='links' class='links_footer'><div class='links_footer1'><p class='tituloLink'>Enlaces</p>"+
+                    "<p class='contenidoLink'><a href='http://www.gob.mx/accesibilidad' target='_blank' >Declaración de Accesibilidad</a></p>"+
+                    "<p class='contenidoLink'><a href='http://www.gob.mx/privacidad' target='_blank' >Pol&iacute;tica de privacidad</a></p>"+
+                    "<p class='contenidoLink'><a href='http://www.gob.mx/terminos' target='_blank' >T&eacute;rminos y Condiciones</a></p>"+
+                    "<p class='contenidoLink'><a href='http://www.ordenjuridico.gob.mx/' target='_blank' >Marco Jur&iacute;dico</a></p>"+
+                    "<p class='contenidoLink'><a href='http://portaltransparencia.gob.mx' target='_blank' >Portal de Obligaciones de Transparencia</a></p>"+
+                    "<p class='contenidoLink'><a href='https://www.infomex.org.mx/gobiernofederal/home.action' target='_blank' >Sistema Infomex</a></p>"+
+                    "<p class='contenidoLink'><a href='http://inicio.ifai.org.mx/SitePages/ifai.aspx' target='_blank' >INAI</a></p>"+
+                    "<p class='contenidoLink'><a href='https://www.gob.mx/sitemap' target='_blank' >Mapa de sitio</a></p>"+
+                    "<p class='tituloLinksuscribe'><form role='form' id='subscribete'><p class='labelcampo'><label>Mantente informado. Suscríbete.</label></p>"+
+                    "<div class='form-group-icon'><input type='text' class='form-control' id='email' name='email' placeholder='usuario@ejemplo.com'>"+
+                    "<button id='subscribe' type='button' class='blue-right btn'><i class='icon-caret-right' onClick='cambiotamano'></i></button></div>"+
+                    "<div class='message-subscribe hidden'></div></form></p></div><div class='links_footer2'><p class='tituloLink'>¿Qué es gob.mx?</p>"+
+                    "<p class='contenidoLink'>Es el portal único de tr&aacute;mites, informaci&oacute;n y</p>"+
+                    "<p class='contenidoLink'>participación ciudadana. <a href='https://www.gob.mx/que-es-gobmx'>Leer m&aacute;s</a></p></br>"+
+                    "<p class='contenidoLink'><a href='http://www.gob.mx/en/index' target='_blank' >English</a></p>"+
+                    "<p class='contenidoLink'><a href='http://www.gob.mx/temas' target='_blank' >Temas</a></p>"+
+                    "<p class='contenidoLink'><a href='http://reformas.gob.mx/' target='_blank' >Reformas</a></p></div>"+
+                    "<div class='links_footer3'><p class='tituloLink'>Contacto</p>"+
+                    "<p class='contenidoLink'>Mesa de ayuda: dudas e informaci&oacute;n</p>" +
+                    "<p class='contenidoLink'>gobmx@funcionpublica.gob.mx</p></br>" +
+                    "<p class='contenidoLink'><a href='https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFP54' target='_blank'>Denuncia contra servidores p&uacute;blicos</a></p>"+
+                    "<br/><br/><br/><br/><br/>"+
+                    "<div class='rsoc'><p class='labelcampo'>Síguenos en</p><a href='https://www.facebook.com/PresidenciaMX' target='_blank'>"+
+                    "<div class='face'></div></a><a href='https://twitter.com/PresidenciaMX' target='_blank'>"+
+                    "<div class='tw'></div></a><!--<a href='https://instagram.com/PresidenciaMX/' target='_blank'>"+
+                    "<div class='ins'></div></a><a href='https://www.youtube.com/gobiernorepublicamx' target='_blank'>"+
+                    "<div class='you'></div></a><a href='https://www.flickr.com/photos/presidenciamx' target='_blank'>"+
+                    "<div class='flk'></div></a><a href='http://www.presidencia.gob.mx/feed/' target='_blank'>"+
+                    "<div class='fe'></div></a>--></div></div></div></div><div class='imagpie'><div class='imgp1'></div><div class='imgp2'></div><div class='imgp3'></div></div></div></body></html>"
+                }
+                $( ".fgobmx" ).html(footer);
+                
+                $('#subscribete').on('keyup keypress', function(e) {
+                    var keyCode = e.keyCode || e.which;
+                    if (keyCode === 13) {
+                        e.preventDefault();
+                        $("#subscribe").click();
+                    }
+                });
+                
+                $("#subscribe").on("click", function (e) {
+                    e.preventDefault();
+                    var t = /[\w-\.]{2,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/,
+                    n = ($("#email").serialize(), $("#email").val()),
+                    r = "http://www.gob.mx/subscribe",
+                    i = 'Agradecemos tu registro dentro de gob.mx. De esta manera estar&aacute;s informado sobre las principales acciones y decisiones del Gobierno de la Rep&uacute;blica.<br><br>Gracias por tu inter&eacute;s y colaboraci&oacute;n. Juntos construimos <a href="/">gob.mx</a>',
+                    o = "Este correo electr&oacute;nico ya ha sido registrado.",
+                    s = "No se pudo registrar el correo electr&oacute;nico.",
+                    a = "Ingrese un email v&aacute;lido";
+                    return 0 == $.trim(n).length || t.test(n) === !1 ? ($(".message-subscribe").removeClass("hidden").html(a), !1) : ($(".message-subscribe").addClass("hidden").html(), $.ajax({
+                                    type : "POST",
+                                    data : "email=" + $("#email").val(),
+                                    dataType : "json",
+                                    url : r
+                            }).done(function (e) {
+                                    "error" == e.status ? $(".message-subscribe").removeClass("hidden").html(o) : ($("#email").val(""), $("#email").prop("disabled", !0), $(".message-subscribe").removeClass("hidden").html(i))
+                                    
+                                    $("#links").removeClass("links_footer");
+                                    $("#linkcontenedor").removeClass("contenido-footer");
+                                    $("#links").addClass("ampliacion");
+                                    $("#linkcontenedor").addClass("ampliacion2");
+                                    $("#pie").removeClass("footerGobmx");
+                                    $("#pie").addClass("footerGobmx2");
+                            }).fail(function () {
+                                    $(".message-subscribe").removeClass("hidden").html(s)
+                            }), !1)
+                });
+          }
+});
