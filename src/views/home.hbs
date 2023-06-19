@@ -467,8 +467,8 @@
       <div class="section-title pb-0">
         <h2>Artículos</h2>
       </div>
-      <div class="owl-carousel articulos-carousel">
-        <div class="articulo-wrap">
+      <div class="owl-carousel articulos-carousel" id="articulos-carousel">
+        {{!-- <div class="articulo-wrap">
           <div class="articulo-item"><a href="https://bit.ly/2XP0v3X" target="_blank">
               <img src="/media/articulos/articulo-1.png" class="articulo-img" alt="">
               <h3>¿Cómo afrontar estrés y ansiedad durante la pandemia?</h3>
@@ -550,7 +550,7 @@
               </p>
             </a>
           </div>
-        </div>
+        </div> --}}
 
       </div>
 
@@ -786,3 +786,38 @@
 <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
 <script src="/vendor/jquery/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+      axios.get('https://conectate.um.edu.mx/categoria/feed/mental', {
+        responseType: 'json'
+      })
+        .then(function(res) {
+          if(res.status==200) {
+            //console.log("RESPUESTA", res.data);
+            let articulos = '';
+            res.data.data.forEach(articulo => {
+              articulos += `
+                <div class="articulo-wrap">
+                  <div class="articulo-item">
+                    <a href="https://conectate.um.edu.mx/articulo/${articulo.URL}" target="_blank">
+                      <img src="${articulo.IMAGEN}" class="articulo-img" alt="">
+                      <h3>${articulo.TITULO}</h3>
+                      <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        ${articulo.EXTRACTO}
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                    </a>
+                  </div>
+                </div> 
+				      `;
+			      });
+            if (typeof document != 'undefined') {
+				      document.getElementById('articulos-carousel').innerHTML = articulos;
+			      }
+          }
+        })
+        .catch(function(err) {
+          console.log(err);
+        });
+</script>

@@ -19,6 +19,7 @@ const request = require("request");//no se usa ahorita
 const axios = require("axios");//manejo de APIS
 const nodemailer = require("nodemailer");//correos
 const Pagos = require("./routes/models/pagos");
+const url = require("url");
 require("dotenv").config();
 
 const app = express();
