@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");//MONGO DB
+/*const mongoose = require("mongoose");//MONGO DB
 const Schema = mongoose.Schema;//ESQUEMA
 const ObjectId = Schema.ObjectId; 
 
@@ -94,4 +94,4 @@ const consultSchema = new Schema({
   },
 });
 
-module.exports = Consult = mongoose.model("Consults", consultSchema);
+module.exports = Consult = mongoose.model("Consults", consultSchema);*/

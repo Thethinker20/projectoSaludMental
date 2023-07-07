@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+/*const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // User's Atributes
@@ -29,4 +29,4 @@ const citaSchema = new Schema({
   },
 });
 
-module.exports = Citas = mongoose.model("Citas", citaSchema);
+module.exports = Citas = mongoose.model("Citas", citaSchema);*/

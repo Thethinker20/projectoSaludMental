@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+/*const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId; 
 
@@ -45,4 +45,4 @@ const doctorsSchema = new Schema({
   },
 });
 
-module.exports = Doctores = mongoose.model("Doctores", doctorsSchema);
+module.exports = Doctores = mongoose.model("Doctores", doctorsSchema);*/

@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+/*const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 var today = new Date();
@@ -18,4 +18,4 @@ const commentSchema = new Schema({
   },
 });
 
-module.exports = Commentas = mongoose.model("Comments", commentSchema);
+module.exports = Commentas = mongoose.model("Comments", commentSchema);*/

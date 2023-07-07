@@ -33,8 +33,6 @@
     "https": "^1.0.0",
     "jsonwebtoken": "^8.5.1",
     "lodash.merge": "^4.6.2",
-    "mongoose": "^5.13.0",
-    "mongoskin": "^2.1.0",
     "morgan": "^1.10.0",
     "node-fetch": "^2.6.1",
     "nodemailer": "^6.6.2",
