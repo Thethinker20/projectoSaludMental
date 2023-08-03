@@ -303,7 +303,7 @@ const promise = fetch("/preguntasEmail", options)
 
 // countPaciente
 
-function getPacientes(){
+/*function getPacientes(){
   $.ajax({
     url: "/all-data",
     method: "get",
@@ -315,3 +315,4 @@ function getPacientes(){
     },
   });
 }
+*/

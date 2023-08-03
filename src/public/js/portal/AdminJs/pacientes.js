@@ -23,7 +23,7 @@ $(document).bind("contextmenu",function(e) {
      }
  });
 
-function getPacientesAdmin() {
+/*function getPacientesAdmin() {
     $.ajax({
       url: "/all-data",
       method: "get",
@@ -58,7 +58,7 @@ function getPacientesAdmin() {
       },
     });
   }
-
+*/
   var sidebarOpen = false;
 var sidebar = document.getElementById("sidebar");
 var sidebarCloseIcon = document.getElementById("sidebarIcon");

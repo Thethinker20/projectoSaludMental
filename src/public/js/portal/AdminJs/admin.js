@@ -8,7 +8,7 @@ $(window).on("load", function () {
   }
 });
 
-$(document).ready(function () {
+/*$(document).ready(function () {
   loadPacienteInfo();
   loadCitasInfo()
   $.ajax({
@@ -22,6 +22,7 @@ $(document).ready(function () {
     },
   });
 });
+*/
 
   /* To Disable Inspect Element */
   // $(document).bind("contextmenu",function(e) {
@@ -34,7 +35,7 @@ $(document).ready(function () {
   //      }
   //  });
 
-function loadPacienteInfo() {
+/*function loadPacienteInfo() {
   $.ajax({
     url: "/all-data",
     method: "get",
@@ -59,6 +60,7 @@ function loadCitasInfo() {
     },
   });
 }
+*/
 
 var sidebarOpen = false;
 var sidebar = document.getElementById("sidebar");

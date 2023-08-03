@@ -9,16 +9,16 @@ const bcrypt = require("bcryptjs");//encriptar contraseñas
 const session = require("express-session");//no se usa ahorita
 const jwt = require("jsonwebtoken");//encriptar json
 const bodyParser = require("body-parser");//conseguir info de handlebar en el back
-const Consult = require("./routes/models/consults");//modelo del back-end
-const Admin = require("./routes/models/admin");//modelo para el administrador
-const Doctors = require("./routes/models/doctores");
-const Citas = require("./routes/models/citas");
-const Commentas = require("./routes/models/comments");
+//const Consult = require("./routes/models/consults");//modelo del back-end
+//const Admin = require("./routes/models/admin");//modelo para el administrador
+//const Doctors = require("./routes/models/doctores");
+//const Citas = require("./routes/models/citas");
+//const Commentas = require("./routes/models/comments");
 //const ObjectID = require("mongoskin").ObjectID;//no se usa ahorita
 const request = require("request");//no se usa ahorita
 const axios = require("axios");//manejo de APIS
 const nodemailer = require("nodemailer");//correos
-const Pagos = require("./routes/models/pagos");
+//const Pagos = require("./routes/models/pagos");
 const url = require("url");
 require("dotenv").config();
 
@@ -264,7 +264,7 @@ app.post("/loginDoc", async (req, res) => {
 
 //Admin
 //get all pacientes from database
-app.get("/all-data", (req, res) => {
+/*app.get("/all-data", (req, res) => {
   Consult.find()
     .then((result) => {
       res.send(result);
@@ -295,6 +295,7 @@ app.get("/all-doctors", (req, res) => {
       console.log(err);
     });
 });
+*/
 
 //agregar doctores
 app.post("/doctorsForm", async (req, res) => {

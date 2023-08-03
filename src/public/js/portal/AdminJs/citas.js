@@ -48,7 +48,7 @@ $('.toggle-sidebar').click(function (e) {
   $('.main-sidebar').toggleClass('open');
 });
 
-function loadDoctores() {
+/*function loadDoctores() {
   $.ajax({
     url: "/all-doctors",
     method: "get",
@@ -124,6 +124,7 @@ function loadCitaTable() {
     },
   });
 }
+*/
 
 //agregar paciente a doctor
 const form = document.getElementById("citasForm");
